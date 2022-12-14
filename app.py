@@ -12,7 +12,7 @@ def index():
 
 @app.route('/endpoints')
 def endpoints():
-    return "TODO: Programmatically list of endpoints."
+    return "TODO: Programmatically list endpoints."
 
 
 
@@ -23,7 +23,7 @@ endpoint_case_switch = {
 }
 
 
-@app.route('/github_case_switch', methods=['POST'])
+@app.route('/github', methods=['POST'])
 def github_case_switch():
     result = NO_SUCH_ENDPOINT
     status_code = endpoint_case_switch.get(request.json['action'], lambda r: 400)(request)

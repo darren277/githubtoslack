@@ -21,14 +21,7 @@ class Webhook:
 
     def post(self):
         d = self.slack_comment_template.format(**self.issue)
-        print(d)
-
-        print(self.slack_relay_endpoint)
-
         req = requests.post(self.slack_relay_endpoint, headers={'Content-Type': 'application/json'}, data=json.dumps(dict(blocks=d)))
-
-        print(req.text)
-
         return req.status_code
 
 
