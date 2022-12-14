@@ -12,7 +12,7 @@ def index():
 
 @app.route('/endpoints')
 def endpoints():
-    return "TODO: Programmatically list of endpoints."
+    return "TODO: Programmatically list endpoints."
 
 
 
