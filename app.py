@@ -180,8 +180,7 @@ def slack_llm():
     prompt = user_text if user_text else "Test prompt from Slack"
 
     import openai
-
-    openai.api_key = LLM_API_KEY
+    client = openai.OpenAI(api_key=LLM_API_KEY)
 
     model = 'gpt-4o-mini'
 
