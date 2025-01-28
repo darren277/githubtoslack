@@ -1,6 +1,7 @@
 from settings import MALFORMED_REQUEST, NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACHABLE, PORT
 from settings import GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_TOKEN
 from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
+from settings import LLM_API_KEY
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
 
 import json
@@ -170,6 +171,38 @@ def slack_openproject():
 
     return jsonify({"response_type": "ephemeral", "text": f"Your task {task_title} was created on OpenProject: {project_title}"}), 200
 
+
+@app.route("/slack/llm", methods=["POST"])
+def slack_llm():
+    user_text = request.form.get("text", "")
+    user_id = request.form.get("user_id", "")
+
+    prompt = user_text if user_text else "Test prompt from Slack"
+
+    import openai
+
+    openai.api_key = LLM_API_KEY
+
+    model = 'gpt-4o-mini'
+
+    messages = [
+        {"role": "system", "content": "You are a helpful expert project management assistant."},
+        {"role": "user", "content": prompt},
+    ]
+
+    result = client.chat.completions.create(model=model, messages=messages)
+
+    print('result:', result)
+
+    if not result:
+        return jsonify({"response_type": "ephemeral", "text": "Error calling LLM endpoint"}), 500
+
+    response = result.choices[0].message.content
+
+    if not response:
+        return jsonify({"response_type": "ephemeral", "text": "No response from LLM"}), 500
+
+    return jsonify({"response_type": "ephemeral", "text": response}), 200
 
 
 if __name__ == '__main__':

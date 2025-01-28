@@ -22,3 +22,5 @@ GITHUB_REPO_NAME = os.environ.get("GITHUB_REPO_NAME")
 
 OPENPROJECT_API_KEY = os.environ.get("OPENPROJECT_API_KEY")
 OPENPROJECT_URL = os.environ.get("OPENPROJECT_URL")
+
+LLM_API_KEY = os.environ.get("LLM_API_KEY")
