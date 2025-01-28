@@ -92,6 +92,19 @@ def slack_github_issue():
     return jsonify({"response_type": "ephemeral", "text": f"Your issue was created on GitHub: {issue_title}"}), 200
 
 
+@app.route("/openproject", methods=["POST"])
+def open_project():
+    form_data = request.form
+
+    print('FORM DATA:')
+    print(form_data)
+
+    project_title = 'unknown'
+
+    return jsonify({"response_type": "ephemeral", "text": f"Testing: {project_title}"}), 200
+
+
+
 if __name__ == '__main__':
     app.run(port=PORT)
 
