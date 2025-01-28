@@ -2,8 +2,9 @@
 from celery import Celery
 import requests
 import openai
+from settings import LLM_API_KEY
 
-celery = Celery("my_app", broker="amqp://guest@localhost//")  # or redis
+celery = Celery("app", broker="amqp://guest@localhost//")
 
 def my_llm_call(prompt: str):
     import openai
