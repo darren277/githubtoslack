@@ -4,6 +4,7 @@ from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
 
 from pyopenproject.openproject import OpenProject
+from pyopenproject.model.project import Project
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
@@ -97,9 +98,16 @@ def slack_github_issue():
     return jsonify({"response_type": "ephemeral", "text": f"Your issue was created on GitHub: {issue_title}"}), 200
 
 
+PROJECT_IDS_DICT = {
+    'Scrum project': 2,
+}
+
 def create_new_task(title: str, project_name: str):
+    project_id = PROJECT_IDS_DICT[project_name]
+    project = Project(dict(id=project_id))
+
     try:
-        project = op.get_project_service().find_by(name=project_name)
+        project = op.get_project_service().find(project)
         if project is None:
             raise Exception(f"Project not found: {project_name}")
     except Exception as e:
@@ -130,7 +138,7 @@ def slack_openproject():
     user_id = request.form.get("user_id", "")
 
     task_title = user_text if user_text else "New Task from Slack"
-    project_title = "OpenProject"
+    project_title = "Scrum project"
     result = create_new_task(task_title, project_title)
     if not result:
         return jsonify({"response_type": "ephemeral", "text": "Error creating project on OpenProject"}), 500
