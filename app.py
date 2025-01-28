@@ -8,7 +8,6 @@ import json
 from pyopenproject.openproject import OpenProject
 from pyopenproject.model.project import Project
 from pyopenproject.model.work_package import WorkPackage
-from pyopenproject.model.type import Type
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
@@ -123,8 +122,6 @@ def create_new_task(title: str, project_name: str):
     except Exception as e:
         raise Exception(f"Failed to fetch project. {e}")
     try:
-        task_type_obj = op.get_type_service().find(Type(dict(id=TASK_TYPES['task'])))
-
         task = op.get_work_package_service().create(
             WorkPackage(
                 dict(
