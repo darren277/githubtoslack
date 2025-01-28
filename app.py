@@ -176,32 +176,18 @@ def slack_openproject():
 def slack_llm():
     user_text = request.form.get("text", "")
     user_id = request.form.get("user_id", "")
+    response_url = request.form.get("response_url", "")
 
     prompt = user_text if user_text else "Test prompt from Slack"
 
-    import openai
-    client = openai.OpenAI(api_key=LLM_API_KEY)
+    task = process_llm.delay(prompt, response_url)
+    print('task', task)
 
-    model = 'gpt-4o-mini'
-
-    messages = [
-        {"role": "system", "content": "You are a helpful expert project management assistant."},
-        {"role": "user", "content": prompt},
-    ]
-
-    result = client.chat.completions.create(model=model, messages=messages)
-
-    print('result:', result)
-
-    if not result:
-        return jsonify({"response_type": "ephemeral", "text": "Error calling LLM endpoint"}), 500
-
-    response = result.choices[0].message.content
-
-    if not response:
-        return jsonify({"response_type": "ephemeral", "text": "No response from LLM"}), 500
-
-    return jsonify({"response_type": "ephemeral", "text": response}), 200
+    # 3) Return a quick 200 to Slack to avoid timeout
+    return jsonify({
+        "response_type": "ephemeral",
+        "text": "Working on your request... I'll be back with an answer shortly."
+    }), 200
 
 
 if __name__ == '__main__':
