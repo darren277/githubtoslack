@@ -124,6 +124,9 @@ def create_new_task(title: str, project_name: str):
 @app.route("/openproject", methods=["POST"])
 def open_project():
     form_data = request.form
+    json_data = request.json
+    print('JSON DATA')
+    print(json_data)
 
     print('FORM DATA:')
     print(form_data)
