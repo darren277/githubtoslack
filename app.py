@@ -5,6 +5,7 @@ from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWe
 
 from pyopenproject.openproject import OpenProject
 from pyopenproject.model.project import Project
+from pyopenproject.model.work_package import WorkPackage
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
@@ -104,16 +105,24 @@ PROJECT_IDS_DICT = {
 
 def create_new_task(title: str, project_name: str):
     project_id = PROJECT_IDS_DICT[project_name]
-    project = Project(dict(id=project_id))
+    project_search = Project(dict(id=project_id))
 
     try:
-        project = op.get_project_service().find(project)
+        project = op.get_project_service().find(project_search)
         if project is None:
             raise Exception(f"Project not found: {project_name}")
     except Exception as e:
         raise Exception(f"Failed to fetch project. {e}")
     try:
-        task = op.get_work_package_service().create(project=project, subject=title)
+        task = op.get_work_package_service().create(
+            WorkPackage(
+                dict(
+                    subject=title,
+                    project=project,
+                    description="This is a test task."
+                )
+            )
+        )
         if task is None:
             raise Exception(f"Failed to create task: {title}")
     except Exception as e:
