@@ -1,5 +1,8 @@
 from settings import MALFORMED_REQUEST, NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACHABLE, PORT
+from settings import GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_TOKEN
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
+
+import requests
 
 from flask import Flask, request, make_response, jsonify
 
@@ -72,6 +75,8 @@ def create_issue_on_github(title, body):
     if response.status_code not in [200, 201]:
         print("Error creating GitHub issue:", response.text)
         return False
+    else:
+        return True
 
 @app.route("/slack/githubissue", methods=["POST"])
 def slack_github_issue():
