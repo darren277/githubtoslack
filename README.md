@@ -31,7 +31,7 @@ https://api.slack.com/messaging/webhooks
 6. Install dependencies.
    1. `pip3 install -r requirements.txt`.
 
-7. Run `python3 main.py`.
+7. Run `python3 app.py`.
 
 
 # Notes
