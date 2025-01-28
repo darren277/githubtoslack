@@ -1,6 +1,11 @@
 from settings import MALFORMED_REQUEST, NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACHABLE, PORT
 from settings import GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_TOKEN
+from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
+
+from pyopenproject.openproject import OpenProject
+
+op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
 import requests
 
@@ -92,6 +97,22 @@ def slack_github_issue():
     return jsonify({"response_type": "ephemeral", "text": f"Your issue was created on GitHub: {issue_title}"}), 200
 
 
+def create_new_task(title: str, project_name: str):
+    try:
+        project = op.get_project_service().find_by(name=project_name)
+        if project is None:
+            raise Exception(f"Project not found: {project_name}")
+    except Exception as e:
+        raise Exception(f"Failed to fetch project. {e}")
+    try:
+        task = op.get_work_package_service().create(project=project, subject=title)
+        if task is None:
+            raise Exception(f"Failed to create task: {title}")
+    except Exception as e:
+        raise Exception(f"Failed to create task. {e}")
+    return task
+
+
 @app.route("/openproject", methods=["POST"])
 def open_project():
     form_data = request.form
@@ -105,6 +126,19 @@ def open_project():
     project_title = 'unknown'
 
     return jsonify({"response_type": "ephemeral", "text": f"Testing: {project_title}"}), 200
+
+@app.route("/slack/openproject", methods=["POST"])
+def slack_openproject():
+    user_text = request.form.get("text", "")
+    user_id = request.form.get("user_id", "")
+
+    task_title = user_text if user_text else "New Task from Slack"
+    project_title = "OpenProject"
+    result = create_new_task(task_title, project_title)
+    if not result:
+        return jsonify({"response_type": "ephemeral", "text": "Error creating project on OpenProject"}), 500
+
+    return jsonify({"response_type": "ephemeral", "text": f"Your task {task_title} was created on OpenProject: {project_title}"}), 200
 
 
 
