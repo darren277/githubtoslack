@@ -4,6 +4,8 @@ from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
 from settings import LLM_API_KEY
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
 
+from tasks import process_llm
+
 import json
 
 from pyopenproject.openproject import OpenProject
