@@ -1,7 +1,10 @@
 from settings import MALFORMED_REQUEST, NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACHABLE, PORT
 from settings import GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_TOKEN
 from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
+from settings import LLM_API_KEY
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
+
+from tasks import process_llm
 
 import json
 
@@ -170,6 +173,23 @@ def slack_openproject():
 
     return jsonify({"response_type": "ephemeral", "text": f"Your task {task_title} was created on OpenProject: {project_title}"}), 200
 
+
+@app.route("/slack/llm", methods=["POST"])
+def slack_llm():
+    user_text = request.form.get("text", "")
+    user_id = request.form.get("user_id", "")
+    response_url = request.form.get("response_url", "")
+
+    prompt = user_text if user_text else "Test prompt from Slack"
+
+    task = process_llm.delay(prompt, response_url)
+    print('task', task)
+
+    # 3) Return a quick 200 to Slack to avoid timeout
+    return jsonify({
+        "response_type": "ephemeral",
+        "text": "Working on your request... I'll be back with an answer shortly."
+    }), 200
 
 
 if __name__ == '__main__':
