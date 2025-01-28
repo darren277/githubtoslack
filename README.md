@@ -33,6 +33,13 @@ https://api.slack.com/messaging/webhooks
 
 7. Run `python3 app.py`.
 
+## Slack to GitHub
+
+Provision a personal access token from GitHub Developer Settings.
+
+Configure the slash command from https://api.slack.com/apps/<APP_ID>/slash-commands.
+
+`/githubissue Fix user login bug`.
 
 # Notes
 
