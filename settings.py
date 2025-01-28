@@ -14,3 +14,5 @@ PORT = int(os.environ.get("PORT"))
 NO_SUCH_ENDPOINT = {"error": 'No such endpoint'}
 SUCCESS = {"success": 'Slack message sent!'}
 SLACK_UNREACHABLE = {"error": 'Slack unreachable.'}
+MALFORMED_REQUEST = {"error": 'Malformed request.'}
+
