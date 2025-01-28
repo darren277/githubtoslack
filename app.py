@@ -18,6 +18,7 @@ def endpoints():
 
 endpoint_case_switch = {
     'open': lambda req: openIssueWebhook(issue=dict(issue=req.json['issue'])).post(),
+    'opened': lambda req: openIssueWebhook(issue=dict(issue=req.json['issue'])).post(),
     'closed': lambda req: closeIssueWebhook(issue=dict(issue=req.json['issue'])).post(),
     'reopen': lambda req: reopenIssueWebhook(issue=dict(issue=req.json['issue'])).post()
 }
@@ -45,6 +46,9 @@ def github_case_switch():
     elif result != NO_SUCH_ENDPOINT:
         result = SLACK_UNREACHABLE
         status_code = 500
+    elif status_code == 400:
+        print("Something else wrong with request:")
+        print(action)
 
     response = make_response(jsonify(result), status_code)
 
