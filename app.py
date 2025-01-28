@@ -1,6 +1,15 @@
 from settings import MALFORMED_REQUEST, NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACHABLE, PORT
 from settings import GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_TOKEN
+from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
+
+import json
+
+from pyopenproject.openproject import OpenProject
+from pyopenproject.model.project import Project
+from pyopenproject.model.work_package import WorkPackage
+
+op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
 import requests
 
@@ -90,6 +99,77 @@ def slack_github_issue():
         return jsonify({"response_type": "ephemeral", "text": "Error creating issue on GitHub"}), 500
 
     return jsonify({"response_type": "ephemeral", "text": f"Your issue was created on GitHub: {issue_title}"}), 200
+
+
+PROJECT_IDS_DICT = {
+    'Scrum project': 2
+}
+
+TASK_TYPES = {
+    'task': 1,
+    'milestone': 2
+}
+
+
+def create_new_task(title: str, project_name: str):
+    project_id = PROJECT_IDS_DICT[project_name]
+    project_search = Project(dict(id=project_id))
+
+    try:
+        project = op.get_project_service().find(project_search)
+        if project is None:
+            raise Exception(f"Project not found: {project_name}")
+    except Exception as e:
+        raise Exception(f"Failed to fetch project. {e}")
+    try:
+        task = op.get_work_package_service().create(
+            WorkPackage(
+                dict(
+                    subject=title,
+                    project=dict(href=f"/api/v3/projects/{project_id}", title=project_name),
+                    type=dict(href=f"/api/v3/types/{TASK_TYPES['task']}", title="task"),
+                    description="This is a test task."
+                )
+            )
+        )
+        if task is None:
+            raise Exception(f"Failed to create task: {title}")
+    except Exception as e:
+        raise Exception(f"Failed to create task. {e}")
+    return task
+
+
+@app.route("/openproject", methods=["POST"])
+def open_project():
+    json_data = request.json
+
+    action = json_data.get('action')
+    if not action:
+        return jsonify({"response_type": "ephemeral", "text": "No action provided"}), 400
+
+    if action == 'work_package:created':
+        work_package = json_data.get('work_package')
+        subject = work_package.get('subject')
+        print(f"New task created: {subject}")
+        # TODO: Do other stuff...
+
+    project_title = 'unknown'
+
+    return jsonify({"response_type": "ephemeral", "text": f"Testing: {project_title}"}), 200
+
+@app.route("/slack/openproject", methods=["POST"])
+def slack_openproject():
+    user_text = request.form.get("text", "")
+    user_id = request.form.get("user_id", "")
+
+    task_title = user_text if user_text else "New Task from Slack"
+    project_title = "Scrum project"
+    result = create_new_task(task_title, project_title)
+    if not result:
+        return jsonify({"response_type": "ephemeral", "text": "Error creating project on OpenProject"}), 500
+
+    return jsonify({"response_type": "ephemeral", "text": f"Your task {task_title} was created on OpenProject: {project_title}"}), 200
+
 
 
 if __name__ == '__main__':

@@ -19,3 +19,6 @@ MALFORMED_REQUEST = {"error": 'Malformed request.'}
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_REPO_OWNER = os.environ.get("GITHUB_REPO_OWNER")
 GITHUB_REPO_NAME = os.environ.get("GITHUB_REPO_NAME")
+
+OPENPROJECT_API_KEY = os.environ.get("OPENPROJECT_API_KEY")
+OPENPROJECT_URL = os.environ.get("OPENPROJECT_URL")
