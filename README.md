@@ -41,6 +41,22 @@ Configure the slash command from https://api.slack.com/apps/<APP_ID>/slash-comma
 
 `/githubissue Fix user login bug`.
 
+## LLM Endpoint
+
+Don't forget to install RabbitMQ:
+
+```shell
+sudo apt-get install rabbitmq-server
+sudo systemctl start rabbitmq-server
+sudo systemctl enable rabbitmq-server
+```
+
+To troubleshoot, check the logs:
+
+```shell
+celery -A tasks.celery worker --loglevel=info
+```
+
 # Notes
 
 Mine is deployed on an AWS EC2 instance so that GitHub has a remote URL to send to.
