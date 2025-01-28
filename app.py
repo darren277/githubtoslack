@@ -3,9 +3,12 @@ from settings import GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_TOKEN
 from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
 
+import json
+
 from pyopenproject.openproject import OpenProject
 from pyopenproject.model.project import Project
 from pyopenproject.model.work_package import WorkPackage
+from pyopenproject.model.type import Type
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
@@ -100,8 +103,14 @@ def slack_github_issue():
 
 
 PROJECT_IDS_DICT = {
-    'Scrum project': 2,
+    'Scrum project': 2
 }
+
+TASK_TYPES = {
+    'task': 1,
+    'milestone': 2
+}
+
 
 def create_new_task(title: str, project_name: str):
     project_id = PROJECT_IDS_DICT[project_name]
@@ -114,11 +123,14 @@ def create_new_task(title: str, project_name: str):
     except Exception as e:
         raise Exception(f"Failed to fetch project. {e}")
     try:
+        task_type_obj = op.get_type_service().find(Type(dict(id=TASK_TYPES['task'])))
+
         task = op.get_work_package_service().create(
             WorkPackage(
                 dict(
                     subject=title,
-                    project=project,
+                    project=dict(href=f"/api/v3/projects/{project_id}", title=project_name),
+                    type=dict(href=f"/api/v3/types/{TASK_TYPES['task']}", title="task"),
                     description="This is a test task."
                 )
             )
