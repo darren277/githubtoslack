@@ -16,3 +16,6 @@ SUCCESS = {"success": 'Slack message sent!'}
 SLACK_UNREACHABLE = {"error": 'Slack unreachable.'}
 MALFORMED_REQUEST = {"error": 'Malformed request.'}
 
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
+GITHUB_REPO_OWNER = os.environ.get("GITHUB_REPO_OWNER")
+GITHUB_REPO_NAME = os.environ.get("GITHUB_REPO_NAME")
