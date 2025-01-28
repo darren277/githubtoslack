@@ -1,4 +1,4 @@
-from settings import NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACHABLE, PORT
+from settings import MALFORMED_REQUEST, NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACHABLE, PORT
 from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
 
 from flask import Flask, request, make_response, jsonify
@@ -26,7 +26,19 @@ endpoint_case_switch = {
 @app.route('/github', methods=['POST'])
 def github_case_switch():
     result = NO_SUCH_ENDPOINT
-    status_code = endpoint_case_switch.get(request.json['action'], lambda r: 400)(request)
+    action = request.json.get('action')
+    if action:
+        status_code = endpoint_case_switch.get(action, lambda r: 400)(request)
+    else:
+        zen = request.json.get('zen')
+        if zen == 'Practicality beats purity.':
+            result = 'Testing Webhook'
+            status_code = 200
+        else:
+            print('action missing from payload')
+            print(request.json)
+            result = MALFORMED_REQUEST
+            status_code = 400
 
     if status_code == 200:
         result = SUCCESS
