@@ -55,3 +55,32 @@ Safely testing locally would almost require a tunneling service like ngrok.
 - Add more webhook types.
 
 
+## OpenProject API
+
+Consider validating attributes before sending request for a cleaner error experience.
+
+```json
+{
+   "_type":"Error",
+   "errorIdentifier":"urn:openproject-org:api:v3:errors:MultipleErrors",
+   "message":"Multiple field constraints have been violated.",
+   "_embedded":
+    {
+       "errors":
+        [
+           {
+              "_type":"Error",
+              "errorIdentifier":"urn:openproject-org:api:v3:errors:PropertyConstraintViolation",
+              "message":"Project can't be blank.",
+              "_embedded":{"details":{"attribute":"project"}}
+           },
+           {
+              "_type":"Error",
+              "errorIdentifier":"urn:openproject-org:api:v3:errors:PropertyConstraintViolation",
+              "message":"Type can't be blank.",
+              "_embedded":{"details":{"attribute":"type"}}
+           }
+        ]
+    }
+}
+```
