@@ -141,13 +141,17 @@ def create_new_task(title: str, project_name: str):
 
 @app.route("/openproject", methods=["POST"])
 def open_project():
-    form_data = request.form
     json_data = request.json
-    print('JSON DATA')
-    print(json_data)
 
-    print('FORM DATA:')
-    print(form_data)
+    action = json_data.get('action')
+    if not action:
+        return jsonify({"response_type": "ephemeral", "text": "No action provided"}), 400
+
+    if action == 'work_package:created':
+        work_package = json_data.get('work_package')
+        subject = work_package.get('subject')
+        print(f"New task created: {subject}")
+        # TODO: Do other stuff...
 
     project_title = 'unknown'
 
