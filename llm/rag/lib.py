@@ -1,4 +1,5 @@
 """"""
+import json
 from sentence_transformers import SentenceTransformer
 
 SURREALDB_NS = "gptstuff"
@@ -50,7 +51,10 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
 
     async def insert(self, chunk_text: str, metadata: dict):
         embedding = self.transformer.encode(chunk_text)
-        await self.client.query(f"INSERT INTO {self.table_name} (embedding, chunk_text, metadata) VALUES ({embedding}, '{chunk_text}', {metadata})")
+
+        embedding_string = json.dumps(embedding.tolist())
+
+        await self.client.query(f"INSERT INTO {self.table_name} (embedding, chunk_text, metadata) VALUES ({embedding_string}, '{chunk_text}', {metadata})")
 
     async def query(self, vector_query: str):
         return await self.client.query(vector_query)
@@ -58,8 +62,10 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
     def build_vector_query(self, text: str):
         embedding = self.transformer.encode(text)
 
+        embedding_string = json.dumps(embedding.tolist())
+
         v_q = f'''
-        LET $query_vector = {embedding};
+        LET $query_vector = {embedding_string};
 
         SELECT id,
                chunk_text,
