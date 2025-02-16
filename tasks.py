@@ -40,7 +40,7 @@ def my_llm_call(prompt: str):
         function_name = tool_call.function.name
         arguments = json.loads(tool_call.function.arguments)
 
-        if function_name == 'search_wiki_tool':
+        if function_name == 'search_wiki':
             tool_result = search_wiki(**arguments)
         else:
             raise Exception(f'Unknown function name: {function_name}')
