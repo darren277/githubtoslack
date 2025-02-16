@@ -95,9 +95,14 @@ async def migrate_test_data():
     await rag.insert("This is a test about birds and fish.", {"file": "test7.txt", "tags": ["test", "birds", "fish"]})
     await rag.insert("This is a test about fish and cats.", {"file": "test8.txt", "tags": ["test", "fish", "cats"]})
 
-async def test_search():
-    results = await rag.search("cats")
-    print(results)
+async def test_search(query: str):
+    results = await rag.search(query)
+    try:
+        result = results[1].get('result')
+        for r in result:
+            print(r)
+    except:
+        print("Something went wrong", results)
 
 
 import asyncio
@@ -109,9 +114,12 @@ async def main():
 
     await migrate_test_data()
 
-    await test_search()
+    q = "cats"
+    print(f'results for search of: "{q}"')
+    await test_search(q)
+
+    q = "dogs"
+    print(f'results for search of: "{q}"')
+    await test_search(q)
 
 asyncio.run(main())
-
-
-
