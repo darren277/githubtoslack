@@ -38,7 +38,7 @@ async def migrate_wiki_data_DO_NOT_USE(wiki_page_id: int):
 
 async def migrate_wiki_data():
     # Must be manually extracted via web UI...
-    toc, sections = fetch_toc_html('Scrum project.htm')
+    toc, sections = fetch_toc_html('ScrumProject.htm')
 
     for name, content in sections.items():
         await rag.insert(content, {"file": name, "tags": ["wiki"]})
