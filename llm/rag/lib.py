@@ -32,7 +32,7 @@ class RAG:
         self.transformer = SentenceTransformer(transformer)
 
     async def connect(self):
-        self.client = surrealdb.Surreal(f"http://{self.db_config.host}:{self.db_config.port}/rpc")
+        self.client = surrealdb.Surreal(f"ws://{self.db_config.host}:{self.db_config.port}/rpc")
         await self.client.connect()
         await self.client.signin({"user": self.db_config.user, "password": self.db_config.password})
         await self.client.use(self.db_config.namespace, self.db_config.database)
