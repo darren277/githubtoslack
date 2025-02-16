@@ -31,10 +31,10 @@ class RAG:
         self.client = None
         self.transformer = SentenceTransformer(transformer)
 
-    def connect(self):
-        self.client = surrealdb.Surreal(f"http://{self.db_config.host}:{self.db_config.port}/rpc")
-        self.client.signin({"user": self.db_config.user, "password": self.db_config.password})
-        self.client.use(self.db_config.namespace, self.db_config.database)
+    async def connect(self):
+        self.client = await surrealdb.Surreal(f"http://{self.db_config.host}:{self.db_config.port}/rpc")
+        await self.client.signin({"user": self.db_config.user, "password": self.db_config.password})
+        await self.client.use(self.db_config.namespace, self.db_config.database)
 
     def migrate_table_schema(self):
         table_schema = f'''
@@ -47,12 +47,12 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
 
         self.client.query(table_schema)
 
-    def insert(self, chunk_text: str, metadata: dict):
+    async def insert(self, chunk_text: str, metadata: dict):
         embedding = self.transformer.encode(chunk_text)
-        self.client.query(f"INSERT INTO {self.table_name} (embedding, chunk_text, metadata) VALUES ({embedding}, '{chunk_text}', {metadata})")
+        await self.client.query(f"INSERT INTO {self.table_name} (embedding, chunk_text, metadata) VALUES ({embedding}, '{chunk_text}', {metadata})")
 
-    def query(self, vector_query: str):
-        return self.client.query(vector_query)
+    async def query(self, vector_query: str):
+        return await self.client.query(vector_query)
 
     def build_vector_query(self, text: str):
         embedding = self.transformer.encode(text)
@@ -70,33 +70,38 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
 
         return v_q
 
-    def search(self, text: str):
+    async def search(self, text: str):
         v_q = self.build_vector_query(text)
-        return self.query(v_q)
+        return await self.query(v_q)
 
 
 rag = RAG("wiki", DBConfig(SURREALDB_NS, SURREALDB_DB, SURREALDB_USER, SURREALDB_PASS, SURREALDB_HOST, SURREALDB_PORT))
-rag.connect()
 
-# rag.migrate_table_schema()
+async def migrate_test_data():
+    await rag.insert("This is a test about cats.", {"file": "test1.txt", "tags": ["test", "cats"]})
+    await rag.insert("This is a test about dogs", {"file": "test2.txt", "tags": ["test", "dogs"]})
+    await rag.insert("This is a test about birds.", {"file": "test3.txt", "tags": ["test", "birds"]})
+    await rag.insert("This is a test about fish.", {"file": "test4.txt", "tags": ["test", "fish"]})
 
-def migrate_test_data():
-    rag.insert("This is a test about cats.", {"file": "test1.txt", "tags": ["test", "cats"]})
-    rag.insert("This is a test about dogs", {"file": "test2.txt", "tags": ["test", "dogs"]})
-    rag.insert("This is a test about birds.", {"file": "test3.txt", "tags": ["test", "birds"]})
-    rag.insert("This is a test about fish.", {"file": "test4.txt", "tags": ["test", "fish"]})
+    await rag.insert("This is a test about cats and dogs.", {"file": "test5.txt", "tags": ["test", "cats", "dogs"]})
+    await rag.insert("This is a test about dogs and birds.", {"file": "test6.txt", "tags": ["test", "dogs", "birds"]})
+    await rag.insert("This is a test about birds and fish.", {"file": "test7.txt", "tags": ["test", "birds", "fish"]})
+    await rag.insert("This is a test about fish and cats.", {"file": "test8.txt", "tags": ["test", "fish", "cats"]})
 
-    rag.insert("This is a test about cats and dogs.", {"file": "test5.txt", "tags": ["test", "cats", "dogs"]})
-    rag.insert("This is a test about dogs and birds.", {"file": "test6.txt", "tags": ["test", "dogs", "birds"]})
-    rag.insert("This is a test about birds and fish.", {"file": "test7.txt", "tags": ["test", "birds", "fish"]})
-    rag.insert("This is a test about fish and cats.", {"file": "test8.txt", "tags": ["test", "fish", "cats"]})
-
-def test_search():
-    results = rag.search("cats")
+async def test_search():
+    results = await rag.search("cats")
     print(results)
 
 
-migrate_test_data()
-test_search()
+import asyncio
+
+async def main():
+    await rag.connect()
+
+    # await rag.migrate_table_schema()
+
+    await migrate_test_data()
+
+    await test_search()
 
 
