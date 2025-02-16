@@ -36,13 +36,18 @@ def my_llm_call(prompt: str):
     if not tool_calls:
         return top_choice.message.content
 
+    loop = asyncio.get_event_loop()
+
     for tool_call in tool_calls:
         print('tool_call:', tool_call)
         function_name = tool_call.function.name
         arguments = json.loads(tool_call.function.arguments)
 
         if function_name == 'search_wiki':
-            tool_result = asyncio.get_event_loop().run_until_complete(search_wiki(**arguments))
+            if loop.is_running():
+                tool_result = asyncio.ensure_future(search_wiki(**arguments))
+            else:
+                tool_result = loop.run_until_complete(search_wiki(**arguments))
         else:
             raise Exception(f'Unknown function name: {function_name}')
 
