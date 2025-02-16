@@ -27,6 +27,7 @@ def my_llm_call(prompt: str):
         return jsonify({"response_type": "ephemeral", "text": "Error calling LLM endpoint"}), 500
 
     #response = result.choices[0].message.content
+    choices = result.choices
     top_choice = choices[0]
     tool_calls = top_choice.message.tool_calls
 
