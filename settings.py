@@ -24,3 +24,14 @@ OPENPROJECT_API_KEY = os.environ.get("OPENPROJECT_API_KEY")
 OPENPROJECT_URL = os.environ.get("OPENPROJECT_URL")
 
 LLM_API_KEY = os.environ.get("LLM_API_KEY")
+
+SURREALDB_NS = "gptstuff"
+SURREALDB_DB = "op"
+
+SURREALDB_USER = "root"
+SURREALDB_PASS = "root"
+
+SURREALDB_HOST = "localhost"
+SURREALDB_PORT = 8011
+
+OP_PORT = 8130
