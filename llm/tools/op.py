@@ -7,19 +7,18 @@ async def search(rag, query: str):
 
     return results
 
-def search_wiki(project_name: str, query: str):
+async def search_wiki(project_name: str, query: str):
     # Placeholder implementation
     ###logger.debug(f"Searching {project_name} Wiki for {query}...")
     print((f"Searching {project_name} Wiki for {query}..."))
 
-    import asyncio
     from llm.rag.lib import RAG, DBConfig
     from settings import SURREALDB_NS, SURREALDB_DB, SURREALDB_USER, SURREALDB_PASS, SURREALDB_HOST, SURREALDB_PORT
     from settings import OPENPROJECT_API_KEY, OP_PORT
 
     rag = RAG("wiki", DBConfig(SURREALDB_NS, SURREALDB_DB, SURREALDB_USER, SURREALDB_PASS, SURREALDB_HOST, SURREALDB_PORT))
 
-    results = asyncio.run(search(rag, query))
+    results = await search(rag, query)
 
     try:
         result = results[1].get('result')
