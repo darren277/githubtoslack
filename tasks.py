@@ -4,7 +4,7 @@ import json
 import requests
 import openai
 from settings import LLM_API_KEY
-from llm.tools.op import search_wiki_tool
+from llm.tools.op import search_wiki_tool, search_wiki
 
 celery = Celery("app", broker="amqp://guest@localhost//")
 
