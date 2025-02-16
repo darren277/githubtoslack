@@ -33,6 +33,10 @@ https://api.slack.com/messaging/webhooks
 
 7. Run `python3 app.py`.
 
+## Docker
+
+TBD...
+
 ## Slack to GitHub
 
 Provision a personal access token from GitHub Developer Settings.
