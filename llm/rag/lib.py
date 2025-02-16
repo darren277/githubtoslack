@@ -104,4 +104,7 @@ async def main():
 
     await test_search()
 
+asyncio.run(main())
+
+
 
