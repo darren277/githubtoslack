@@ -25,21 +25,23 @@ class WikiPage:
         self.title = title
 
 
-async def migrate_wiki_data(project_id: int):
+async def migrate_wiki_data_DO_NOT_USE(wiki_page_id: int):
     from pyopenproject.openproject import OpenProject
     from pyopenproject.model.project import Project
 
     op = OpenProject(url=f"http://localhost:{OP_PORT}", api_key=OPENPROJECT_API_KEY)
-
     wiki_pages_service = op.get_wiki_page_service()
-
-    print(wiki_pages_service.__dir__())
-
-    found = wiki_pages_service.find(
-        WikiPage(project_id, 'TOC')
-    )
+    found = wiki_pages_service.find(WikiPage(wiki_page_id, 'TOC'))
 
     print(found)
+
+
+async def migrate_wiki_data():
+    # Must be manually extracted via web UI...
+    toc, sections = fetch_toc_html('Scrum project.htm')
+
+    for name, content in sections.items():
+        await rag.insert(content, {"file": name, "tags": ["wiki"]})
 
 
 async def test_search(query: str):
@@ -72,6 +74,18 @@ async def main():
 async def migrate_wiki():
     await rag.connect()
 
-    await migrate_wiki_data(2)
+    await migrate_wiki_data()
+
+    q = "cats"
+    print(f'results for search of: "{q}"')
+    await test_search(q)
+
+    q = "dogs"
+    print(f'results for search of: "{q}"')
+    await test_search(q)
+
+    q = "Scrum"
+    print(f'results for search of: "{q}"')
+    await test_search(q)
 
 asyncio.run(migrate_wiki())
