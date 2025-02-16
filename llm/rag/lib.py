@@ -1,4 +1,6 @@
 """"""
+from sentence_transformers import SentenceTransformer
+
 SURREALDB_NS = "gptstuff"
 SURREALDB_DB = "op"
 
