@@ -33,9 +33,9 @@ class RAG:
 
     async def connect(self):
         self.client = surrealdb.Surreal(f"http://{self.db_config.host}:{self.db_config.port}/rpc")
+        await self.client.connect()
         await self.client.signin({"user": self.db_config.user, "password": self.db_config.password})
         await self.client.use(self.db_config.namespace, self.db_config.database)
-        await self.client.connect()
 
     def migrate_table_schema(self):
         table_schema = f'''
