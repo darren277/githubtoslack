@@ -44,10 +44,7 @@ def my_llm_call(prompt: str):
         arguments = json.loads(tool_call.function.arguments)
 
         if function_name == 'search_wiki':
-            if loop.is_running():
-                tool_result = asyncio.ensure_future(search_wiki(**arguments))
-            else:
-                tool_result = loop.run_until_complete(search_wiki(**arguments))
+            tool_result = asyncio.run_coroutine_threadsafe(search_wiki(**arguments), loop).result()
         else:
             raise Exception(f'Unknown function name: {function_name}')
 
