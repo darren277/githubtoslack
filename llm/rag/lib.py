@@ -13,6 +13,7 @@ SURREALDB_PORT = 8011
 
 OP_PORT = 8130
 
+from settings import OPENPROJECT_API_KEY
 
 import surrealdb
 
@@ -109,7 +110,7 @@ async def migrate_wiki_data(project_id: int):
     from pyopenproject.openproject import OpenProject
     from pyopenproject.model.project import Project
 
-    op = OpenProject(url=f"http://localhost:{OP_PORT}", api_key=os.environ.get('OP_API_KEY'))
+    op = OpenProject(url=f"http://localhost:{OP_PORT}", api_key=OPENPROJECT_API_KEY)
 
     wiki_pages_service = op.get_wiki_page_service()
 
