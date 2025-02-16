@@ -9,7 +9,8 @@ async def search(rag, query: str):
 
 def search_wiki(project_name: str, query: str):
     # Placeholder implementation
-    logger.debug(f"Searching {project_name} Wiki for {query}...")
+    ###logger.debug(f"Searching {project_name} Wiki for {query}...")
+    print((f"Searching {project_name} Wiki for {query}..."))
 
     import asyncio
     from llm.rag.lib import RAG, DBConfig
