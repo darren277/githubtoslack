@@ -42,7 +42,7 @@ def my_llm_call(prompt: str):
         arguments = json.loads(tool_call.function.arguments)
 
         if function_name == 'search_wiki':
-            tool_result = asyncio.run(search_wiki(**arguments))
+            tool_result = asyncio.get_event_loop().run_until_complete(search_wiki(**arguments))
         else:
             raise Exception(f'Unknown function name: {function_name}')
 
