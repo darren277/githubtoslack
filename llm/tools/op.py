@@ -26,10 +26,12 @@ def search_wiki(project_name: str, query: str):
         print('results from search_wiki()')
         for r in result:
             print(r)
+        top_result = result[0].get('chunk_text', 'Something went wrong or maybe no results.')
     except:
         print("Something went wrong", results)
+        top_result = "Something went wrong."
 
-    return f"Search results for {query} in {project_name} Wiki"
+    return top_result
 
 
 
