@@ -3,7 +3,7 @@ import asyncio
 from llm.rag.lib import RAG, DBConfig
 from settings import SURREALDB_NS, SURREALDB_DB, SURREALDB_USER, SURREALDB_PASS, SURREALDB_HOST, SURREALDB_PORT
 from settings import OPENPROJECT_API_KEY, OP_PORT
-
+from llm.rag.utils import fetch_toc_html
 
 rag = RAG("wiki", DBConfig(SURREALDB_NS, SURREALDB_DB, SURREALDB_USER, SURREALDB_PASS, SURREALDB_HOST, SURREALDB_PORT))
 
