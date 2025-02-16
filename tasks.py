@@ -53,7 +53,12 @@ def my_llm_call(prompt: str):
 
         messages.append({"role": "function", "name": function_name, "content": json.dumps(tool_result)})
 
+    print("ABOUT TO CALL SECOND TIME")
     result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool], tool_choice='auto')
+
+    print('result:', result)
+
+    print("ABOUT TO RETURN")
 
     return result.choices[0].message.content
 
