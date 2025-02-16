@@ -3,6 +3,7 @@ from celery import Celery
 import requests
 import openai
 from settings import LLM_API_KEY
+from llm.tools.op import search_wiki_tool
 
 celery = Celery("app", broker="amqp://guest@localhost//")
 
@@ -18,19 +19,35 @@ def my_llm_call(prompt: str):
         {"role": "user", "content": prompt},
     ]
 
-    result = client.chat.completions.create(model=model, messages=messages)
+    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool])
 
     print('result:', result)
 
     if not result:
         return jsonify({"response_type": "ephemeral", "text": "Error calling LLM endpoint"}), 500
 
-    response = result.choices[0].message.content
+    #response = result.choices[0].message.content
+    top_choice = choices[0]
+    tool_calls = top_choice.message.tool_calls
 
-    if not response:
-        return "No response from LLM"
+    if not tool_calls:
+        return top_choice.message.content
 
-    return response
+    for tool_call in tool_calls:
+        print('tool_call:', tool_call)
+        function_name = tool_call.function.name
+        arguments = json.loads(tool_call.function.arguments)
+
+        if function_name == 'search_wiki_tool':
+            tool_result = search_wiki(**arguments)
+        else:
+            raise Exception(f'Unknown function name: {function_name}')
+
+        messages.append({"role": "function", "name": function_name, "content": json.dumps(tool_result)})
+
+    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool], tool_choice='auto')
+
+    return result.choices[0].message.content
 
 
 @celery.task
