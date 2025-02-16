@@ -103,8 +103,8 @@ Consider validating attributes before sending request for a cleaner error experi
 
 ## SurrealDB
 
-To run: `docker run --rm --pull always -p $(EXT_PORT):8000 surrealdb/surrealdb:latest start`.
+To run: `docker run --rm --pull always -p $(EXT_PORT):$(INT_PORT) surrealdb/surrealdb:latest start`.
 
-I will be using `EXT_PORT=8011` for the external port, but you can change this to whatever you like.
+I will be using `EXT_PORT=8011` and `INT_PORT=8011` for both the external and internal port, but you can change this to whatever you like.
 
-To run (hardcoded port): `docker run --rm --pull always -p 8011:8000 surrealdb/surrealdb:latest start`.
+To run (hardcoded port): `docker run --rm --pull always -p 8011:8011 surrealdb/surrealdb:latest start --bind 0.0.0.0:8011 --user root --pass root`.
