@@ -63,7 +63,7 @@ def process_llm(prompt, response_url):
 
     # 2) Use the Slack response_url to POST the final answer
     payload = {
-        "response_type": "ephemeral",  # or "in_channel"
+        "response_type": "in_channel",  # or "ephemeral"
         "text": result_text
     }
     requests.post(response_url, json=payload)
