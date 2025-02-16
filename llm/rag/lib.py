@@ -11,6 +11,9 @@ SURREALDB_PASS = "root"
 SURREALDB_HOST = "localhost"
 SURREALDB_PORT = 8011
 
+OP_PORT = 8130
+
+
 import surrealdb
 
 
@@ -95,6 +98,30 @@ async def migrate_test_data():
     await rag.insert("This is a test about birds and fish.", {"file": "test7.txt", "tags": ["test", "birds", "fish"]})
     await rag.insert("This is a test about fish and cats.", {"file": "test8.txt", "tags": ["test", "fish", "cats"]})
 
+
+class WikiPage:
+    def __init__(self, id: int, title: str):
+        self.id = id
+        self.title = title
+
+
+async def migrate_wiki_data(project_id: int):
+    from pyopenproject.openproject import OpenProject
+    from pyopenproject.model.project import Project
+
+    op = OpenProject(url=f"http://localhost:{OP_PORT}", api_key=os.environ.get('OP_API_KEY'))
+
+    wiki_pages_service = op.get_wiki_page_service()
+
+    print(wiki_pages_service.__dir__())
+
+    found = wiki_pages_service.find(
+        WikiPage(project_id, 'TOC')
+    )
+
+    print(found)
+
+
 async def test_search(query: str):
     results = await rag.search(query)
     try:
@@ -122,4 +149,11 @@ async def main():
     print(f'results for search of: "{q}"')
     await test_search(q)
 
-asyncio.run(main())
+#asyncio.run(main())
+
+async def migrate_wiki():
+    await rag.connect()
+
+    await migrate_wiki_data(2)
+
+asyncio.run(migrate_wiki())
