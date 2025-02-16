@@ -1,5 +1,6 @@
 """"""
 from celery import Celery
+import json
 import requests
 import openai
 from settings import LLM_API_KEY
