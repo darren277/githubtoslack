@@ -63,6 +63,13 @@ Mine is deployed on an AWS EC2 instance so that GitHub has a remote URL to send 
 
 Safely testing locally would almost require a tunneling service like ngrok.
 
+## LLM Use Cases
+
+### Structured Outputs
+
+I encountered an interesting scenario today. I was originally intending to use `pydantic` to define a structured model for OpenProject `WorkPackage` objects (i.e. Tasks, etc) that would be passed directly into the OpenAI chat completions API call. What occured instead, however, was I discovered a certain complication due to having multiple fundamentally different kinds of tool calls available, making structured output definitions trickier.
+
+So what happened instead, was that I wound up creating a third tool call option, wherein I simply use a `pydantic` builtin method to convert the input to the desired structured output. It is experimental for the time being, so we'll see how it works.
 
 # TODO
 
