@@ -5,6 +5,7 @@ import requests
 import openai
 from settings import LLM_API_KEY
 from llm.tools.op import search_wiki_tool, search_wiki
+from llm.tools.op import create_work_package_tool, create_work_package
 
 celery = Celery("app", broker="amqp://guest@localhost//")
 
@@ -21,7 +22,7 @@ def my_llm_call(prompt: str):
         {"role": "user", "content": prompt},
     ]
 
-    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool])
+    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool], tool_choice='auto')
 
     print('result:', result)
 
@@ -44,17 +45,18 @@ def my_llm_call(prompt: str):
         arguments = json.loads(tool_call.function.arguments)
 
         if function_name == 'search_wiki':
-            if loop.is_running():
-                tool_result = asyncio.ensure_future(search_wiki(**arguments))
-            else:
-                tool_result = loop.run_until_complete(search_wiki(**arguments))
+            if loop.is_running(): tool_result = asyncio.ensure_future(search_wiki(**arguments))
+            else: tool_result = loop.run_until_complete(search_wiki(**arguments))
+        elif function_name == 'create_work_package':
+            if loop.is_running(): tool_result = asyncio.ensure_future(create_work_package(**arguments))
+            else: tool_result = loop.run_until_complete(create_work_package(**arguments))
         else:
             raise Exception(f'Unknown function name: {function_name}')
 
         messages.append({"role": "function", "name": function_name, "content": json.dumps(tool_result)})
 
     print("ABOUT TO CALL SECOND TIME")
-    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool], tool_choice='auto')
+    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool], tool_choice='auto')
 
     print('result:', result)
 

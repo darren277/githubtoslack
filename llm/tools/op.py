@@ -1,5 +1,7 @@
 """"""
 
+""" WIKI SEARCH TOOL """
+
 async def search(rag, query: str):
     await rag.connect()
 
@@ -55,3 +57,85 @@ search_wiki_tool = {
         }
     }
 }
+
+
+""" WORK PACKAGE CREATION TOOL """
+from settings import USERS_LOOKUP_TABLE, PRIORITIES
+from llm.outputs.op import create_new_task
+
+def create_work_package(title: str, description: str = None, start_date: str = None, due_date: str = None, estimated_time: str = None,
+                        assignee: str = None, responsible: str = None, priority: str = None):
+    kwargs = dict()
+
+    description = dict(format='markdown', raw=description, html=f'<p class="op-uc-p">{description}</p>') if description else dict(format='markdown', raw='Description TBD.', html='<p class="op-uc-p">Description TBD.</p>')
+    kwargs['description'] = description
+
+    if start_date: kwargs['startDate'] = start_date # '2025-01-22',
+    if due_date: kwargs['dueDate'] = due_date # '2025-01-24',
+    if estimated_time: kwargs['estimatedTime'] = estimated_time # 'PT1H' (1 hour),
+    if assignee: kwargs['assignee'] = USERS_LOOKUP_TABLE.get(assignee)
+    if responsible: kwargs['responsible'] = USERS_LOOKUP_TABLE.get(responsible)
+
+    # TODO: Get this working properly. Defaults to High or Normal while ther are other options available.
+    if priority: kwargs['priority'] = High if PRIORITIES.get(priority) == 9 else Normal
+
+    try:
+        create_new_task(
+            title,
+            'Scrum project',
+            **kwargs,
+            #type=Task
+            # TODO: category=...,
+        )
+    except Exception as e:
+        return f"Error creating work package: {e}"
+
+    return f"Work package created successfully: {title}"
+
+
+create_work_package_tool = {
+    "type": "function",
+    "function": {
+        "name": "create_work_package",
+        "description": "Creates a new work package in the project",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "The title of the work package"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the work package"
+                },
+                "start_date": {
+                    "type": "string",
+                    "description": "The start date of the work package"
+                },
+                "due_date": {
+                    "type": "string",
+                    "description": "The due date of the work package"
+                },
+                "estimated_time": {
+                    "type": "string",
+                    "description": "The estimated time to complete the work package"
+                },
+                "assignee": {
+                    "type": "string",
+                    "description": "The assignee of the work package"
+                },
+                "responsible": {
+                    "type": "string",
+                    "description": "The responsible person for the work package"
+                },
+                "priority": {
+                    "type": "string",
+                    "description": "The priority of the work package"
+                }
+            },
+            "required": ["title"]
+        }
+    }
+}
+
