@@ -49,3 +49,30 @@ PRIORITIES = {
     'High': 9,
     # etc...
 }
+
+
+class Priority:
+    def __init__(self, id: int, name: str, position: int, color: str, is_default: bool = False, is_active: bool = True):
+        self.id = id
+        self.name = name
+        self.position = position
+        self.color = color
+        self.is_default = is_default
+        self.is_active = is_active
+
+    #def __str__(self): return f"Priority: {self.name} (ID: {self.id})"
+    def __str__(self): return f"/api/v3/priorities/{self.id}"
+
+    def d(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "position": self.position,
+            "color": self.color,
+            "isDefault": self.is_default,
+            "isActive": self.is_active
+        }
+
+Normal = Priority(8, 'Normal', 2, '#74C0FC', is_default=True)
+Low = Priority(7, 'Low', 1, '#C5F6FA')
+High = Priority(9, 'High', 3, '#F59F00')
