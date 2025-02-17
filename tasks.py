@@ -32,6 +32,8 @@ def my_llm_call(prompt: str):
     if not result:
         return jsonify({"response_type": "ephemeral", "text": "Error calling LLM endpoint"}), 500
 
+    n = 0
+
     #response = result.choices[0].message.content
     choices = result.choices
     top_choice = choices[0]
@@ -40,36 +42,47 @@ def my_llm_call(prompt: str):
     if not tool_calls:
         return top_choice.message.content
 
-    loop = asyncio.get_event_loop()
+    active_tool_calls = True
 
-    for tool_call in tool_calls:
-        print('tool_call:', tool_call)
-        function_name = tool_call.function.name
-        arguments = json.loads(tool_call.function.arguments)
+    while active_tool_calls:
+        loop = asyncio.get_event_loop()
 
-        if function_name == 'search_wiki':
-            if loop.is_running(): tool_result = asyncio.ensure_future(search_wiki(**arguments))
-            else: tool_result = loop.run_until_complete(search_wiki(**arguments))
-            content = json.dumps(tool_result)
-        elif function_name == 'create_work_package':
-            tool_result = create_work_package(**arguments)
-            content = json.dumps(tool_result)
-        elif function_name == 'provide_work_package_output':
-            try:
-                structured_data = WorkPackageOutput.parse_obj(arguments)
-                print("Parsed structured data:", structured_data)
-                content = "Successfully parsed output. Now saving to OpenProject...\n"
-                tool_result = create_work_package(**structured_data)
-                content += json.dumps(tool_result)
-            except ValidationError as ve:
-                raise Exception(f"LLM output validation failed: {ve}")
-        else:
-            raise Exception(f'Unknown function name: {function_name}')
+        for tool_call in tool_calls:
+            print('tool_call:', tool_call)
+            function_name = tool_call.function.name
+            arguments = json.loads(tool_call.function.arguments)
 
-        messages.append({"role": "function", "name": function_name, "content": content})
+            if function_name == 'search_wiki':
+                if loop.is_running(): tool_result = asyncio.ensure_future(search_wiki(**arguments))
+                else: tool_result = loop.run_until_complete(search_wiki(**arguments))
+                content = json.dumps(tool_result)
+            elif function_name == 'create_work_package':
+                tool_result = create_work_package(**arguments)
+                content = json.dumps(tool_result)
+            elif function_name == 'provide_work_package_output':
+                try:
+                    structured_data = WorkPackageOutput.parse_obj(arguments)
+                    print("Parsed structured data:", structured_data)
+                    content = "Successfully parsed output. Now saving to OpenProject...\n"
+                    tool_result = create_work_package(**structured_data)
+                    content += json.dumps(tool_result)
+                except ValidationError as ve:
+                    raise Exception(f"LLM output validation failed: {ve}")
+            else:
+                raise Exception(f'Unknown function name: {function_name}')
 
-    print("ABOUT TO CALL SECOND TIME")
-    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool, provide_work_package_output_tool], tool_choice='auto')
+            messages.append({"role": "function", "name": function_name, "content": content})
+
+        print(f"ABOUT TO CALL {n}th TIME")
+        result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool, provide_work_package_output_tool], tool_choice='auto')
+
+        n += 1
+        choices = result.choices
+        top_choice = choices[0]
+        tool_calls = top_choice.message.tool_calls
+
+        if not tool_calls:
+            active_tool_calls = False
 
     print('result:', result)
 
