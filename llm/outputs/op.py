@@ -1,7 +1,7 @@
 """"""
 from settings import PROJECT_IDS_DICT
 from pydantic import BaseModel
-from pyopenproject.models import WorkPackage, Project
+from pyopenproject.model import WorkPackage, Project
 
 class WorkPackageOutput(BaseModel):
     title: str
