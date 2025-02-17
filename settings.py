@@ -35,3 +35,17 @@ SURREALDB_HOST = "localhost"
 SURREALDB_PORT = 8011
 
 OP_PORT = 8130
+
+PROJECT_IDS_DICT = {
+    'Scrum project': 2
+}
+
+USERS_LOOKUP_TABLE = {
+    'Darren MacKenzie': 5
+}
+
+PRIORITIES = {
+    'Normal': 8,
+    'High': 9,
+    # etc...
+}
