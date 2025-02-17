@@ -52,16 +52,14 @@ def my_llm_call(prompt: str):
             else: tool_result = loop.run_until_complete(search_wiki(**arguments))
             content = json.dumps(tool_result)
         elif function_name == 'create_work_package':
-            if loop.is_running(): tool_result = asyncio.ensure_future(create_work_package(**arguments))
-            else: tool_result = loop.run_until_complete(create_work_package(**arguments))
+            tool_result = create_work_package(**arguments)
             content = json.dumps(tool_result)
         elif function_name == 'provide_work_package_output':
             try:
                 structured_data = WorkPackageOutput.parse_obj(arguments)
                 print("Parsed structured data:", structured_data)
                 content = "Successfully parsed output. Now saving to OpenProject...\n"
-                if loop.is_running(): tool_result = asyncio.ensure_future(create_work_package(**structured_data))
-                else: tool_result = loop.run_until_complete(create_work_package(**structured_data))
+                tool_result = create_work_package(**structured_data)
                 content += json.dumps(tool_result)
             except ValidationError as ve:
                 raise Exception(f"LLM output validation failed: {ve}")
