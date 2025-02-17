@@ -6,6 +6,7 @@ This is also my first attempt at using an abstract factory pattern for easier ex
 
 This is a work in progress.
 
+**Please note:** LLM tool calls are very experimental at the moment.
 
 # Usage
 
@@ -70,6 +71,18 @@ Safely testing locally would almost require a tunneling service like ngrok.
 I encountered an interesting scenario today. I was originally intending to use `pydantic` to define a structured model for OpenProject `WorkPackage` objects (i.e. Tasks, etc) that would be passed directly into the OpenAI chat completions API call. What occured instead, however, was I discovered a certain complication due to having multiple fundamentally different kinds of tool calls available, making structured output definitions trickier.
 
 So what happened instead, was that I wound up creating a third tool call option, wherein I simply use a `pydantic` builtin method to convert the input to the desired structured output. It is experimental for the time being, so we'll see how it works.
+
+### Multiple Tools
+
+It turns out that incorporating numerous fundamentally different kinds of tool calls can make things a bit messy.
+
+For example, I found that the LLM was using tools that I really did not see as all that relevant for the given query.
+
+### Example Task Creation
+
+As of right now, it unfortunately needs a pretty precise definition of some attributes in order to behave consistently. This is something I will experiment with as I go.
+
+Slack slash command example: `/llm create the following task: Title: "Fix User Sign-Up Issue". Start date: 2025-02-20. Due date: 2025-02-28. Estimated time: 5 hours.`.
 
 # TODO
 
