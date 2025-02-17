@@ -25,7 +25,7 @@ def my_llm_call(prompt: str):
         {"role": "user", "content": prompt},
     ]
 
-    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool, provide_work_package_output], tool_choice='auto')
+    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool, provide_work_package_output_tool], tool_choice='auto')
 
     print('result:', result)
 
@@ -71,7 +71,7 @@ def my_llm_call(prompt: str):
         messages.append({"role": "function", "name": function_name, "content": content})
 
     print("ABOUT TO CALL SECOND TIME")
-    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool, provide_work_package_output], tool_choice='auto')
+    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool, provide_work_package_output_tool], tool_choice='auto')
 
     print('result:', result)
 
