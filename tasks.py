@@ -6,7 +6,8 @@ import openai
 from settings import LLM_API_KEY
 from llm.tools.op import search_wiki_tool, search_wiki
 from llm.tools.op import create_work_package_tool, create_work_package
-from llm.tools.op import provide_work_package_output_tool, WorkPackageOutput
+from llm.tools.op import provide_work_package_output_tool
+from llm.outputs.op import WorkPackageOutput
 from pydantic import ValidationError
 
 celery = Celery("app", broker="amqp://guest@localhost//")
