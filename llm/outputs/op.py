@@ -1,11 +1,27 @@
 """"""
 from settings import PROJECT_IDS_DICT
 from pydantic import BaseModel
+from openproject.models import WorkPackage, Project
 
-class WorkPackage(BaseModel):
-    ...
+class WorkPackageOutput(BaseModel):
+    title: str
+    description: str
+    priority: int
+    start_date: str
+    due_date: str
+    estimate_time: str
 
-class Task(WorkPackage):
+    def _fmt(self):
+        return dict(
+            title=self.title,
+            description=self.description,
+            start_date=self.start_date,
+            due_date=self.due_date,
+            estimated_time=self.estimate_time,
+            priority=self.priority
+        )
+
+class Task(WorkPackageOutput):
     ...
 
 
