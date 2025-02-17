@@ -139,3 +139,31 @@ create_work_package_tool = {
     }
 }
 
+
+""" WORK PACKAGE OUTPUT TOOL """
+provide_work_package_output_tool = {
+    "type": "function",
+    "function": {
+        "name": "provide_work_package_output",
+        "description": "Returns structured work package output in JSON format according to the Pydantic schema.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "title": {"type": "string", "description": "The final title of the work package"},
+                "description": {"type": "string", "description": "The final description"},
+                "priority": {"type": "integer", "description": "The final numeric priority"},
+                "start_date": {"type": "string", "description": "The final start date"},
+                "due_date": {"type": "string", "description": "The final due date"},
+                "estimate_time": {"type": "string", "description": "The final estimated time in ISO8601 duration format or hours"},
+            },
+            "required": [
+                "title",
+                "description",
+                "priority",
+                "start_date",
+                "due_date",
+                "estimate_time"
+            ]
+        }
+    }
+}
