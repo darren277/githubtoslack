@@ -71,8 +71,8 @@ def my_llm_call(endpoint: str, prompt: str):
             arguments = json.loads(tool_call.function.arguments)
 
             if function_name == 'search_wiki':
-                if loop.is_running(): tool_result = asyncio.ensure_future(search_wiki(**arguments))
-                else: tool_result = loop.run_until_complete(search_wiki(**arguments))
+                if loop.is_running(): tool_result = asyncio.ensure_future(search_wiki(**arguments, llm_client=client))
+                else: tool_result = loop.run_until_complete(search_wiki(**arguments, llm_client=client))
                 content = json.dumps(tool_result)
             elif function_name == 'create_work_package':
                 tool_result = create_work_package(**arguments)

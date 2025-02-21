@@ -3,14 +3,14 @@ from settings import High, Normal
 
 """ WIKI SEARCH TOOL """
 
-async def search(rag, query: str):
+async def search(rag, query: str, use_remote: bool = False):
     await rag.connect()
 
-    results = await rag.search(query)
+    results = await rag.search(query, use_remote=use_remote)
 
     return results
 
-async def search_wiki(project_name: str, query: str):
+async def search_wiki(project_name: str, query: str, llm_client=None):
     # Placeholder implementation
     ###logger.debug(f"Searching {project_name} Wiki for {query}...")
     print((f"Searching {project_name} Wiki for {query}..."))
@@ -21,7 +21,10 @@ async def search_wiki(project_name: str, query: str):
 
     rag = RAG("wiki", DBConfig(SURREALDB_NS, SURREALDB_DB, SURREALDB_USER, SURREALDB_PASS, SURREALDB_HOST, SURREALDB_PORT))
 
-    results = await search(rag, query)
+    if llm_client:
+        rag.llm_client = llm_client
+
+    results = await search(rag, query, use_remote=True)
 
     try:
         result = results[1].get('result')
