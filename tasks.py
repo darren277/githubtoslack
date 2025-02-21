@@ -28,7 +28,7 @@ ENDPOINTS = dict(
 )
 
 
-def my_llm_call(endpoint: str, prompt: str):
+def my_llm_call(endpoint: str, prompt: str) -> str:
     import openai
     import asyncio
 
@@ -52,7 +52,7 @@ def my_llm_call(endpoint: str, prompt: str):
     print('result:', result)
 
     if not result:
-        return jsonify({"response_type": "ephemeral", "text": "Error calling LLM endpoint"}), 500
+        return "Error calling LLM endpoint"
 
     n = 0
 
@@ -68,7 +68,7 @@ def my_llm_call(endpoint: str, prompt: str):
 
     while active_tool_calls:
         if n > MAX_TOOL_CALLS:
-            return jsonify({"response_type": "ephemeral", "text": "Error calling LLM endpoint (too many iterations for some reason)."}), 500
+            return "Error calling LLM endpoint (too many iterations for some reason)."
         loop = asyncio.get_event_loop()
 
         for tool_call in tool_calls:
