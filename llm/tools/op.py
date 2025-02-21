@@ -32,6 +32,8 @@ async def search_wiki(project_name: str, query: str, llm_client=None):
         for r in result:
             print(r)
         top_result = result[0].get('chunk_text', 'Something went wrong or maybe no results.')
+    except IndexError:
+        top_result = "No results found. Warning: Wiki may be empty (Hint: check SurrealDB)."
     except Exception as e:
         print("Something went wrong", results)
         print(f"Error: {e}")
