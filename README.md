@@ -128,3 +128,15 @@ To run: `docker run --rm --pull always -p $(EXT_PORT):$(INT_PORT) surrealdb/surr
 I will be using `EXT_PORT=8011` and `INT_PORT=8011` for both the external and internal port, but you can change this to whatever you like.
 
 To run (hardcoded port): `docker run --rm --pull always -p 8011:8011 surrealdb/surrealdb:latest start --bind 0.0.0.0:8011 --user root --pass root`.
+
+### Migrations
+
+To migrate the Wiki data (for vector-based RAG search):
+
+Step 1: Export Wiki as an HTML file from OpenProject.
+
+Step 2: Run the migration script (HTML filename is currently hardcoded. Will convert to a CLI argument later).
+
+```shell
+python3 migrations.py
+```
