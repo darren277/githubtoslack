@@ -12,7 +12,19 @@ from pydantic import ValidationError
 
 celery = Celery("app", broker="amqp://guest@localhost//")
 
-def my_llm_call(prompt: str):
+ENDPOINTS = dict(
+    llm_create_task=dict(
+        prompt="",
+        tools=[create_work_package_tool, provide_work_package_output_tool]
+    ),
+    llm_wiki=dict(
+        prompt="",
+        tools=[search_wiki_tool]
+    )
+)
+
+
+def my_llm_call(endpoint: str, prompt: str):
     import openai
     import asyncio
 
@@ -21,11 +33,17 @@ def my_llm_call(prompt: str):
     model = 'gpt-4o-mini'
 
     messages = [
-        {"role": "system", "content": "You are a helpful expert project management assistant."},
+        #{"role": "system", "content": "You are a helpful expert project management assistant."},
+        {"role": "system", "content": ENDPOINTS[endpoint]['prompt']},
         {"role": "user", "content": prompt},
     ]
 
-    result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool, provide_work_package_output_tool], tool_choice='auto')
+    result = client.chat.completions.create(
+        model=model,
+        messages=messages,
+        tools=ENDPOINTS[endpoint]['tools'],
+        tool_choice='auto'
+    )
 
     print('result:', result)
 
@@ -74,7 +92,12 @@ def my_llm_call(prompt: str):
             messages.append({"role": "function", "name": function_name, "content": content})
 
         print(f"ABOUT TO CALL {n}th TIME")
-        result = client.chat.completions.create(model=model, messages=messages, tools=[search_wiki_tool, create_work_package_tool, provide_work_package_output_tool], tool_choice='auto')
+        result = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            tools=ENDPOINTS[endpoint]['tools'],
+            tool_choice='auto'
+        )
 
         n += 1
         choices = result.choices
@@ -92,10 +115,10 @@ def my_llm_call(prompt: str):
 
 
 @celery.task
-def process_llm(prompt, response_url):
+def process_llm(endpoint: str, prompt: str, response_url: str):
     # 1) Call LLM (this might take a while)
     # (Placeholder code. Adjust to your own LLM library.)
-    result_text = my_llm_call(prompt)
+    result_text = my_llm_call(endpoint, prompt)
 
     # 2) Use the Slack response_url to POST the final answer
     payload = {
