@@ -10,6 +10,10 @@ from llm.tools.op import provide_work_package_output_tool
 from llm.outputs.op import WorkPackageOutput
 from pydantic import ValidationError
 
+
+MAX_TOOL_CALLS = 5
+
+
 celery = Celery("app", broker="amqp://guest@localhost//")
 
 ENDPOINTS = dict(
@@ -63,6 +67,8 @@ def my_llm_call(endpoint: str, prompt: str):
     active_tool_calls = True
 
     while active_tool_calls:
+        if n > MAX_TOOL_CALLS:
+            return jsonify({"response_type": "ephemeral", "text": "Error calling LLM endpoint (too many iterations for some reason)."}), 500
         loop = asyncio.get_event_loop()
 
         for tool_call in tool_calls:
