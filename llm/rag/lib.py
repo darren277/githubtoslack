@@ -57,11 +57,15 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
             response = self.llm_client.embeddings.create(input=text, model="text-embedding-3-small")
             embedding = response.data[0].embedding
             print("DATA TYPE OF EMBEDDING:", type(embedding), type(embedding[0]), embedding[0])
+            # Remember that the issue is the dimensionality...
+            ## "The two vectors must be of the same dimension."
+            print("EMBEDDING DIMENSIONALITY:", len(embedding))
             embedding_string = json.dumps(embedding)
         else:
             embedding = self.transformer.encode(text)
             e = embedding.tolist()
             print("DATA TYPE OF EMBEDDING:", type(e), type(e[0]), e[0])
+            print("EMBEDDING DIMENSIONALITY:", len(e))
             embedding_string = json.dumps(e)
 
         v_q = f'''
