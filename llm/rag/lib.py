@@ -23,6 +23,8 @@ class RAG:
         self.client = None
         self.transformer = SentenceTransformer(transformer)
 
+        self.llm_client = None
+
     async def connect(self):
         self.client = surrealdb.Surreal(f"ws://{self.db_config.host}:{self.db_config.port}/rpc")
         await self.client.connect()
@@ -50,10 +52,21 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
     async def query(self, vector_query: str):
         return await self.client.query(vector_query)
 
-    def build_vector_query(self, text: str):
-        embedding = self.transformer.encode(text)
-
-        embedding_string = json.dumps(embedding.tolist())
+    def build_vector_query(self, text: str, use_remote: bool = False):
+        if use_remote:
+            response = self.llm_client.embeddings.create(input=text, model="text-embedding-3-small")
+            embedding = response.data[0].embedding
+            print("DATA TYPE OF EMBEDDING:", type(embedding), type(embedding[0]), embedding[0])
+            # Remember that the issue is the dimensionality...
+            ## "The two vectors must be of the same dimension."
+            print("EMBEDDING DIMENSIONALITY:", len(embedding))
+            embedding_string = json.dumps(embedding)
+        else:
+            embedding = self.transformer.encode(text)
+            e = embedding.tolist()
+            print("DATA TYPE OF EMBEDDING:", type(e), type(e[0]), e[0])
+            print("EMBEDDING DIMENSIONALITY:", len(e))
+            embedding_string = json.dumps(e)
 
         v_q = f'''
         LET $query_vector = {embedding_string};
@@ -68,7 +81,7 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
 
         return v_q
 
-    async def search(self, text: str):
-        v_q = self.build_vector_query(text)
+    async def search(self, text: str, use_remote: bool = False):
+        v_q = self.build_vector_query(text, use_remote=use_remote)
         return await self.query(v_q)
 

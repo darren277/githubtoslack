@@ -174,15 +174,15 @@ def slack_openproject():
     return jsonify({"response_type": "ephemeral", "text": f"Your task {task_title} was created on OpenProject: {project_title}"}), 200
 
 
-@app.route("/slack/llm", methods=["POST"])
-def slack_llm():
+@app.route("/slack/llm_create_task", methods=["POST"])
+def slack_llm_create_task():
     user_text = request.form.get("text", "")
     user_id = request.form.get("user_id", "")
     response_url = request.form.get("response_url", "")
 
     prompt = user_text if user_text else "Test prompt from Slack"
 
-    task = process_llm.delay(prompt, response_url)
+    task = process_llm.delay('llm_create_task', prompt, response_url)
     print('task', task)
 
     # 3) Return a quick 200 to Slack to avoid timeout
@@ -190,6 +190,25 @@ def slack_llm():
         "response_type": "ephemeral",
         "text": "Working on your request... I'll be back with an answer shortly."
     }), 200
+
+
+@app.route('/slack/llm_wiki', methods=['POST'])
+def slack_llm_wiki():
+    user_text = request.form.get("text", "")
+    user_id = request.form.get("user_id", "")
+    response_url = request.form.get("response_url", "")
+
+    prompt = user_text if user_text else "Test prompt from Slack"
+
+    task = process_llm.delay('llm_wiki', prompt, response_url)
+    print('task', task)
+
+    # 3) Return a quick 200 to Slack to avoid timeout
+    return jsonify({
+        "response_type": "ephemeral",
+        "text": "Working on your request... I'll be back with an answer shortly."
+    }), 200
+
 
 
 if __name__ == '__main__':
