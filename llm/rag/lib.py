@@ -56,10 +56,13 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
         if use_remote:
             response = self.llm_client.embeddings.create(input=text, model="text-embedding-3-small")
             embedding = response.data[0].embedding
+            print("DATA TYPE OF EMBEDDING:", type(embedding))
             embedding_string = json.dumps(embedding)
         else:
             embedding = self.transformer.encode(text)
-            embedding_string = json.dumps(embedding.tolist())
+            e = embedding.tolist()
+            print("DATA TYPE OF EMBEDDING:", type(e))
+            embedding_string = json.dumps(e)
 
         v_q = f'''
         LET $query_vector = {embedding_string};
