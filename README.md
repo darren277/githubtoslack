@@ -140,3 +140,5 @@ Step 2: Run the migration script (HTML filename is currently hardcoded. Will con
 ```shell
 python3 migrations.py
 ```
+
+Note that you have to use the same embedding model for both the migration and the search queries.
