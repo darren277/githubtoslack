@@ -29,8 +29,9 @@ async def search_wiki(project_name: str, query: str):
         for r in result:
             print(r)
         top_result = result[0].get('chunk_text', 'Something went wrong or maybe no results.')
-    except:
+    except Exception as e:
         print("Something went wrong", results)
+        print(f"Error: {e}")
         top_result = "Something went wrong."
 
     return top_result
