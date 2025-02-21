@@ -56,7 +56,6 @@ DEFINE FIELD {self.table_name}.metadata TYPE object;           -- Extra metadata
         if use_remote:
             response = self.llm_client.embeddings.create(input=text, model="text-embedding-3-small")
             embedding = response.data[0].embedding
-            print(f'Embedding response: {embedding}')
             embedding_string = json.dumps(embedding)
         else:
             embedding = self.transformer.encode(text)
