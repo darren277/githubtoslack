@@ -14,11 +14,11 @@ celery = Celery("app", broker="amqp://guest@localhost//")
 
 ENDPOINTS = dict(
     llm_create_task=dict(
-        prompt="",
+        prompt="You are a helpful expert project management assistant. Please create a new task in OpenProject. If the task is particularly unstructured, try to fill in the details as best as you can and use the 'Provide Work Package Output' tool to provide the structured data if necessary.",
         tools=[create_work_package_tool, provide_work_package_output_tool]
     ),
     llm_wiki=dict(
-        prompt="",
+        prompt="You are a helpful expert project management assistant. Please search the OpenProject wiki for information on the topic.",
         tools=[search_wiki_tool]
     )
 )
