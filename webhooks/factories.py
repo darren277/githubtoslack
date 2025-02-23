@@ -2,7 +2,7 @@
 
 import abc
 
-from webhooks.interfaces import IssueWebhook, Webhook
+from webhooks.interfaces import IssueWebhook, Webhook, SGWebhook
 
 
 class WebhookFactory(metaclass=abc.ABCMeta):
