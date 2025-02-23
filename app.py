@@ -2,7 +2,7 @@ from settings import MALFORMED_REQUEST, NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACH
 from settings import GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_TOKEN
 from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
 from settings import LLM_API_KEY
-from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook
+from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook, sendgridIssueWebhook
 
 from tasks import process_llm
 

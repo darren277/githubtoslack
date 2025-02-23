@@ -1,6 +1,6 @@
 """"""
 from settings import GITHUB_REPO
-from webhooks.factories import issueWebhookFactory
+from webhooks.factories import issueWebhookFactory, sgWebhookFactory
 from webhooks.utils import SlackCommentTemplate
 
 openIssueWebhook = issueWebhookFactory.createWebhook('open',
