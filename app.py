@@ -39,14 +39,14 @@ endpoint_case_switch = {
 }
 
 sendgrid_endpoint_case_switch = {
-    'dropped': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
-    'bounce': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
-    'click': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
-    'open': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
-    'deferred': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
-    'delivered': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
-    'spamreport': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
-    'unsubscribed': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post()
+    'dropped': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'bounce': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'click': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'open': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'deferred': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'delivered': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'spamreport': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'unsubscribed': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post()
 }
 
 
