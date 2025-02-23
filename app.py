@@ -38,6 +38,18 @@ endpoint_case_switch = {
     'reopen': lambda req: reopenIssueWebhook(issue=dict(issue=req.json['issue'])).post()
 }
 
+sendgrid_endpoint_case_switch = {
+    'dropped': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'bounce': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'click': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'open': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'deferred': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'delivered': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'spamreport': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post(),
+    'unsubscribed': lambda req: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event['reason']).post()
+}
+
+
 
 @app.route('/github', methods=['POST'])
 def github_case_switch():
@@ -208,6 +220,20 @@ def slack_llm_wiki():
         "response_type": "ephemeral",
         "text": "Working on your request... I'll be back with an answer shortly."
     }), 200
+
+
+@app.route('/sendgrid-events', methods=['POST'])
+def sendgrid_event_listener():
+    events = request.get_json()
+    for event in events:
+        event_string = event.get('event', '')
+        print(f"Event: {event.get('event')} for {event.get('email')}")
+        if event.get('event') == 'dropped':
+            print(f"Reason: {event.get('reason')}")
+        if event_string:
+            status_code = sendgrid_endpoint_case_switch.get(event_string, lambda r: 400)(event)
+            print("SLACK SEND STATUS CODE:", status_code)
+    return jsonify({"status": "ok"}), 200
 
 
 
