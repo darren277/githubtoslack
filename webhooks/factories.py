@@ -2,7 +2,7 @@
 
 import abc
 
-from webhooks.interfaces import IssueWebhook, Webhook
+from webhooks.interfaces import IssueWebhook, Webhook, SGWebhook
 
 
 class WebhookFactory(metaclass=abc.ABCMeta):
@@ -37,3 +37,17 @@ issueWebhookFactory = IssueWebhookFactory()
 
 
 
+class SendGridWebhookFactory(WebhookFactory):
+    def createWebhook(self, customization) -> 'SGWebhook':
+        return customization()
+
+    @staticmethod
+    def getWebhookFactory(factoryType) -> 'WebhookFactory':
+        return factoryType()
+
+
+class UniversalSGWebhookFactory(SendGridWebhookFactory):
+    def createWebhook(self, name: str, **attributes) -> 'SGWebhook':
+        return type(name+'SGWebhook', (SGWebhook,), attributes)
+
+sgWebhookFactory = UniversalSGWebhookFactory()
