@@ -37,3 +37,19 @@ issueWebhookFactory = IssueWebhookFactory()
 
 
 
+class SendGridWebhookFactory(WebhookFactory):
+    def createWebhook(self, customization) -> 'Webhook':
+        return customization()
+
+    @staticmethod
+    def getWebhookFactory(factoryType) -> 'WebhookFactory':
+        return factoryType()
+
+
+class UniversalSGWebhookFactory(SendGridWebhookFactory):
+    def createWebhook(self, name: str, **attributes) -> 'Webhook':
+        return type(name+'SGWebhook', (Webhook,), attributes)
+
+sgWebhookFactory = UniversalSGWebhookFactory()
+
+

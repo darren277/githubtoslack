@@ -58,3 +58,18 @@ reopenIssueWebhook = issueWebhookFactory.createWebhook('reopen',
         }
     ])
 )
+
+
+universal_sg_slack_template = SlackCommentTemplate(*[
+    {
+        "type": "section",
+        "text": {
+            "type": "mrkdwn",
+            "text": "[{{ event_type }}]({{ email }}) has occured with reason: {{ reason }}."
+        }
+    }
+])
+
+sendgridIssueWebhook = sgWebhookFactory.createWebhook('open',
+    slack_comment_template=universal_sg_slack_template
+)
