@@ -12,6 +12,7 @@ class Webhook:
     issue: dict
 
     def __init__(self, **attributes):
+        print(f"Initializing Webhook with the following attributes: {attributes}")
         for key, val in attributes.items():
             setattr(self, key, val)
 
@@ -43,6 +44,7 @@ class SGWebhook(Webhook):
     # slack_relay_endpoint: str = '/sg'
 
     def post(self):
+        print(f"Posting to {self.slack_relay_endpoint} with the following data: Event type ({self.event_type}), Email ({self.email}), Reason ({self.reason})")
         d = self.slack_comment_template.format(
             event_type=self.event_type,
             email=self.email,
