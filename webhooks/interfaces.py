@@ -56,6 +56,8 @@ class SGWebhook(Webhook):
             unique_tag=unique_tag
         )
 
+        print("Formatted blocks:", json.dumps(formatted_blocks, indent=2))
+
         data = json.dumps({"blocks": formatted_blocks})
 
         print("DEBUG LOG:", data)

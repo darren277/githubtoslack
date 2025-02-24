@@ -3,12 +3,15 @@ from flask import render_template_string
 
 
 def format_block(block, **data):
-    if block['type'] == 'section':
-        block['text'] = format_block(block['text'], **data)
-        return block
-    elif block['type'] == 'mrkdwn':
-        block['text'] = render_template_string(block['text'], **data)
-        return block
+    # Avoid mutating the original block
+    new_block = block.copy()
+
+    if new_block['type'] == 'section':
+        new_block['text'] = format_block(new_block['text'], **data)
+        return new_block
+    elif new_block['type'] == 'mrkdwn':
+        new_block['text'] = render_template_string(new_block['text'], **data)
+        return new_block
 
 
 
