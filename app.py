@@ -38,12 +38,16 @@ endpoint_case_switch = {
     'reopen': lambda req: reopenIssueWebhook(issue=dict(issue=req.json['issue'])).post()
 }
 
-sendgrid_endpoint_case_switch = {
-    event_type: lambda event, et=event_type: create_sendgrid_issue_webhook(
-        et,
+def handle_sendgrid_event(event, event_type):
+    webhook = create_sendgrid_issue_webhook(
+        event_type,
         event['email'],
         event.get('reason', 'no reason')
-    ).post()
+    )
+    return webhook.post()
+
+sendgrid_endpoint_case_switch = {
+    event_type: lambda event, et=event_type: handle_sendgrid_event(event, et)
     for event_type in [
         'dropped', 'bounce', 'click', 'open', 'deferred',
         'delivered', 'spamreport', 'unsubscribed'
