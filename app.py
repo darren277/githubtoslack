@@ -244,13 +244,16 @@ def slack_llm_wiki():
 def sendgrid_event_listener():
     events = request.get_json()
     for event in events:
-        event_string = event.get('event', '')
         print(f"Event: {event.get('event')} for {event.get('email')}")
-        if event.get('event') == 'dropped':
-            print(f"Reason: {event.get('reason')}")
-        if event_string:
-            status_code = sendgrid_endpoint_case_switch.get(event_string, lambda r: 400)(event)
-            print("SLACK SEND STATUS CODE:", status_code)
+        if event.get('event') == 'dropped': print(f"Reason: {event.get('reason')}")
+
+        handler = sendgrid_endpoint_case_switch.get(event_type)
+
+        if handler:
+            status_code = handler(event)
+            print(f"SLACK SEND STATUS CODE [{g.unique_event_id}]: {status_code}")
+        else:
+            print(f"No handler for event type: {event_type}")
     return jsonify({"status": "ok"}), 200
 
 
