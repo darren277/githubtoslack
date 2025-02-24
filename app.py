@@ -39,11 +39,11 @@ endpoint_case_switch = {
 }
 
 sendgrid_endpoint_case_switch = {
-    event_type: (lambda event, et=event_type: create_sendgrid_issue_webhook(
+    event_type: lambda event, et=event_type: create_sendgrid_issue_webhook(
         et,
         event['email'],
         event.get('reason', 'no reason')
-    ).post())
+    ).post()
     for event_type in [
         'dropped', 'bounce', 'click', 'open', 'deferred',
         'delivered', 'spamreport', 'unsubscribed'
