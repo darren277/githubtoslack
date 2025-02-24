@@ -55,6 +55,9 @@ class SGWebhook(Webhook):
             reason=self.reason,
             unique_tag=unique_tag
         )
+
+        self.slack_comment_template = None
+
         req = requests.post(self.slack_relay_endpoint, headers={'Content-Type': 'application/json'}, data=json.dumps(dict(blocks=d)))
         return req.status_code
 
