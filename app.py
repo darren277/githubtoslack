@@ -8,6 +8,8 @@ from tasks import process_llm
 
 import json
 
+import gc
+
 from pyopenproject.openproject import OpenProject
 from pyopenproject.model.project import Project
 from pyopenproject.model.work_package import WorkPackage
@@ -44,7 +46,12 @@ def handle_sendgrid_event(event, event_type):
         event['email'],
         event.get('reason', 'no reason')
     )
-    return webhook.post()
+    status = webhook.post()
+
+    del webhook
+    gc.collect()
+
+    return status
 
 sendgrid_endpoint_case_switch = {
     event_type: lambda event, et=event_type: handle_sendgrid_event(event, et)
