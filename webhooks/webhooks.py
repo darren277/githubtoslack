@@ -71,9 +71,10 @@ universal_sg_slack_template = SlackCommentTemplate(*[
 ])
 
 def create_sendgrid_issue_webhook(event_type, email, reason):
-    return sgWebhookFactory.createWebhook(
+    webhook_cls = sgWebhookFactory.createWebhook(
         event_type,
         slack_comment_template=universal_sg_slack_template,
         email=email,
         reason=reason
     )
+    return webhook_cls()
