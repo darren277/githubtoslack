@@ -244,6 +244,8 @@ def slack_llm_wiki():
 def sendgrid_event_listener():
     events = request.get_json()
     for event in events:
+        event_type = event.get('event')
+
         print(f"Event: {event.get('event')} for {event.get('email')}")
         if event.get('event') == 'dropped': print(f"Reason: {event.get('reason')}")
 
