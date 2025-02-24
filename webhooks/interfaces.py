@@ -58,6 +58,10 @@ class SGWebhook(Webhook):
 
         self.slack_comment_template = None
 
-        req = requests.post(self.slack_relay_endpoint, headers={'Content-Type': 'application/json'}, data=json.dumps(dict(blocks=d)))
+        data = json.dumps(dict(blocks=d))
+
+        print("DEBUG LOG:", data)
+
+        req = requests.post(self.slack_relay_endpoint, headers={'Content-Type': 'application/json'}, data=data)
         return req.status_code
 
