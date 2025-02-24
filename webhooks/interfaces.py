@@ -1,4 +1,6 @@
 """"""
+import uuid
+
 import json
 
 import requests
@@ -45,10 +47,13 @@ class SGWebhook(Webhook):
 
     def post(self):
         print(f"Posting to {self.slack_relay_endpoint} with the following data: Event type ({self.event_type}), Email ({self.email}), Reason ({self.reason})")
+        unique_tag = uuid.uuid4()
+        print(f"Posting with unique ID: {unique_tag}")
         d = self.slack_comment_template.format(
             event_type=self.event_type,
             email=self.email,
-            reason=self.reason
+            reason=self.reason,
+            unique_tag=unique_tag
         )
         req = requests.post(self.slack_relay_endpoint, headers={'Content-Type': 'application/json'}, data=json.dumps(dict(blocks=d)))
         return req.status_code

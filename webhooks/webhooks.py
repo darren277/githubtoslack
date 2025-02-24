@@ -65,7 +65,7 @@ universal_sg_slack_template = SlackCommentTemplate(*[
         "type": "section",
         "text": {
             "type": "mrkdwn",
-            "text": "[{{ event_type }}]({{ email }}) has occured with reason: {{ reason }}."
+            "text": "[{{ event_type }}: {{unique_tag}}]({{ email }}) has occured with reason: {{ reason }}."
         }
     }
 ])
