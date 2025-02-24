@@ -56,9 +56,17 @@ class SGWebhook(Webhook):
             unique_tag=unique_tag
         )
 
-        self.slack_comment_template = None
+        import copy
 
-        data = json.dumps(dict(blocks=d))
+        template_copy = copy.deepcopy(self.slack_comment_template)
+        template_copy[0]["text"]["text"] = template_copy[0]["text"]["text"].format(
+            event_type=self.event_type,
+            email=self.email,
+            reason=self.reason,
+            unique_tag=unique_tag
+        )
+
+        data = json.dumps({"blocks": template_copy})
 
         print("DEBUG LOG:", data)
 
