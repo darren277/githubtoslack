@@ -18,7 +18,7 @@ op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
 import requests
 
-from flask import Flask, request, make_response, jsonify
+from flask import Flask, request, make_response, jsonify, g
 
 app = Flask(__name__)
 
@@ -41,10 +41,14 @@ endpoint_case_switch = {
 }
 
 def handle_sendgrid_event(event, event_type):
+    unique_id = str(uuid.uuid4())
+    g.unique_event_id = unique_id
+
     webhook = create_sendgrid_issue_webhook(
         event_type,
         event['email'],
-        event.get('reason', 'no reason')
+        event.get('reason', 'no reason'),
+        unique_id
     )
     status = webhook.post()
 
