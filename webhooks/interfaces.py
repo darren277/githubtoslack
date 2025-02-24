@@ -49,24 +49,14 @@ class SGWebhook(Webhook):
         print(f"Posting to {self.slack_relay_endpoint} with the following data: Event type ({self.event_type}), Email ({self.email}), Reason ({self.reason})")
         unique_tag = uuid.uuid4()
         print(f"Posting with unique ID: {unique_tag}")
-        d = self.slack_comment_template.format(
+        formatted_blocks = self.slack_comment_template.format(
             event_type=self.event_type,
             email=self.email,
             reason=self.reason,
             unique_tag=unique_tag
         )
 
-        import copy
-
-        template_copy = copy.deepcopy(self.slack_comment_template)
-        template_copy[0]["text"]["text"] = template_copy[0]["text"]["text"].format(
-            event_type=self.event_type,
-            email=self.email,
-            reason=self.reason,
-            unique_tag=unique_tag
-        )
-
-        data = json.dumps({"blocks": template_copy})
+        data = json.dumps({"blocks": formatted_blocks})
 
         print("DEBUG LOG:", data)
 

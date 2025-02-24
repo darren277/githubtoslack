@@ -14,9 +14,10 @@ def format_block(block, **data):
 
 class SlackCommentTemplate:
     def __init__(self, *blocks: dict):
-        self.blocks = blocks
+        self.blocks = list(blocks)
 
     def format(self, **data):
-        return [format_block(block, **data) for block in self.blocks]
+        # Copy each block to prevent overwriting
+        return [format_block(block.copy(), **data) for block in self.blocks]
 
 
