@@ -39,14 +39,15 @@ endpoint_case_switch = {
 }
 
 sendgrid_endpoint_case_switch = {
-    'dropped': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'bounce': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'click': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'open': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'deferred': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'delivered': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'spamreport': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'unsubscribed': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post()
+    event_type: (lambda event, et=event_type: sendgridIssueWebhook(
+        event_type=et,
+        email=event['email'],
+        reason=event.get('reason', 'no reason')
+    ).post())
+    for event_type in [
+        'dropped', 'bounce', 'click', 'open', 'deferred',
+        'delivered', 'spamreport', 'unsubscribed'
+    ]
 }
 
 
