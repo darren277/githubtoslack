@@ -10,6 +10,8 @@ import json
 
 import gc
 
+import uuid
+
 from pyopenproject.openproject import OpenProject
 from pyopenproject.model.project import Project
 from pyopenproject.model.work_package import WorkPackage
