@@ -2,11 +2,15 @@ from settings import MALFORMED_REQUEST, NO_SUCH_ENDPOINT, SUCCESS, SLACK_UNREACH
 from settings import GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_TOKEN
 from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
 from settings import LLM_API_KEY
-from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook, sendgridIssueWebhook
+from webhooks.webhooks import openIssueWebhook, closeIssueWebhook, reopenIssueWebhook, create_sendgrid_issue_webhook
 
 from tasks import process_llm
 
 import json
+
+import gc
+
+import uuid
 
 from pyopenproject.openproject import OpenProject
 from pyopenproject.model.project import Project
@@ -16,7 +20,7 @@ op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
 import requests
 
-from flask import Flask, request, make_response, jsonify
+from flask import Flask, request, make_response, jsonify, g
 
 app = Flask(__name__)
 
@@ -38,15 +42,29 @@ endpoint_case_switch = {
     'reopen': lambda req: reopenIssueWebhook(issue=dict(issue=req.json['issue'])).post()
 }
 
+def handle_sendgrid_event(event, event_type):
+    unique_id = str(uuid.uuid4())
+    g.unique_event_id = unique_id
+
+    webhook = create_sendgrid_issue_webhook(
+        event_type,
+        event['email'],
+        event.get('reason', 'no reason'),
+        unique_id
+    )
+    status = webhook.post()
+
+    del webhook
+    gc.collect()
+
+    return status
+
 sendgrid_endpoint_case_switch = {
-    'dropped': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'bounce': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'click': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'open': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'deferred': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'delivered': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'spamreport': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post(),
-    'unsubscribed': lambda event: sendgridIssueWebhook(event_type=event['event'], email=event['email'], reason=event.get('reason', 'no reason')).post()
+    event_type: lambda event, et=event_type: handle_sendgrid_event(event, et)
+    for event_type in [
+        'dropped', 'bounce', 'click', 'open', 'deferred',
+        'delivered', 'spamreport', 'unsubscribed'
+    ]
 }
 
 
@@ -226,13 +244,18 @@ def slack_llm_wiki():
 def sendgrid_event_listener():
     events = request.get_json()
     for event in events:
-        event_string = event.get('event', '')
+        event_type = event.get('event')
+
         print(f"Event: {event.get('event')} for {event.get('email')}")
-        if event.get('event') == 'dropped':
-            print(f"Reason: {event.get('reason')}")
-        if event_string:
-            status_code = sendgrid_endpoint_case_switch.get(event_string, lambda r: 400)(event)
-            print("SLACK SEND STATUS CODE:", status_code)
+        if event.get('event') == 'dropped': print(f"Reason: {event.get('reason')}")
+
+        handler = sendgrid_endpoint_case_switch.get(event_type)
+
+        if handler:
+            status_code = handler(event)
+            print(f"SLACK SEND STATUS CODE [{g.unique_event_id}]: {status_code}")
+        else:
+            print(f"No handler for event type: {event_type}")
     return jsonify({"status": "ok"}), 200
 
 

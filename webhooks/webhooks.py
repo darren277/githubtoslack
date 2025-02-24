@@ -65,11 +65,17 @@ universal_sg_slack_template = SlackCommentTemplate(*[
         "type": "section",
         "text": {
             "type": "mrkdwn",
-            "text": "[{{ event_type }}]({{ email }}) has occured with reason: {{ reason }}."
+            "text": "[{{ event_type }}: {{unique_tag}}]({{ email }}) has occured with reason: {{ reason }}."
         }
     }
 ])
 
-sendgridIssueWebhook = sgWebhookFactory.createWebhook('open',
-    slack_comment_template=universal_sg_slack_template
-)
+def create_sendgrid_issue_webhook(event_type, email, reason, unique_id):
+    webhook_cls = sgWebhookFactory.createWebhook(
+        event_type,
+        slack_comment_template=universal_sg_slack_template,
+        email=email,
+        reason=reason,
+        unique_tag=unique_id
+    )
+    return webhook_cls()
