@@ -48,6 +48,7 @@ class SendGridWebhookFactory(WebhookFactory):
 
 class UniversalSGWebhookFactory(SendGridWebhookFactory):
     def createWebhook(self, name: str, **attributes) -> 'SGWebhook':
+        attributes['event_type'] = name
         return type(name+'SGWebhook', (SGWebhook,), attributes)
 
 sgWebhookFactory = UniversalSGWebhookFactory()
