@@ -321,6 +321,23 @@ def export_users():
         return
 
 
+def serialize_project(project: pyopenproject.model.project.Project):
+    # ['_type', 'id', 'identifier', 'name', 'active', 'public', 'description', 'createdAt', 'updatedAt', 'statusExplanation', '_links',
+    return dict(
+        _type=project._type,
+        id=project.id,
+        identifier=project.identifier,
+        name=project.name,
+        active=project.active,
+        public=project.public,
+        description=project.description,
+        createdAt=project.createdAt,
+        updatedAt=project.updatedAt,
+        statusExplanation=project.statusExplanation,
+        _links=project._links
+    )
+
+
 def export_projects():
     try:
         project = op.get_project_service().find_all()
@@ -331,7 +348,7 @@ def export_projects():
 
     #for p in project: print(p)
 
-    data = project
+    data = [serialize_project(p) for p in project]
 
     try:
         with open(f"{JSON_OUTPUT_PATH}projects.json", "w") as f: json.dump(data, f, indent=2)
