@@ -83,6 +83,30 @@ def export_queries():
         json.dump(data, f, indent=2)
 
 
+def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
+    return dict(
+        derivedStartDate=wp.derivedStartDate,
+        derivedDueDate=wp.derivedDueDate,
+        derivedEstimatedTime=wp.derivedEstimatedTime,
+        derivedRemainingTime=wp.derivedRemainingTime,
+        derivedPercentageDone=wp.derivedPercentageDone,
+        _type=wp._type,
+        id=wp.id,
+        lockVersion=wp.lockVersion,
+        subject=wp.subject,
+        description=wp.description,
+        scheduleManually=wp.scheduleManually,
+        startDate=wp.startDate,
+        dueDate=wp.dueDate,
+        estimatedTime=wp.estimatedTime,
+        duration=wp.duration,
+        ignoreNonWorkingDays=wp.ignoreNonWorkingDays,
+        percentageDone=wp.percentageDone,
+        createdAt=wp.createdAt,
+        updatedAt=wp.updatedAt,
+        _links=wp._links
+    )
+
 def export_work_packages():
     try:
         work_packages = op.get_work_package_service().find_all()
