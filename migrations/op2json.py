@@ -167,6 +167,20 @@ def export_journals():
         json.dump(data, f, indent=2)
 
 
+def serialize_relation(relation: pyopenproject.model.relation.Relation):
+    # ['_type', 'id', 'name', 'type', 'reverseType', 'lag', 'description', '_links',
+    return dict(
+        _type=relation._type,
+        id=relation.id,
+        name=relation.name,
+        type=relation.type,
+        reverseType=relation.reverseType,
+        lag=relation.lag,
+        description=relation.description,
+        _links=relation._links
+    )
+
+
 def export_relations():
     try:
         s = op.get_relation_service()
@@ -178,7 +192,7 @@ def export_relations():
     #for relation in relations: print(relation)
 
     #data = [relation.__dict__ for relation in relations]
-    data = relations
+    data = [serialize_relation(relation) for relation in relations]
 
     try:
         with open(f"{JSON_OUTPUT_PATH}relations.json", "w") as f: json.dump(data, f, indent=2)
