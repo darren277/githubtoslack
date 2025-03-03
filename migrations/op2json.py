@@ -47,7 +47,12 @@ def export_custom_fields_and_custom_options():
 
 
 def export_queries():
-    queries = op.get_query_service().find_all()
+    try:
+        queries = op.get_query_service().find_all()
+    except Exception as e:
+        print(f"Failed to export queries. {e}")
+        breakpoint()
+        return
 
     data = queries
 
@@ -56,7 +61,12 @@ def export_queries():
 
 
 def export_work_packages():
-    work_packages = op.get_work_package_service().find_all()
+    try:
+        work_packages = op.get_work_package_service().find_all()
+    except Exception as e:
+        print(f"Failed to export work packages. {e}")
+        breakpoint()
+        return
 
     #for wp in work_packages: print(wp)
 
@@ -103,8 +113,13 @@ def export_journals():
 
 
 def export_relations():
-    s = op.get_relation_service()
-    relations = s.find_all()
+    try:
+        s = op.get_relation_service()
+        relations = s.find_all()
+    except Exception as e:
+        print(f"Failed to export relations. {e}")
+        breakpoint()
+        return
     #for relation in relations: print(relation)
 
     #data = [relation.__dict__ for relation in relations]
@@ -115,7 +130,12 @@ def export_relations():
 
 
 def export_types():
-    data = op.get_type_service().find_all()
+    try:
+        data = op.get_type_service().find_all()
+    except Exception as e:
+        print(f"Failed to export types. {e}")
+        breakpoint()
+        return
 
     #for t in data: print(t)
 
@@ -136,7 +156,12 @@ def export_versions():
     # Work Packages can be assigned to a version.
     # As such, versions serve to group Work Packages into logical units where each group comprises all the work packages that needs to be finished in order for the version to be finished.
 
-    versions = op.get_version_service().find_all()
+    try:
+        versions = op.get_version_service().find_all()
+    except Exception as e:
+        print(f"Failed to export versions. {e}")
+        breakpoint()
+        return
 
     #for version in versions: print(version)
 
@@ -147,7 +172,12 @@ def export_versions():
 
 
 def export_users():
-    users = op.get_user_service().find_all()
+    try:
+        users = op.get_user_service().find_all()
+    except Exception as e:
+        print(f"Failed to export users. {e}")
+        breakpoint()
+        return
 
     #for user in users: print(user)
 
@@ -159,7 +189,12 @@ def export_users():
 
 
 def export_projects():
-    project = op.get_project_service().find_all()
+    try:
+        project = op.get_project_service().find_all()
+    except Exception as e:
+        print(f"Failed to export projects. {e}")
+        breakpoint()
+        return
 
     #for p in project: print(p)
 
