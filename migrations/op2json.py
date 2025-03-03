@@ -93,8 +93,11 @@ def serialize_derived(d):
     return new_d
 
 def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
+    d = dict()
     try:
-        d = dict(
+        if getattr(wp, 'startDate', None): d.update(startDate = wp.startDate)
+        if getattr(wp, 'dueDate', None): d.update(dueDate = wp.dueDate)
+        d.update(
             **serialize_derived(wp),
             _type=wp._type,
             id=wp.id,
@@ -102,8 +105,6 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
             subject=wp.subject,
             description=wp.description,
             scheduleManually=wp.scheduleManually,
-            startDate=wp.startDate,
-            dueDate=wp.dueDate,
             estimatedTime=wp.estimatedTime,
             duration=wp.duration,
             ignoreNonWorkingDays=wp.ignoreNonWorkingDays,
@@ -112,11 +113,10 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
             updatedAt=wp.updatedAt,
             _links=wp._links
         )
-        return d
     except Exception as e:
         print(f"Failed to serialize work package. {e}")
         breakpoint()
-        return dict()
+    return d
 
 def export_work_packages():
     try:
