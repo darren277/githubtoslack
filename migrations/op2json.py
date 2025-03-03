@@ -1,6 +1,7 @@
 """"""
 from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
 from pyopenproject.openproject import OpenProject
+import pyopenproject
 
 import json
 
@@ -46,7 +47,7 @@ def export_custom_fields_and_custom_options():
         json.dump(data, f, indent=2)
 
 
-def serialize_query(query: pyopenproject.nodel.query.Query):
+def serialize_query(query: pyopenproject.model.query.Query):
     return dict(
         _type=query._type,
         starred=query.starred,
