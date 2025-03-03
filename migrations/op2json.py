@@ -46,6 +46,28 @@ def export_custom_fields_and_custom_options():
         json.dump(data, f, indent=2)
 
 
+def serialize_query(query: pyopenproject.nodel.query.Query):
+    return dict(
+        _type=query._type,
+        starred=query.starred,
+        id=query.id,
+        name=query.name,
+        createdAt=query.createdAt,
+        updatedAt=query.updatedAt,
+        filters=query.filters,
+        includeSubprojects=query.includeSubprojects,
+        sums=query.sums,
+        public=query.public,
+        hidden=query.hidden,
+        timelineVisible=query.timelineVisible,
+        showHierarchies=query.showHierarchies,
+        timelineZoomLevel=query.timelineZoomLevel,
+        timelineLabels=query.timelineLabels,
+        timestamps=query.timestamps,
+        highlightingMode=query.highlightingMode,
+        _links=query._links
+    )
+
 def export_queries():
     try:
         queries = op.get_query_service().find_all()
@@ -54,7 +76,7 @@ def export_queries():
         breakpoint()
         return
 
-    data = queries
+    data = [serialize_query(query) for query in queries]
 
     with open(f"{JSON_OUTPUT_PATH}queries.json", "w") as f:
         json.dump(data, f, indent=2)
@@ -72,8 +94,12 @@ def export_work_packages():
 
     data = work_packages
 
-    with open(f"{JSON_OUTPUT_PATH}work_packages.json", "w") as f:
-        json.dump(data, f, indent=2)
+    try:
+        with open(f"{JSON_OUTPUT_PATH}work_packages.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write work packages to file. {e}")
+        breakpoint()
+        return
 
 
 def export_attachments():
@@ -81,8 +107,12 @@ def export_attachments():
 
     data = build_query(url)
 
-    with open(f"{JSON_OUTPUT_PATH}attachments.json", "w") as f:
-        json.dump(data, f, indent=2)
+    try:
+        with open(f"{JSON_OUTPUT_PATH}attachments.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write attachments to file. {e}")
+        breakpoint()
+        return
 
 
 def export_comments_in_journal():
@@ -125,8 +155,12 @@ def export_relations():
     #data = [relation.__dict__ for relation in relations]
     data = relations
 
-    with open(f"{JSON_OUTPUT_PATH}relations.json", "w") as f:
-        json.dump(data, f, indent=2)
+    try:
+        with open(f"{JSON_OUTPUT_PATH}relations.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write relations to file. {e}")
+        breakpoint()
+        return
 
 
 def export_types():
@@ -139,8 +173,12 @@ def export_types():
 
     #for t in data: print(t)
 
-    with open(f"{JSON_OUTPUT_PATH}types.json", "w") as f:
-        json.dump(data, f, indent=2)
+    try:
+        with open(f"{JSON_OUTPUT_PATH}types.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write types to file. {e}")
+        breakpoint()
+        return
 
 
 def export_project_roles():
@@ -167,8 +205,12 @@ def export_versions():
 
     data = versions
 
-    with open(f"{JSON_OUTPUT_PATH}versions.json", "w") as f:
-        json.dump(data, f, indent=2)
+    try:
+        with open(f"{JSON_OUTPUT_PATH}versions.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write versions to file. {e}")
+        breakpoint()
+        return
 
 
 def export_users():
@@ -184,8 +226,12 @@ def export_users():
     #data = [user.__dict__ for user in users]
     data = users
 
-    with open(f"{JSON_OUTPUT_PATH}users.json", "w") as f:
-        json.dump(data, f, indent=2)
+    try:
+        with open(f"{JSON_OUTPUT_PATH}users.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write users to file. {e}")
+        breakpoint()
+        return
 
 
 def export_projects():
@@ -200,8 +246,12 @@ def export_projects():
 
     data = project
 
-    with open(f"{JSON_OUTPUT_PATH}projects.json", "w") as f:
-        json.dump(data, f, indent=2)
+    try:
+        with open(f"{JSON_OUTPUT_PATH}projects.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write projects to file. {e}")
+        breakpoint()
+        return
 
 
 def export_all():
