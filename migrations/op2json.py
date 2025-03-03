@@ -37,6 +37,19 @@ groups 	Summarized information about aggregation groups 	Object 	when grouping
 totalSums 	Aggregations of supported values for elements of the collection 	Object 	when showing sums
 '''
 
+def extract_schema():
+    try:
+        schema = op.get_schema_service().find_all()
+    except Exception as e:
+        print(f"Failed to extract schema. {e}")
+        breakpoint()
+        return
+    print("SCHEMA", schema, schema.__dir__())
+
+extract_schema()
+quit(54)
+
+
 
 def serialize_custom_option(custom_option: pyopenproject.model.custom_object.CustomObject):
     d = dict()
