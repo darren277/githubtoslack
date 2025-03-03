@@ -38,13 +38,40 @@ totalSums 	Aggregations of supported values for elements of the collection 	Obje
 '''
 
 
+def serialize_custom_option(custom_option: pyopenproject.model.custom_option.CustomOption):
+    d = dict()
+    try:
+        d.update(
+            _type=custom_option._type,
+            id=custom_option.id,
+            name=custom_option.name,
+            position=custom_option.position,
+            color=custom_option.color,
+            _links=custom_option._links
+        )
+    except Exception as e:
+        print(f"Failed to serialize custom option. {e}")
+        breakpoint()
+    return d
+
 def export_custom_fields_and_custom_options():
-    raise NotImplementedError
+    print("WARNING: WHAT IS CUSTOM FIELD?")
 
-    data = build_query(url)
+    try:
+        custom_options = op.get_custom_options_service().find_all()
+    except Exception as e:
+        print(f"Failed to export custom options. {e}")
+        breakpoint()
+        return
 
-    with open(f"{JSON_OUTPUT_PATH}custom_fields.json", "w") as f:
-        json.dump(data, f, indent=2)
+    data = [serialize_custom_option(custom_option) for custom_option in custom_options]
+
+    try:
+        with open(f"{JSON_OUTPUT_PATH}custom_options.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write custom options to file. {e}")
+        breakpoint()
+        return
 
 
 def serialize_query(query: pyopenproject.model.query.Query):
