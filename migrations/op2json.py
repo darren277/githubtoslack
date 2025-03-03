@@ -56,6 +56,12 @@ def serialize_custom_option(custom_option: pyopenproject.model.custom_object.Cus
 
 def export_custom_fields_and_custom_options():
     print("WARNING: WHAT IS CUSTOM FIELD?")
+    try:
+        custom_fields = op.get_custom_field_service().find_all()
+    except Exception as e:
+        print(f"Failed to export custom fields. {e}")
+        breakpoint()
+        return
 
     try:
         custom_options = op.get_custom_object_service().find_all()
