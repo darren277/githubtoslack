@@ -117,7 +117,7 @@ def export_work_packages():
 
     #for wp in work_packages: print(wp)
 
-    data = work_packages
+    data = [serialize_work_package(wp) for wp in work_packages]
 
     try:
         with open(f"{JSON_OUTPUT_PATH}work_packages.json", "w") as f: json.dump(data, f, indent=2)
