@@ -245,13 +245,40 @@ def export_types():
         return
 
 
+
+def serialize_role(role: pyopenproject.model.role.Role):
+    d = dict()
+    try:
+        d.update(
+            _type=role._type,
+            id=role.id,
+            name=role.name,
+            permissions=role.permissions,
+            createdAt=role.createdAt,
+            updatedAt=role.updatedAt,
+            _links=role._links
+        )
+    except Exception as e:
+        print(f"Failed to serialize role. {e}")
+        breakpoint()
+    return dict()
+
 def export_project_roles():
-    raise NotImplementedError
+    try:
+        data = op.get_role_service().find_all()
+    except Exception as e:
+        print(f"Failed to export project roles. {e}")
+        breakpoint()
+        return
 
-    data = build_query(url)
+    data = [serialize_role(role) for role in data]
 
-    with open(f"{JSON_OUTPUT_PATH}project_roles.json", "w") as f:
-        json.dump(data, f, indent=2)
+    try:
+        with open(f"{JSON_OUTPUT_PATH}project_roles.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write project roles to file. {e}")
+        breakpoint()
+        return
 
 
 def serialize_version(version: pyopenproject.model.version.Version):
