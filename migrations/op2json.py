@@ -38,7 +38,7 @@ totalSums 	Aggregations of supported values for elements of the collection 	Obje
 '''
 
 
-def serialize_custom_option(custom_option: pyopenproject.model.custom_option.CustomOption):
+def serialize_custom_option(custom_option: pyopenproject.model.custom_object.CustomObject):
     d = dict()
     try:
         d.update(
