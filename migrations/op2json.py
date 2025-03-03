@@ -281,6 +281,25 @@ def export_versions():
         return
 
 
+def serialize_user(user: pyopenproject.model.user.User):
+    return dict(
+        _type=user._type,
+        id=user.id,
+        name=user.name,
+        createdAt=user.createdAt,
+        updatedAt=user.updatedAt,
+        login=user.login,
+        admin=user.admin,
+        firstName=user.firstName,
+        lastName=user.lastName,
+        email=user.email,
+        avatar=user.avatar,
+        status=user.status,
+        identityUrl=user.identityUrl,
+        language=user.language,
+        _links=user._links
+    )
+
 def export_users():
     try:
         users = op.get_user_service().find_all()
@@ -292,7 +311,7 @@ def export_users():
     #for user in users: print(user)
 
     #data = [user.__dict__ for user in users]
-    data = users
+    data = [serialize_user(user) for user in users]
 
     try:
         with open(f"{JSON_OUTPUT_PATH}users.json", "w") as f: json.dump(data, f, indent=2)
