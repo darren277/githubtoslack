@@ -83,13 +83,18 @@ def export_queries():
         json.dump(data, f, indent=2)
 
 
+def serialize_derived(d):
+    new_d = dict()
+    if getattr(d, 'derivedStartDate', None): new_d['derivedStartDate'] = d.derivedStartDate
+    if getattr(d, 'derivedDueDate', None): new_d['derivedDueDate'] = d.derivedDueDate
+    if getattr(d, 'derivedEstimatedTime', None): new_d['derivedEstimatedTime'] = d.derivedEstimatedTime
+    if getattr(d, 'derivedRemainingTime', None): new_d['derivedRemainingTime'] = d.derivedRemainingTime
+    if getattr(d, 'derivedPercentageDone', None): new_d['derivedPercentageDone'] = d.derivedPercentageDone
+    return new_d
+
 def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
     return dict(
-        derivedStartDate=wp.derivedStartDate,
-        derivedDueDate=wp.derivedDueDate,
-        derivedEstimatedTime=wp.derivedEstimatedTime,
-        derivedRemainingTime=wp.derivedRemainingTime,
-        derivedPercentageDone=wp.derivedPercentageDone,
+        **serialize_derived(wp),
         _type=wp._type,
         id=wp.id,
         lockVersion=wp.lockVersion,
