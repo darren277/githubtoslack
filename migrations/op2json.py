@@ -202,7 +202,6 @@ def export_relations():
 
 
 def serialize_type(t: pyopenproject.model.type.Type):
-    # ['_type', 'id', 'name', 'color', 'position', 'isDefault', 'isMilestone', 'createdAt', 'updatedAt', '_links',
     return dict(
         _type=t._type,
         id=t.id,
@@ -244,6 +243,21 @@ def export_project_roles():
         json.dump(data, f, indent=2)
 
 
+def serialize_version(version: pyopenproject.model.version.Version):
+    return dict(
+        _type=version._type,
+        id=version.id,
+        name=version.name,
+        description=version.description,
+        startDate=version.startDate,
+        endDate=version.endDate,
+        status=version.status,
+        sharing=version.sharing,
+        createdAt=version.createdAt,
+        updatedAt=version.updatedAt,
+        _links=version._links
+    )
+
 def export_versions():
     # Work Packages can be assigned to a version.
     # As such, versions serve to group Work Packages into logical units where each group comprises all the work packages that needs to be finished in order for the version to be finished.
@@ -257,7 +271,7 @@ def export_versions():
 
     #for version in versions: print(version)
 
-    data = versions
+    data = [serialize_version(version) for version in versions]
 
     try:
         with open(f"{JSON_OUTPUT_PATH}versions.json", "w") as f: json.dump(data, f, indent=2)
