@@ -253,9 +253,6 @@ def serialize_role(role: pyopenproject.model.role.Role):
             _type=role._type,
             id=role.id,
             name=role.name,
-            permissions=role.permissions,
-            createdAt=role.createdAt,
-            updatedAt=role.updatedAt,
             _links=role._links
         )
     except Exception as e:
