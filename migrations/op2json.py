@@ -54,6 +54,24 @@ def serialize_custom_option(custom_option: pyopenproject.model.custom_object.Cus
         breakpoint()
     return d
 
+
+def serialize_custom_field(custom_field: pyopenproject.model.custom_field.CustomField):
+    d = dict()
+    try:
+        d.update(
+            _type=custom_field._type,
+            id=custom_field.id,
+            name=custom_field.name,
+            position=custom_field.position,
+            fieldType=custom_field.fieldType,
+            possibleValues=custom_field.possibleValues,
+            _links=custom_field._links
+        )
+    except Exception as e:
+        print(f"Failed to serialize custom field. {e}")
+        breakpoint()
+    return d
+
 def export_custom_fields_and_custom_options():
     print("WARNING: WHAT IS CUSTOM FIELD?")
     try:
@@ -63,17 +81,22 @@ def export_custom_fields_and_custom_options():
         breakpoint()
         return
 
-    try:
-        custom_options = op.get_custom_object_service().find_all()
-    except Exception as e:
-        print(f"Failed to export custom options. {e}")
-        breakpoint()
-        return
+    custom_field_data = [serialize_custom_field(custom_field) for custom_field in custom_fields]
 
-    data = [serialize_custom_option(custom_option) for custom_option in custom_options]
+    data = []
+
+    for field in custom_field_data:
+        field_id = field['id']
+        try:
+            custom_options = op.get_custom_object_service().find(field_id)
+        except Exception as e:
+            print(f"Failed to export custom options. {e}")
+            breakpoint()
+            return
+        data.append(dict(custom_field=field, custom_options=[serialize_custom_option(custom_option) for custom_option in custom_options]))
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}custom_options.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{JSON_OUTPUT_PATH}custom_fields_and_options.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write custom options to file. {e}")
         breakpoint()
