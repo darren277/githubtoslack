@@ -97,6 +97,7 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
     try:
         if getattr(wp, 'startDate', None): d.update(startDate = wp.startDate)
         if getattr(wp, 'dueDate', None): d.update(dueDate = wp.dueDate)
+        if getattr(wp, 'duration', None): d.update(duration = wp.duration)
         d.update(
             **serialize_derived(wp),
             _type=wp._type,
@@ -106,7 +107,6 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
             description=wp.description,
             scheduleManually=wp.scheduleManually,
             estimatedTime=wp.estimatedTime,
-            duration=wp.duration,
             ignoreNonWorkingDays=wp.ignoreNonWorkingDays,
             percentageDone=wp.percentageDone,
             createdAt=wp.createdAt,
