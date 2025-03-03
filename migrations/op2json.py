@@ -168,7 +168,6 @@ def export_journals():
 
 
 def serialize_relation(relation: pyopenproject.model.relation.Relation):
-    # ['_type', 'id', 'name', 'type', 'reverseType', 'lag', 'description', '_links',
     return dict(
         _type=relation._type,
         id=relation.id,
@@ -202,6 +201,21 @@ def export_relations():
         return
 
 
+def serialize_type(t: pyopenproject.model.type.Type):
+    # ['_type', 'id', 'name', 'color', 'position', 'isDefault', 'isMilestone', 'createdAt', 'updatedAt', '_links',
+    return dict(
+        _type=t._type,
+        id=t.id,
+        name=t.name,
+        color=t.color,
+        position=t.position,
+        isDefault=t.isDefault,
+        isMilestone=t.isMilestone,
+        createdAt=t.createdAt,
+        updatedAt=t.updatedAt,
+        _links=t._links
+    )
+
 def export_types():
     try:
         data = op.get_type_service().find_all()
@@ -211,6 +225,7 @@ def export_types():
         return
 
     #for t in data: print(t)
+    data = [serialize_type(t) for t in data]
 
     try:
         with open(f"{JSON_OUTPUT_PATH}types.json", "w") as f: json.dump(data, f, indent=2)
