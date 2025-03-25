@@ -262,7 +262,17 @@ def sendgrid_event_listener():
 # Pretty print backup JSONs...
 @app.route('/backups/<folder>/<filename>')
 def backups(folder, filename):
-    if filename not in ['project_roles.json', 'projects.json', 'queries.json', 'relations.json', 'types.json', 'users.json', 'versions.json', 'work_packages.json']:
+    if filename not in [
+        'project_roles.json',
+        'projects.json',
+        'queries.json',
+        'relations.json',
+        'types.json',
+        'users.json',
+        'versions.json',
+        'work_packages.json',
+        'grids.json'
+    ]:
         raise Exception("No such file.")
     with open(f'output/{folder}/{filename}', 'r', encoding='utf-8') as f:
         data = json.load(f)
