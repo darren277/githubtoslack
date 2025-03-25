@@ -41,8 +41,11 @@ def extract_schema():
     schemas = []
     for project in all_projects:
         project_id = project.id
-        types = op.get_type_service().find_all(project_id=project_id)
-        for t in types:
+
+        types_url = project._links.types.href
+        project_types = op.conn.get(types_url)._embedded.elements
+
+        for t in project_types:
             type_id = t.id
             schema_url = f"/api/v3/projects/{project_id}/types/{type_id}/schema"
             schema = op.conn.get(schema_url)
