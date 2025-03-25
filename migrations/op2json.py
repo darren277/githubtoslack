@@ -455,6 +455,66 @@ def export_projects():
         return
 
 
+def serailize_grid_widget(grid_widget: pyopenproject.model.grid_widget.GridWidget):
+    # ['_type', 'id', 'identifier', 'startRow', 'endRow', 'startColumn', 'endColumn', 'options']
+    return dict(
+        _type=grid_widget._type,
+        id=grid_widget.id,
+        identifier=grid_widget.identifier,
+        startRow=grid_widget.startRow,
+        endRow=grid_widget.endRow,
+        startColumn=grid_widget.startColumn,
+        endColumn=grid_widget.endColumn,
+        options=grid_widget.options
+    )
+
+def serialize_grid(grid: pyopenproject.model.grid.Grid):
+    # ['_type', 'id', 'name', 'rowCount', 'columnCount', 'options', 'widgets', 'createdAt', 'updatedAt', '_links']
+    return dict(
+        _type=grid._type,
+        id=grid.id,
+        name=grid.name,
+        rowCount=grid.rowCount,
+        columnCount=grid.columnCount,
+        options=grid.options,
+        widgets=[serailize_grid_widget(widget) for widget in grid.widgets],
+        createdAt=grid.createdAt,
+        updatedAt=grid.updatedAt,
+        _links=grid._links
+    )
+
+
+def export_grids():
+    try:
+        grids = op.get_grid_service().find_all()
+    except Exception as e:
+        print(f"Failed to export grids. {e}")
+        breakpoint()
+        return
+
+    data = [grid.__dict__ for grid in grids]
+
+    try:
+        with open(f"{OP_JSON_OUTPUT_PATH}grids.json", "w") as f: json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write grids to file. {e}")
+        breakpoint()
+        return
+
+
+# get_priority_service()
+# get_status_service()
+# get_category_service()
+# get_role_service()
+# get_memberships_service()
+# get_group_service()
+# get_news_service()
+# get_time_entry_service()
+# get_activity_service()
+# get_revision_service()
+
+# wiki?
+
 
 def export_all():
     try:
@@ -521,6 +581,11 @@ def export_all():
         export_projects()
     except Exception as e:
         print(f"Failed to export projects. {e}")
+
+    try:
+        export_grids()
+    except Exception as e:
+        print(f"Failed to export grids. {e}")
 
     print("Export complete.")
 
