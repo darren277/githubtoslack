@@ -1,0 +1,6658 @@
+[
+  {
+    "startDate": "2025-02-10",
+    "dueDate": "2025-02-24",
+    "duration": "P11D",
+    "derivedStartDate": "2025-02-10",
+    "derivedDueDate": "2025-02-24",
+    "_type": "WorkPackage",
+    "id": 2,
+    "lockVersion": 0,
+    "subject": "Organize open source conference",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:11.471Z",
+    "updatedAt": "2025-02-15T17:29:12.162Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/2/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/2/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/2/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/2/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/2/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-3"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/2",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/2",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/2/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Organize open source conference'"
+      },
+      "copy": {
+        "href": "/work_packages/2/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Organize open source conference'"
+      },
+      "pdf": {
+        "href": "/work_packages/2.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/2.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/2/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/3/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/2/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/2/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/2/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/2/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/2/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/2/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/2/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Organize open source conference"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/2",
+        "method": "patch",
+        "title": "Change parent of Organize open source conference"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/2/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/2",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/3",
+        "title": "Phase"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/7",
+        "title": "In progress"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/2/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/2/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/2/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/2/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/2",
+        "title": "Organize open source conference"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/2/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "children": [
+        {
+          "href": "/api/v3/work_packages/3",
+          "title": "Set date and location of conference"
+        },
+        {
+          "href": "/api/v3/work_packages/7",
+          "title": "Invite attendees to conference"
+        },
+        {
+          "href": "/api/v3/work_packages/8",
+          "title": "Setup conference website"
+        }
+      ],
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "dueDate": "2025-02-13",
+    "duration": "P4D",
+    "derivedStartDate": "2025-02-10",
+    "derivedDueDate": "2025-02-13",
+    "_type": "WorkPackage",
+    "id": 3,
+    "lockVersion": 1,
+    "subject": "Set date and location of conference",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:11.513Z",
+    "updatedAt": "2025-02-15T17:29:11.902Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/3/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/3/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/3/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/3/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/3/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/3",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/3",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/3/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Set date and location of conference'"
+      },
+      "copy": {
+        "href": "/work_packages/3/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Set date and location of conference'"
+      },
+      "pdf": {
+        "href": "/work_packages/3.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/3.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/3/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/3/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/3/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/3/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/3/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/3/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/3/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/3/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Set date and location of conference"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/3",
+        "method": "patch",
+        "title": "Change parent of Set date and location of conference"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/3/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/3",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/7",
+        "title": "In progress"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/3/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/3/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/3/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/3/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/3",
+        "title": "Set date and location of conference"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/3/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "children": [
+        {
+          "href": "/api/v3/work_packages/4",
+          "title": "Send invitation to speakers"
+        },
+        {
+          "href": "/api/v3/work_packages/5",
+          "title": "Contact sponsoring partners"
+        },
+        {
+          "href": "/api/v3/work_packages/6",
+          "title": "Create sponsorship brochure and hand-outs"
+        }
+      ],
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/2",
+          "title": "Organize open source conference"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/2",
+        "title": "Organize open source conference"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "dueDate": "2025-02-10",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 4,
+    "lockVersion": 1,
+    "subject": "Send invitation to speakers",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:11.555Z",
+    "updatedAt": "2025-02-15T17:29:11.616Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/4/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/4/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/4/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/4/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/4/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/4",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/4",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/4/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Send invitation to speakers'"
+      },
+      "copy": {
+        "href": "/work_packages/4/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Send invitation to speakers'"
+      },
+      "pdf": {
+        "href": "/work_packages/4.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/4.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/4/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/4/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/4/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/4/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/4/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/4/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/4/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/4/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Send invitation to speakers"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/4",
+        "method": "patch",
+        "title": "Change parent of Send invitation to speakers"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/4/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/4",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/7",
+        "title": "In progress"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/4/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/4/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/4/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/4/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/4",
+        "title": "Send invitation to speakers"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/4/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/2",
+          "title": "Organize open source conference"
+        },
+        {
+          "href": "/api/v3/work_packages/3",
+          "title": "Set date and location of conference"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/3",
+        "title": "Set date and location of conference"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "dueDate": "2025-02-11",
+    "duration": "P2D",
+    "_type": "WorkPackage",
+    "id": 5,
+    "lockVersion": 1,
+    "subject": "Contact sponsoring partners",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:11.663Z",
+    "updatedAt": "2025-02-15T17:29:11.726Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/5/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/5/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/5/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/5/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/5/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/5",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/5",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/5/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Contact sponsoring partners'"
+      },
+      "copy": {
+        "href": "/work_packages/5/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Contact sponsoring partners'"
+      },
+      "pdf": {
+        "href": "/work_packages/5.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/5.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/5/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/5/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/5/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/5/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/5/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/5/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/5/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/5/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Contact sponsoring partners"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/5",
+        "method": "patch",
+        "title": "Change parent of Contact sponsoring partners"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/5/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/5",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/5/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/5/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/5/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/5/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/5",
+        "title": "Contact sponsoring partners"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/5/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/2",
+          "title": "Organize open source conference"
+        },
+        {
+          "href": "/api/v3/work_packages/3",
+          "title": "Set date and location of conference"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/3",
+        "title": "Set date and location of conference"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "dueDate": "2025-02-13",
+    "duration": "P4D",
+    "_type": "WorkPackage",
+    "id": 6,
+    "lockVersion": 1,
+    "subject": "Create sponsorship brochure and hand-outs",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:11.762Z",
+    "updatedAt": "2025-02-15T17:29:11.825Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/6/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/6/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/6/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/6/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/6/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/6",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/6",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/6/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Create sponsorship brochure and hand-outs'"
+      },
+      "copy": {
+        "href": "/work_packages/6/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Create sponsorship brochure and hand-outs'"
+      },
+      "pdf": {
+        "href": "/work_packages/6.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/6.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/6/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/6/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/6/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/6/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/6/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/6/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/6/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/6/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Create sponsorship brochure and hand-outs"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/6",
+        "method": "patch",
+        "title": "Change parent of Create sponsorship brochure and hand-outs"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/6/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/6",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/6/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/6/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/6/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/6/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/6",
+        "title": "Create sponsorship brochure and hand-outs"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/6/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/2",
+          "title": "Organize open source conference"
+        },
+        {
+          "href": "/api/v3/work_packages/3",
+          "title": "Set date and location of conference"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/3",
+        "title": "Set date and location of conference"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-14",
+    "dueDate": "2025-02-14",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 7,
+    "lockVersion": 1,
+    "subject": "Invite attendees to conference",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:11.958Z",
+    "updatedAt": "2025-02-15T17:29:12.015Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/7/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/7/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/7/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/7/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/7/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/7",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/7",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/7/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Invite attendees to conference'"
+      },
+      "copy": {
+        "href": "/work_packages/7/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Invite attendees to conference'"
+      },
+      "pdf": {
+        "href": "/work_packages/7.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/7.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/7/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/7/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/7/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/7/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/7/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/7/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/7/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/7/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Invite attendees to conference"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/7",
+        "method": "patch",
+        "title": "Change parent of Invite attendees to conference"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/7/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/7",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/7/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/7/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/7/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/7/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/7",
+        "title": "Invite attendees to conference"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/7/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/2",
+          "title": "Organize open source conference"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/2",
+        "title": "Organize open source conference"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-14",
+    "dueDate": "2025-02-24",
+    "duration": "P7D",
+    "_type": "WorkPackage",
+    "id": 8,
+    "lockVersion": 1,
+    "subject": "Setup conference website",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:12.063Z",
+    "updatedAt": "2025-02-15T17:29:12.122Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/8/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/8/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/8/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/8/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/8/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/8",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/8",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/8/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Setup conference website'"
+      },
+      "copy": {
+        "href": "/work_packages/8/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Setup conference website'"
+      },
+      "pdf": {
+        "href": "/work_packages/8.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/8.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/8/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/8/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/8/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/8/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/8/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/8/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/8/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/8/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Setup conference website"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/8",
+        "method": "patch",
+        "title": "Change parent of Setup conference website"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/8/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/8",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/8/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/8/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/8/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/8/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/8",
+        "title": "Setup conference website"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/8/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/2",
+          "title": "Organize open source conference"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/2",
+        "title": "Organize open source conference"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "_type": "WorkPackage",
+    "id": 9,
+    "lockVersion": 0,
+    "subject": "Conference",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:12.190Z",
+    "updatedAt": "2025-02-15T17:29:12.225Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/9/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/9/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/9/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/9/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/9/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-2"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/9",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/9",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/9/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Conference'"
+      },
+      "copy": {
+        "href": "/work_packages/9/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Conference'"
+      },
+      "pdf": {
+        "href": "/work_packages/9.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/9.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/9/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/2/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/9/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/9/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/9/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/9/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/9/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/9/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/9/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/9",
+        "method": "patch",
+        "title": "Change parent of Conference"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/9/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/9",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/2",
+        "title": "Milestone"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/6",
+        "title": "Scheduled"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/9/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/9/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/9/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/9/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/9",
+        "title": "Conference"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/9/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-03",
+    "dueDate": "2025-03-13",
+    "duration": "P9D",
+    "derivedStartDate": "2025-03-03",
+    "derivedDueDate": "2025-03-13",
+    "_type": "WorkPackage",
+    "id": 10,
+    "lockVersion": 0,
+    "subject": "Follow-up tasks",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:12.248Z",
+    "updatedAt": "2025-02-15T17:29:12.493Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/10/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/10/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/10/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/10/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/10/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-3"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/10",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/10",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/10/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Follow-up tasks'"
+      },
+      "copy": {
+        "href": "/work_packages/10/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Follow-up tasks'"
+      },
+      "pdf": {
+        "href": "/work_packages/10.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/10.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/10/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/3/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/10/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/10/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/10/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/10/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/10/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/10/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/10/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Follow-up tasks"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/10",
+        "method": "patch",
+        "title": "Change parent of Follow-up tasks"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/10/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/10",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/3",
+        "title": "Phase"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/5",
+        "title": "To be scheduled"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/10/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/10/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/10/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/10/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/10",
+        "title": "Follow-up tasks"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/10/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "children": [
+        {
+          "href": "/api/v3/work_packages/11",
+          "title": "Upload presentations to website"
+        },
+        {
+          "href": "/api/v3/work_packages/12",
+          "title": "Party for conference supporters :-)"
+        }
+      ],
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-03",
+    "dueDate": "2025-03-12",
+    "duration": "P8D",
+    "_type": "WorkPackage",
+    "id": 11,
+    "lockVersion": 1,
+    "subject": "Upload presentations to website",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:12.283Z",
+    "updatedAt": "2025-02-15T17:29:12.347Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/11/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/11/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/11/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/11/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/11/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/11",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/11",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/11/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Upload presentations to website'"
+      },
+      "copy": {
+        "href": "/work_packages/11/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Upload presentations to website'"
+      },
+      "pdf": {
+        "href": "/work_packages/11.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/11.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/11/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/11/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/11/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/11/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/11/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/11/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/11/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/11/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Upload presentations to website"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/11",
+        "method": "patch",
+        "title": "Change parent of Upload presentations to website"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/11/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/11",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/11/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/11/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/11/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/11/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/11",
+        "title": "Upload presentations to website"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/11/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/10",
+          "title": "Follow-up tasks"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/10",
+        "title": "Follow-up tasks"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-13",
+    "dueDate": "2025-03-13",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 12,
+    "lockVersion": 1,
+    "subject": "Party for conference supporters :-)",
+    "description": {
+      "format": "markdown",
+      "raw": "*   [ ] Beer\n*   [ ] Snacks\n*   [ ] Music\n*   [ ] Even more beer",
+      "html": "<ul class=\"op-uc-list_task-list op-uc-list\">\n<li class=\"op-uc-list--item\">\n<input type=\"checkbox\" class=\"op-uc-list--task-checkbox\" disabled> Beer</li>\n<li class=\"op-uc-list--item\">\n<input type=\"checkbox\" class=\"op-uc-list--task-checkbox\" disabled> Snacks</li>\n<li class=\"op-uc-list--item\">\n<input type=\"checkbox\" class=\"op-uc-list--task-checkbox\" disabled> Music</li>\n<li class=\"op-uc-list--item\">\n<input type=\"checkbox\" class=\"op-uc-list--task-checkbox\" disabled> Even more beer</li>\n</ul>"
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:12.392Z",
+    "updatedAt": "2025-02-15T17:29:12.452Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/12/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/12/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/12/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/12/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/12/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/12",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/12",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/12/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Party for conference supporters :-)'"
+      },
+      "copy": {
+        "href": "/work_packages/12/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Party for conference supporters :-)'"
+      },
+      "pdf": {
+        "href": "/work_packages/12.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/12.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/12/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/12/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/12/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/12/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/12/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/12/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/12/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/12/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/demo-project/work_packages",
+        "method": "post",
+        "title": "Add child of Party for conference supporters :-)"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/12",
+        "method": "patch",
+        "title": "Change parent of Party for conference supporters :-)"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/12/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/12",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/12/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/12/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/12/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/12/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/12",
+        "title": "Party for conference supporters :-)"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/12/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/10",
+          "title": "Follow-up tasks"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/10",
+        "title": "Follow-up tasks"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "_type": "WorkPackage",
+    "id": 13,
+    "lockVersion": 0,
+    "subject": "End of project",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:12.514Z",
+    "updatedAt": "2025-02-15T17:29:12.552Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/13/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/13/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/13/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/13/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/13/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/1-2"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/13",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/13",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/13/move/new",
+        "type": "text/html",
+        "title": "Move work package 'End of project'"
+      },
+      "copy": {
+        "href": "/work_packages/13/copy",
+        "type": "text/html",
+        "title": "Copy work package 'End of project'"
+      },
+      "pdf": {
+        "href": "/work_packages/13.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/13.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/13/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/demo-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/2/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/13/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/13/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/13/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/13/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/13/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/13/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/13/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/13",
+        "method": "patch",
+        "title": "Change parent of End of project"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/13/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/13",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/2",
+        "title": "Milestone"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/13/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/13/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/13/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/13/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/13",
+        "title": "End of project"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/13/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "_type": "WorkPackage",
+    "id": 14,
+    "lockVersion": 0,
+    "subject": "New login screen",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:13.650Z",
+    "updatedAt": "2025-02-15T17:29:13.696Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/14/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/14/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/14/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/14/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/14/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/14",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/14",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/14/move/new",
+        "type": "text/html",
+        "title": "Move work package 'New login screen'"
+      },
+      "copy": {
+        "href": "/work_packages/14/copy",
+        "type": "text/html",
+        "title": "Copy work package 'New login screen'"
+      },
+      "pdf": {
+        "href": "/work_packages/14.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/14.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/14/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/14/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/14/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/14/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/14/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/14/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/14/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/14/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of New login screen"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/14",
+        "method": "patch",
+        "title": "Change parent of New login screen"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/14/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/14",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/2",
+        "title": "In specification"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/2",
+        "title": "Product Backlog"
+      },
+      "meetings": {
+        "href": "/work_packages/14/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/14/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/14/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/14/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/14",
+        "title": "New login screen"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/14/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "_type": "WorkPackage",
+    "id": 15,
+    "lockVersion": 0,
+    "subject": "Password reset does not send email",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:13.720Z",
+    "updatedAt": "2025-02-15T17:29:13.759Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/15/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/15/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/15/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/15/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/15/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-7"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/15",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/15",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/15/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Password reset does not send email'"
+      },
+      "copy": {
+        "href": "/work_packages/15/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Password reset does not send email'"
+      },
+      "pdf": {
+        "href": "/work_packages/15.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/15.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/15/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/7/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/15/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/15/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/15/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/15/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/15/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/15/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/15/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Password reset does not send email"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/15",
+        "method": "patch",
+        "title": "Change parent of Password reset does not send email"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/15/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/15",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/7",
+        "title": "Bug"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/4",
+        "title": "Confirmed"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/1",
+        "title": "Bug Backlog"
+      },
+      "meetings": {
+        "href": "/work_packages/15/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/15/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/15/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/15/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/15",
+        "title": "Password reset does not send email"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/15/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "dueDate": "2025-03-10",
+    "duration": "P21D",
+    "derivedStartDate": "2025-02-10",
+    "derivedDueDate": "2025-03-10",
+    "_type": "WorkPackage",
+    "id": 16,
+    "lockVersion": 0,
+    "subject": "New website",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:13.780Z",
+    "updatedAt": "2025-02-15T17:29:14.268Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/16/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/16/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/16/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/16/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/16/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-5"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/16",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/16",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/16/move/new",
+        "type": "text/html",
+        "title": "Move work package 'New website'"
+      },
+      "copy": {
+        "href": "/work_packages/16/copy",
+        "type": "text/html",
+        "title": "Copy work package 'New website'"
+      },
+      "pdf": {
+        "href": "/work_packages/16.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/16.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/16/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/5/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/16/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/16/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/16/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/16/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/16/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/16/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/16/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of New website"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/16",
+        "method": "patch",
+        "title": "Change parent of New website"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/16/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/16",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/5",
+        "title": "Epic"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/3",
+        "title": "Specified"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/16/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/16/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/16/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/16/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/16",
+        "title": "New website"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/16/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "children": [
+        {
+          "href": "/api/v3/work_packages/19",
+          "title": "New landing page"
+        },
+        {
+          "href": "/api/v3/work_packages/18",
+          "title": "Implement product tour"
+        },
+        {
+          "href": "/api/v3/work_packages/17",
+          "title": "Newsletter registration form"
+        }
+      ],
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "_type": "WorkPackage",
+    "id": 17,
+    "lockVersion": 1,
+    "subject": "Newsletter registration form",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:13.815Z",
+    "updatedAt": "2025-02-15T17:29:13.885Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/17/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/17/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/17/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/17/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/17/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/17",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/17",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/17/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Newsletter registration form'"
+      },
+      "copy": {
+        "href": "/work_packages/17/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Newsletter registration form'"
+      },
+      "pdf": {
+        "href": "/work_packages/17.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/17.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/17/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/17/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/17/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/17/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/17/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/17/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/17/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/17/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Newsletter registration form"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/17",
+        "method": "patch",
+        "title": "Change parent of Newsletter registration form"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/17/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/17",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/7",
+        "title": "In progress"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/2",
+        "title": "Product Backlog"
+      },
+      "meetings": {
+        "href": "/work_packages/17/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/17/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/17/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/17/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/17",
+        "title": "Newsletter registration form"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/17/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/16",
+          "title": "New website"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/16",
+        "title": "New website"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "_type": "WorkPackage",
+    "id": 18,
+    "lockVersion": 1,
+    "subject": "Implement product tour",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:13.922Z",
+    "updatedAt": "2025-02-15T17:29:13.982Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/18/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/18/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/18/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/18/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/18/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/18",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/18",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/18/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Implement product tour'"
+      },
+      "copy": {
+        "href": "/work_packages/18/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Implement product tour'"
+      },
+      "pdf": {
+        "href": "/work_packages/18.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/18.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/18/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/18/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/18/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/18/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/18/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/18/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/18/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/18/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Implement product tour"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/18",
+        "method": "patch",
+        "title": "Change parent of Implement product tour"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/18/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/18",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/2",
+        "title": "In specification"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/2",
+        "title": "Product Backlog"
+      },
+      "meetings": {
+        "href": "/work_packages/18/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/18/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/18/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/18/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/18",
+        "title": "Implement product tour"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/18/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/16",
+          "title": "New website"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/16",
+        "title": "New website"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-10",
+    "dueDate": "2025-03-10",
+    "duration": "P1D",
+    "derivedStartDate": "2025-03-10",
+    "derivedDueDate": "2025-03-10",
+    "_type": "WorkPackage",
+    "id": 19,
+    "lockVersion": 1,
+    "subject": "New landing page",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.019Z",
+    "updatedAt": "2025-02-15T17:29:14.175Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/19/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/19/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/19/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/19/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/19/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/19",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/19",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/19/move/new",
+        "type": "text/html",
+        "title": "Move work package 'New landing page'"
+      },
+      "copy": {
+        "href": "/work_packages/19/copy",
+        "type": "text/html",
+        "title": "Copy work package 'New landing page'"
+      },
+      "pdf": {
+        "href": "/work_packages/19.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/19.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/19/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/19/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/19/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/19/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/19/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/19/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/19/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/19/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of New landing page"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/19",
+        "method": "patch",
+        "title": "Change parent of New landing page"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/19/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/19",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/3",
+        "title": "Specified"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/3",
+        "title": "Sprint 1"
+      },
+      "meetings": {
+        "href": "/work_packages/19/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/19/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/19/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/19/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/19",
+        "title": "New landing page"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/19/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "children": [
+        {
+          "href": "/api/v3/work_packages/20",
+          "title": "Create wireframes for new landing page"
+        }
+      ],
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/16",
+          "title": "New website"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/16",
+        "title": "New website"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-10",
+    "dueDate": "2025-03-10",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 20,
+    "lockVersion": 1,
+    "subject": "Create wireframes for new landing page",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.060Z",
+    "updatedAt": "2025-02-15T17:29:14.114Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/20/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/20/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/20/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/20/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/20/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/20",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/20",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/20/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Create wireframes for new landing page'"
+      },
+      "copy": {
+        "href": "/work_packages/20/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Create wireframes for new landing page'"
+      },
+      "pdf": {
+        "href": "/work_packages/20.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/20.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/20/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/20/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/20/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/20/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/20/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/20/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/20/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/20/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Create wireframes for new landing page"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/20",
+        "method": "patch",
+        "title": "Change parent of Create wireframes for new landing page"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/20/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/20",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/7",
+        "title": "In progress"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/3",
+        "title": "Sprint 1"
+      },
+      "meetings": {
+        "href": "/work_packages/20/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/20/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/20/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/20/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/20",
+        "title": "Create wireframes for new landing page"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/20/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/16",
+          "title": "New website"
+        },
+        {
+          "href": "/api/v3/work_packages/19",
+          "title": "New landing page"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/19",
+        "title": "New landing page"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-03",
+    "dueDate": "2025-03-03",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 21,
+    "lockVersion": 0,
+    "subject": "Contact form",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.296Z",
+    "updatedAt": "2025-02-15T17:29:14.341Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/21/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/21/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/21/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/21/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/21/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/21",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/21",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/21/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Contact form'"
+      },
+      "copy": {
+        "href": "/work_packages/21/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Contact form'"
+      },
+      "pdf": {
+        "href": "/work_packages/21.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/21.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/21/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/21/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/21/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/21/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/21/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/21/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/21/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/21/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Contact form"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/21",
+        "method": "patch",
+        "title": "Change parent of Contact form"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/21/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/21",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/3",
+        "title": "Specified"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/3",
+        "title": "Sprint 1"
+      },
+      "meetings": {
+        "href": "/work_packages/21/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/21/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/21/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/21/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/21",
+        "title": "Contact form"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/21/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-10",
+    "derivedStartDate": "2025-02-10",
+    "derivedDueDate": "2025-02-10",
+    "_type": "WorkPackage",
+    "id": 22,
+    "lockVersion": 0,
+    "subject": "Feature carousel",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.365Z",
+    "updatedAt": "2025-02-15T17:29:14.500Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/22/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/22/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/22/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/22/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/22/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/22",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/22",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/22/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Feature carousel'"
+      },
+      "copy": {
+        "href": "/work_packages/22/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Feature carousel'"
+      },
+      "pdf": {
+        "href": "/work_packages/22.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/22.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/22/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/22/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/22/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/22/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/22/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/22/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/22/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/22/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Feature carousel"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/22",
+        "method": "patch",
+        "title": "Change parent of Feature carousel"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/22/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/22",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/3",
+        "title": "Specified"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/3",
+        "title": "Sprint 1"
+      },
+      "meetings": {
+        "href": "/work_packages/22/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/22/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/22/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/22/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/22",
+        "title": "Feature carousel"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/22/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "children": [
+        {
+          "href": "/api/v3/work_packages/23",
+          "title": "Make screenshots for feature tour"
+        }
+      ],
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-04",
+    "dueDate": "2025-03-04",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 25,
+    "lockVersion": 0,
+    "subject": "SSL certificate",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.587Z",
+    "updatedAt": "2025-02-15T17:29:14.626Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/25/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/25/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/25/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/25/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/25/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/25",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/25",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/25/move/new",
+        "type": "text/html",
+        "title": "Move work package 'SSL certificate'"
+      },
+      "copy": {
+        "href": "/work_packages/25/copy",
+        "type": "text/html",
+        "title": "Copy work package 'SSL certificate'"
+      },
+      "pdf": {
+        "href": "/work_packages/25.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/25.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/25/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/25/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/25/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/25/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/25/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/25/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/25/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/25/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of SSL certificate"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/25",
+        "method": "patch",
+        "title": "Change parent of SSL certificate"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/25/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/25",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/3",
+        "title": "Specified"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/2",
+        "title": "Product Backlog"
+      },
+      "meetings": {
+        "href": "/work_packages/25/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/25/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/25/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/25/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/25",
+        "title": "SSL certificate"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/25/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-05",
+    "dueDate": "2025-03-05",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 26,
+    "lockVersion": 0,
+    "subject": "Set-up Staging environment",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.646Z",
+    "updatedAt": "2025-02-15T17:29:14.684Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/26/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/26/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/26/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/26/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/26/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/26",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/26",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/26/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Set-up Staging environment'"
+      },
+      "copy": {
+        "href": "/work_packages/26/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Set-up Staging environment'"
+      },
+      "pdf": {
+        "href": "/work_packages/26.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/26.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/26/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/26/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/26/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/26/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/26/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/26/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/26/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/26/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Set-up Staging environment"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/26",
+        "method": "patch",
+        "title": "Change parent of Set-up Staging environment"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/26/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/26",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/2",
+        "title": "In specification"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/2",
+        "title": "Product Backlog"
+      },
+      "meetings": {
+        "href": "/work_packages/26/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/26/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/26/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/26/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/26",
+        "title": "Set-up Staging environment"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/26/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-06",
+    "dueDate": "2025-03-06",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 27,
+    "lockVersion": 0,
+    "subject": "Choose a content management system",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.707Z",
+    "updatedAt": "2025-02-15T17:29:14.745Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/27/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/27/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/27/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/27/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/27/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/27",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/27",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/27/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Choose a content management system'"
+      },
+      "copy": {
+        "href": "/work_packages/27/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Choose a content management system'"
+      },
+      "pdf": {
+        "href": "/work_packages/27.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/27.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/27/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/27/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/27/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/27/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/27/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/27/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/27/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/27/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Choose a content management system"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/27",
+        "method": "patch",
+        "title": "Change parent of Choose a content management system"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/27/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/27",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/3",
+        "title": "Specified"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/2",
+        "title": "Product Backlog"
+      },
+      "meetings": {
+        "href": "/work_packages/27/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/27/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/27/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/27/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/27",
+        "title": "Choose a content management system"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/27/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-07",
+    "dueDate": "2025-03-07",
+    "duration": "P1D",
+    "derivedStartDate": "2025-03-07",
+    "derivedDueDate": "2025-03-07",
+    "_type": "WorkPackage",
+    "id": 28,
+    "lockVersion": 0,
+    "subject": "Website navigation structure",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.765Z",
+    "updatedAt": "2025-02-15T17:29:14.890Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/28/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/28/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/28/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/28/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/28/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/28",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/28",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/28/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Website navigation structure'"
+      },
+      "copy": {
+        "href": "/work_packages/28/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Website navigation structure'"
+      },
+      "pdf": {
+        "href": "/work_packages/28.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/28.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/28/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/6/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/28/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/28/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/28/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/28/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/28/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/28/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/28/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Website navigation structure"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/28",
+        "method": "patch",
+        "title": "Change parent of Website navigation structure"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/28/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/28",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/6",
+        "title": "User story"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/3",
+        "title": "Specified"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/3",
+        "title": "Sprint 1"
+      },
+      "meetings": {
+        "href": "/work_packages/28/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/28/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/28/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/28/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/28",
+        "title": "Website navigation structure"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/28/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "children": [
+        {
+          "href": "/api/v3/work_packages/29",
+          "title": "Set up navigation concept for website."
+        }
+      ],
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-07",
+    "dueDate": "2025-03-07",
+    "duration": "P1D",
+    "_type": "WorkPackage",
+    "id": 29,
+    "lockVersion": 1,
+    "subject": "Set up navigation concept for website.",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.802Z",
+    "updatedAt": "2025-02-15T17:29:14.854Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/29/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/29/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/29/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/29/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/29/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/29",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/29",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/29/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Set up navigation concept for website.'"
+      },
+      "copy": {
+        "href": "/work_packages/29/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Set up navigation concept for website.'"
+      },
+      "pdf": {
+        "href": "/work_packages/29.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/29.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/29/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/1/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/29/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/29/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/29/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/29/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/29/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/29/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/29/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Set up navigation concept for website."
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/29",
+        "method": "patch",
+        "title": "Change parent of Set up navigation concept for website."
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/29/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/29",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/1",
+        "title": "Task"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/2",
+        "title": "In specification"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": "/api/v3/versions/3",
+        "title": "Sprint 1"
+      },
+      "meetings": {
+        "href": "/work_packages/29/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/29/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/29/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/29/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/29",
+        "title": "Set up navigation concept for website."
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/29/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [
+        {
+          "href": "/api/v3/work_packages/28",
+          "title": "Website navigation structure"
+        }
+      ],
+      "parent": {
+        "href": "/api/v3/work_packages/28",
+        "title": "Website navigation structure"
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-02-24",
+    "dueDate": "2025-02-26",
+    "duration": "P3D",
+    "_type": "WorkPackage",
+    "id": 31,
+    "lockVersion": 0,
+    "subject": "Develop v1.0",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:14.971Z",
+    "updatedAt": "2025-02-15T17:29:15.003Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/31/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/31/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/31/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/31/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/31/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-3"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/31",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/31",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/31/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Develop v1.0'"
+      },
+      "copy": {
+        "href": "/work_packages/31/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Develop v1.0'"
+      },
+      "pdf": {
+        "href": "/work_packages/31.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/31.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/31/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/3/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/31/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/31/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/31/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/31/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/31/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/31/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/31/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Develop v1.0"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/31",
+        "method": "patch",
+        "title": "Change parent of Develop v1.0"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/31/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/31",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/3",
+        "title": "Phase"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/7",
+        "title": "In progress"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/31/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/31/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/31/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/31/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/31",
+        "title": "Develop v1.0"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/31/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "_type": "WorkPackage",
+    "id": 32,
+    "lockVersion": 0,
+    "subject": "Release v1.0",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:15.030Z",
+    "updatedAt": "2025-02-15T17:29:15.062Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/32/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/32/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/32/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/32/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/32/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-2"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/32",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/32",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/32/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Release v1.0'"
+      },
+      "copy": {
+        "href": "/work_packages/32/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Release v1.0'"
+      },
+      "pdf": {
+        "href": "/work_packages/32.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/32.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/32/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/2/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/32/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/32/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/32/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/32/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/32/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/32/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/32/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/32",
+        "method": "patch",
+        "title": "Change parent of Release v1.0"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/32/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/32",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/2",
+        "title": "Milestone"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/32/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/32/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/32/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/32/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/32",
+        "title": "Release v1.0"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/32/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-03",
+    "dueDate": "2025-03-05",
+    "duration": "P3D",
+    "_type": "WorkPackage",
+    "id": 33,
+    "lockVersion": 0,
+    "subject": "Develop v1.1",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:15.081Z",
+    "updatedAt": "2025-02-15T17:29:15.120Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/33/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/33/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/33/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/33/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/33/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-3"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/33",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/33",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/33/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Develop v1.1'"
+      },
+      "copy": {
+        "href": "/work_packages/33/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Develop v1.1'"
+      },
+      "pdf": {
+        "href": "/work_packages/33.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/33.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/33/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/3/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/33/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/33/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/33/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/33/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/33/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/33/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/33/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Develop v1.1"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/33",
+        "method": "patch",
+        "title": "Change parent of Develop v1.1"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/33/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/33",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/3",
+        "title": "Phase"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/33/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/33/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/33/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/33/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/33",
+        "title": "Develop v1.1"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/33/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "_type": "WorkPackage",
+    "id": 34,
+    "lockVersion": 0,
+    "subject": "Release v1.1",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:15.142Z",
+    "updatedAt": "2025-02-15T17:29:15.176Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/34/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/34/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/34/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/34/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/34/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-2"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/34",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/34",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/34/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Release v1.1'"
+      },
+      "copy": {
+        "href": "/work_packages/34/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Release v1.1'"
+      },
+      "pdf": {
+        "href": "/work_packages/34.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/34.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/34/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/2/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/34/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/34/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/34/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/34/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/34/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/34/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/34/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/34",
+        "method": "patch",
+        "title": "Change parent of Release v1.1"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/34/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/34",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/2",
+        "title": "Milestone"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/34/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/34/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/34/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/34/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/34",
+        "title": "Release v1.1"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/34/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "startDate": "2025-03-10",
+    "dueDate": "2025-03-12",
+    "duration": "P3D",
+    "_type": "WorkPackage",
+    "id": 35,
+    "lockVersion": 0,
+    "subject": "Develop v2.0",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:15.197Z",
+    "updatedAt": "2025-02-15T17:29:15.231Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/35/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/35/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/35/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/35/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/35/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-3"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/35",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/35",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/35/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Develop v2.0'"
+      },
+      "copy": {
+        "href": "/work_packages/35/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Develop v2.0'"
+      },
+      "pdf": {
+        "href": "/work_packages/35.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/35.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/35/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/3/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/35/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/35/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/35/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/35/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/35/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/35/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/35/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "addChild": {
+        "href": "/api/v3/projects/your-scrum-project/work_packages",
+        "method": "post",
+        "title": "Add child of Develop v2.0"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/35",
+        "method": "patch",
+        "title": "Change parent of Develop v2.0"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/35/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/35",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/3",
+        "title": "Phase"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/35/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/35/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/35/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/35/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/35",
+        "title": "Develop v2.0"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/35/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  },
+  {
+    "_type": "WorkPackage",
+    "id": 36,
+    "lockVersion": 0,
+    "subject": "Release v2.0",
+    "description": {
+      "format": "markdown",
+      "raw": "",
+      "html": ""
+    },
+    "scheduleManually": false,
+    "estimatedTime": null,
+    "ignoreNonWorkingDays": false,
+    "percentageDone": null,
+    "createdAt": "2025-02-15T17:29:15.251Z",
+    "updatedAt": "2025-02-15T17:29:15.284Z",
+    "_links": {
+      "attachments": {
+        "href": "/api/v3/work_packages/36/attachments"
+      },
+      "addAttachment": {
+        "href": "/api/v3/work_packages/36/attachments",
+        "method": "post"
+      },
+      "fileLinks": {
+        "href": "/api/v3/work_packages/36/file_links"
+      },
+      "addFileLink": {
+        "href": "/api/v3/work_packages/36/file_links",
+        "method": "post"
+      },
+      "update": {
+        "href": "/api/v3/work_packages/36/form",
+        "method": "post"
+      },
+      "schema": {
+        "href": "/api/v3/work_packages/schemas/2-2"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/work_packages/36",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/work_packages/36",
+        "method": "delete"
+      },
+      "move": {
+        "href": "/work_packages/36/move/new",
+        "type": "text/html",
+        "title": "Move work package 'Release v2.0'"
+      },
+      "copy": {
+        "href": "/work_packages/36/copy",
+        "type": "text/html",
+        "title": "Copy work package 'Release v2.0'"
+      },
+      "pdf": {
+        "href": "/work_packages/36.pdf",
+        "type": "application/pdf",
+        "title": "Export as PDF"
+      },
+      "atom": {
+        "href": "/work_packages/36.atom",
+        "type": "application/rss+xml",
+        "title": "Atom feed"
+      },
+      "availableRelationCandidates": {
+        "href": "/api/v3/work_packages/36/available_relation_candidates",
+        "title": "Potential work packages to relate to"
+      },
+      "customFields": {
+        "href": "/projects/your-scrum-project/settings/custom_fields",
+        "type": "text/html",
+        "title": "Custom fields"
+      },
+      "configureForm": {
+        "href": "/types/2/edit?tab=form_configuration",
+        "type": "text/html",
+        "title": "Configure form"
+      },
+      "activities": {
+        "href": "/api/v3/work_packages/36/activities"
+      },
+      "availableWatchers": {
+        "href": "/api/v3/work_packages/36/available_watchers"
+      },
+      "relations": {
+        "href": "/api/v3/work_packages/36/relations"
+      },
+      "watchers": {
+        "href": "/api/v3/work_packages/36/watchers"
+      },
+      "addWatcher": {
+        "href": "/api/v3/work_packages/36/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/{user_id}"
+          }
+        },
+        "templated": true
+      },
+      "removeWatcher": {
+        "href": "/api/v3/work_packages/36/watchers/{user_id}",
+        "method": "delete",
+        "templated": true
+      },
+      "addRelation": {
+        "href": "/api/v3/work_packages/36/relations",
+        "method": "post",
+        "title": "Add relation"
+      },
+      "changeParent": {
+        "href": "/api/v3/work_packages/36",
+        "method": "patch",
+        "title": "Change parent of Release v2.0"
+      },
+      "addComment": {
+        "href": "/api/v3/work_packages/36/activities",
+        "method": "post",
+        "title": "Add comment"
+      },
+      "previewMarkup": {
+        "href": "/api/v3/render/markdown?context=/api/v3/work_packages/36",
+        "method": "post"
+      },
+      "category": {
+        "href": null
+      },
+      "type": {
+        "href": "/api/v3/types/2",
+        "title": "Milestone"
+      },
+      "priority": {
+        "href": "/api/v3/priorities/8",
+        "title": "Normal"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "status": {
+        "href": "/api/v3/statuses/1",
+        "title": "New"
+      },
+      "author": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "responsible": {
+        "href": null
+      },
+      "assignee": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "version": {
+        "href": null
+      },
+      "meetings": {
+        "href": "/work_packages/36/tabs/meetings",
+        "title": "meetings"
+      },
+      "github_pull_requests": {
+        "href": "/api/v3/work_packages/36/github_pull_requests",
+        "title": "GitHub pull requests"
+      },
+      "gitlab_merge_requests": {
+        "href": "/api/v3/work_packages/36/gitlab_merge_requests",
+        "title": "Gitlab merge requests"
+      },
+      "gitlab_issues": {
+        "href": "/api/v3/work_packages/36/gitlab_issues",
+        "title": "Gitlab Issues"
+      },
+      "self": {
+        "href": "/api/v3/work_packages/36",
+        "title": "Release v2.0"
+      },
+      "watch": {
+        "href": "/api/v3/work_packages/36/watchers",
+        "method": "post",
+        "payload": {
+          "user": {
+            "href": "/api/v3/users/4"
+          }
+        }
+      },
+      "ancestors": [],
+      "parent": {
+        "href": null,
+        "title": null
+      },
+      "customActions": []
+    }
+  }
+]

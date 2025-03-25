@@ -1,0 +1,3260 @@
+[
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 26,
+    "name": "Never",
+    "createdAt": "2025-02-15T17:29:15.487Z",
+    "updatedAt": "2025-02-15T17:29:15.487Z",
+    "filters": [
+      {
+        "_type": "ManualSortQueryFilter",
+        "name": "Manual sort",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/manualSort"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/manualSort",
+            "title": "Manual sort"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/ow",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/26",
+        "title": "Never"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22manualSort%22%3A%7B%22operator%22%3A%22ow%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/26/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/26/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/26",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/26/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/26",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 25,
+    "name": "Priority list for today",
+    "createdAt": "2025-02-15T17:29:15.468Z",
+    "updatedAt": "2025-02-15T17:29:15.468Z",
+    "filters": [
+      {
+        "_type": "ManualSortQueryFilter",
+        "name": "Manual sort",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/manualSort"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/manualSort",
+            "title": "Manual sort"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/ow",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/25",
+        "title": "Priority list for today"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22manualSort%22%3A%7B%22operator%22%3A%22ow%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/25/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/25/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/25",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/25/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/25",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 24,
+    "name": "Short list",
+    "createdAt": "2025-02-15T17:29:15.449Z",
+    "updatedAt": "2025-02-15T17:29:15.449Z",
+    "filters": [
+      {
+        "_type": "ManualSortQueryFilter",
+        "name": "Manual sort",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/manualSort"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/manualSort",
+            "title": "Manual sort"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/ow",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/24",
+        "title": "Short list"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22manualSort%22%3A%7B%22operator%22%3A%22ow%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/24/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/24/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/24",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/24/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/24",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 23,
+    "name": "Wish list",
+    "createdAt": "2025-02-15T17:29:15.428Z",
+    "updatedAt": "2025-02-15T17:29:15.428Z",
+    "filters": [
+      {
+        "_type": "ManualSortQueryFilter",
+        "name": "Manual sort",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/manualSort"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/manualSort",
+            "title": "Manual sort"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/ow",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/23",
+        "title": "Wish list"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22manualSort%22%3A%7B%22operator%22%3A%22ow%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/23/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/23/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/23",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/23/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/23",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 22,
+    "name": "Rejected",
+    "createdAt": "2025-02-15T17:29:15.363Z",
+    "updatedAt": "2025-02-15T17:29:15.363Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/statuses/14",
+              "title": "Rejected"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/22",
+        "title": "Rejected"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2214%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/22/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/22/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/22",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/22/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/22",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 21,
+    "name": "Closed",
+    "createdAt": "2025-02-15T17:29:15.347Z",
+    "updatedAt": "2025-02-15T17:29:15.347Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/statuses/12",
+              "title": "Closed"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/21",
+        "title": "Closed"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2212%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/21/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/21/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/21",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/21/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/21",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 20,
+    "name": "In progress",
+    "createdAt": "2025-02-15T17:29:15.330Z",
+    "updatedAt": "2025-02-15T17:29:15.330Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/statuses/7",
+              "title": "In progress"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/20",
+        "title": "In progress"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%227%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/20/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/20/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/20",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/20/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/20",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 19,
+    "name": "New",
+    "createdAt": "2025-02-15T17:29:15.311Z",
+    "updatedAt": "2025-02-15T17:29:15.311Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/statuses/1",
+              "title": "New"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/19",
+        "title": "New"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%221%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/19/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/19/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/19",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/19/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/19",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 18,
+    "name": "Tasks",
+    "createdAt": "2025-02-15T17:29:13.592Z",
+    "updatedAt": "2025-02-15T17:29:13.592Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/o",
+            "title": "open"
+          },
+          "values": []
+        }
+      },
+      {
+        "_type": "TypeQueryFilter",
+        "name": "Type",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/type"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/type",
+            "title": "Type"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/types/1",
+              "title": "Task"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": false,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/18",
+        "title": "Tasks"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22o%22%2C%22values%22%3A%5B%5D%7D%7D%2C%7B%22type%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%221%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false"
+      },
+      "star": {
+        "href": "/api/v3/queries/18/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/18/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/18",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/18/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/18",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 17,
+    "name": "Sprint 1",
+    "createdAt": "2025-02-15T17:29:13.570Z",
+    "updatedAt": "2025-02-15T17:29:13.570Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/o",
+            "title": "open"
+          },
+          "values": []
+        }
+      },
+      {
+        "_type": "VersionQueryFilter",
+        "name": "Version",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/version"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/version",
+            "title": "Version"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/versions/3",
+              "title": "Sprint 1"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": false,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/17",
+        "title": "Sprint 1"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?columns%5B%5D=id&columns%5B%5D=type&columns%5B%5D=subject&columns%5B%5D=priority&columns%5B%5D=status&columns%5B%5D=assignee&columns%5B%5D=percentageDone&columns%5B%5D=storyPoints&filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22o%22%2C%22values%22%3A%5B%5D%7D%7D%2C%7B%22version%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%223%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false"
+      },
+      "star": {
+        "href": "/api/v3/queries/17/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/17/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/17",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/17/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/17",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/percentageDone",
+          "title": "% Complete"
+        },
+        {
+          "href": "/api/v3/queries/columns/storyPoints",
+          "title": "Story Points"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 16,
+    "name": "Product backlog",
+    "createdAt": "2025-02-15T17:29:13.540Z",
+    "updatedAt": "2025-02-15T17:29:13.540Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/o",
+            "title": "open"
+          },
+          "values": []
+        }
+      },
+      {
+        "_type": "VersionQueryFilter",
+        "name": "Version",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/version"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/version",
+            "title": "Version"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/versions/2",
+              "title": "Product Backlog"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": false,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/16",
+        "title": "Product backlog"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?columns%5B%5D=id&columns%5B%5D=type&columns%5B%5D=subject&columns%5B%5D=priority&columns%5B%5D=status&columns%5B%5D=assignee&columns%5B%5D=storyPoints&filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22o%22%2C%22values%22%3A%5B%5D%7D%7D%2C%7B%22version%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%222%22%5D%7D%7D%5D&groupBy=status&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22status%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/16/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/16/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/16",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/16/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/16",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/status-asc",
+          "title": "Status (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": "/api/v3/queries/group_bys/status",
+        "title": "Status"
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/storyPoints",
+          "title": "Story Points"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 15,
+    "name": "Project plan",
+    "createdAt": "2025-02-15T17:29:13.503Z",
+    "updatedAt": "2025-02-15T17:29:13.503Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/o",
+            "title": "open"
+          },
+          "values": []
+        }
+      },
+      {
+        "_type": "TypeQueryFilter",
+        "name": "Type",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/type"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/type",
+            "title": "Type"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/types/2",
+              "title": "Milestone"
+            },
+            {
+              "href": "/api/v3/types/3",
+              "title": "Phase"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": false,
+    "timelineVisible": true,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/15",
+        "title": "Project plan"
+      },
+      "project": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "results": {
+        "href": "/api/v3/projects/2/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22o%22%2C%22values%22%3A%5B%5D%7D%7D%2C%7B%22type%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%222%22%2C%223%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22id%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/15/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/your-scrum-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/15/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/15",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/15/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/15",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/id-asc",
+          "title": "ID (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 14,
+    "name": "Follow-up tasks",
+    "createdAt": "2025-02-15T17:29:12.922Z",
+    "updatedAt": "2025-02-15T17:29:12.922Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/o",
+            "title": "open"
+          },
+          "values": []
+        }
+      },
+      {
+        "_type": "ParentQueryFilter",
+        "name": "Parent",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/parent"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/parent",
+            "title": "Parent"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/work_packages/10",
+              "title": "Follow-up tasks"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/14",
+        "title": "Follow-up tasks"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22o%22%2C%22values%22%3A%5B%5D%7D%7D%2C%7B%22parent%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2210%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/14/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/14/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/14",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/14/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/14",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 13,
+    "name": "Organize open source conference",
+    "createdAt": "2025-02-15T17:29:12.897Z",
+    "updatedAt": "2025-02-15T17:29:12.897Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/o",
+            "title": "open"
+          },
+          "values": []
+        }
+      },
+      {
+        "_type": "ParentQueryFilter",
+        "name": "Parent",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/parent"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/parent",
+            "title": "Parent"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/work_packages/2",
+              "title": "Organize open source conference"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/13",
+        "title": "Organize open source conference"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22o%22%2C%22values%22%3A%5B%5D%7D%7D%2C%7B%22parent%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%222%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/13/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/13/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/13",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/13/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/13",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 12,
+    "name": "Never",
+    "createdAt": "2025-02-15T17:29:12.824Z",
+    "updatedAt": "2025-02-15T17:29:12.824Z",
+    "filters": [
+      {
+        "_type": "ManualSortQueryFilter",
+        "name": "Manual sort",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/manualSort"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/manualSort",
+            "title": "Manual sort"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/ow",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/12",
+        "title": "Never"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22manualSort%22%3A%7B%22operator%22%3A%22ow%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/12/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/12/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/12",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/12/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/12",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 11,
+    "name": "Priority list for today",
+    "createdAt": "2025-02-15T17:29:12.806Z",
+    "updatedAt": "2025-02-15T17:29:12.806Z",
+    "filters": [
+      {
+        "_type": "ManualSortQueryFilter",
+        "name": "Manual sort",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/manualSort"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/manualSort",
+            "title": "Manual sort"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/ow",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/11",
+        "title": "Priority list for today"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22manualSort%22%3A%7B%22operator%22%3A%22ow%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/11/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/11/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/11",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/11/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/11",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 10,
+    "name": "Short list",
+    "createdAt": "2025-02-15T17:29:12.784Z",
+    "updatedAt": "2025-02-15T17:29:12.784Z",
+    "filters": [
+      {
+        "_type": "ManualSortQueryFilter",
+        "name": "Manual sort",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/manualSort"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/manualSort",
+            "title": "Manual sort"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/ow",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/10",
+        "title": "Short list"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22manualSort%22%3A%7B%22operator%22%3A%22ow%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/10/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/10/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/10",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/10/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/10",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 9,
+    "name": "Wish list",
+    "createdAt": "2025-02-15T17:29:12.761Z",
+    "updatedAt": "2025-02-15T17:29:12.761Z",
+    "filters": [
+      {
+        "_type": "ManualSortQueryFilter",
+        "name": "Manual sort",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/manualSort"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/manualSort",
+            "title": "Manual sort"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/ow",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/9",
+        "title": "Wish list"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22manualSort%22%3A%7B%22operator%22%3A%22ow%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/9/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/9/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/9",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/9/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/9",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 8,
+    "name": "Rejected",
+    "createdAt": "2025-02-15T17:29:12.661Z",
+    "updatedAt": "2025-02-15T17:29:12.661Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/statuses/14",
+              "title": "Rejected"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/8",
+        "title": "Rejected"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2214%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/8/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/8/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/8",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/8/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/8",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 7,
+    "name": "Closed",
+    "createdAt": "2025-02-15T17:29:12.642Z",
+    "updatedAt": "2025-02-15T17:29:12.642Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/statuses/12",
+              "title": "Closed"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/7",
+        "title": "Closed"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%2212%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/7/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/7/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/7",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/7/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/7",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 6,
+    "name": "In progress",
+    "createdAt": "2025-02-15T17:29:12.623Z",
+    "updatedAt": "2025-02-15T17:29:12.623Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/statuses/7",
+              "title": "In progress"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/6",
+        "title": "In progress"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%227%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/6/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/6/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/6",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/6/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/6",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 5,
+    "name": "New",
+    "createdAt": "2025-02-15T17:29:12.601Z",
+    "updatedAt": "2025-02-15T17:29:12.601Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/statuses/1",
+              "title": "New"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": true,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/5",
+        "title": "New"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%221%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22manualSorting%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/5/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/5/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/5",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/5/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/5",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/manualSorting-asc",
+          "title": "Manual sorting (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 4,
+    "name": "Team planner",
+    "createdAt": "2025-02-15T17:29:11.198Z",
+    "updatedAt": "2025-02-15T17:29:11.198Z",
+    "filters": [
+      {
+        "_type": "AssigneeQueryFilter",
+        "name": "Assignee",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/assignee"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/assignee",
+            "title": "Assignee"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/users/4",
+              "title": "OpenProject Admin"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": false,
+    "timelineVisible": false,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/4",
+        "title": "Team planner"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?filters=%5B%7B%22assignee%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%224%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false"
+      },
+      "star": {
+        "href": "/api/v3/queries/4/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/4/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/4",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/4/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/4",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 3,
+    "name": "Tasks",
+    "createdAt": "2025-02-15T17:29:11.163Z",
+    "updatedAt": "2025-02-15T17:29:11.163Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/o",
+            "title": "open"
+          },
+          "values": []
+        }
+      },
+      {
+        "_type": "TypeQueryFilter",
+        "name": "Type",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/type"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/type",
+            "title": "Type"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/types/1",
+              "title": "Task"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": false,
+    "timelineVisible": false,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/3",
+        "title": "Tasks"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?columns%5B%5D=id&columns%5B%5D=subject&columns%5B%5D=priority&columns%5B%5D=status&columns%5B%5D=assignee&filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22o%22%2C%22values%22%3A%5B%5D%7D%7D%2C%7B%22type%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%221%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22id%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/3/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/3/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/3",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/3/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/3",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/id-asc",
+          "title": "ID (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/priority",
+          "title": "Priority"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": false,
+    "id": 2,
+    "name": "Milestones",
+    "createdAt": "2025-02-15T17:29:11.124Z",
+    "updatedAt": "2025-02-15T17:29:11.124Z",
+    "filters": [
+      {
+        "_type": "TypeQueryFilter",
+        "name": "Type",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/type"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/type",
+            "title": "Type"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/%3D",
+            "title": "is (OR)"
+          },
+          "values": [
+            {
+              "href": "/api/v3/types/2",
+              "title": "Milestone"
+            }
+          ]
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": false,
+    "timelineVisible": true,
+    "showHierarchies": false,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/2",
+        "title": "Milestones"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?columns%5B%5D=id&columns%5B%5D=type&columns%5B%5D=subject&columns%5B%5D=status&columns%5B%5D=startDate&columns%5B%5D=dueDate&filters=%5B%7B%22type%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%222%22%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=false&showSums=false&sortBy=%5B%5B%22id%22%2C%22asc%22%5D%5D"
+      },
+      "star": {
+        "href": "/api/v3/queries/2/star",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/2/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/2",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/2/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/2",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/id-asc",
+          "title": "ID (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/startDate",
+          "title": "Start date"
+        },
+        {
+          "href": "/api/v3/queries/columns/dueDate",
+          "title": "Finish date"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  },
+  {
+    "_type": "Query",
+    "starred": true,
+    "id": 1,
+    "name": "Project plan",
+    "createdAt": "2025-02-15T17:29:11.073Z",
+    "updatedAt": "2025-02-15T17:29:11.073Z",
+    "filters": [
+      {
+        "_type": "StatusQueryFilter",
+        "name": "Status",
+        "_links": {
+          "schema": {
+            "href": "/api/v3/queries/filter_instance_schemas/status"
+          },
+          "filter": {
+            "href": "/api/v3/queries/filters/status",
+            "title": "Status"
+          },
+          "operator": {
+            "href": "/api/v3/queries/operators/o",
+            "title": "open"
+          },
+          "values": []
+        }
+      }
+    ],
+    "includeSubprojects": true,
+    "sums": false,
+    "public": true,
+    "hidden": false,
+    "timelineVisible": true,
+    "showHierarchies": true,
+    "timelineZoomLevel": "auto",
+    "timelineLabels": {},
+    "timestamps": [
+      "PT0S"
+    ],
+    "highlightingMode": "none",
+    "_links": {
+      "self": {
+        "href": "/api/v3/queries/1",
+        "title": "Project plan"
+      },
+      "project": {
+        "href": "/api/v3/projects/1",
+        "title": "Demo project"
+      },
+      "results": {
+        "href": "/api/v3/projects/1/work_packages?columns%5B%5D=id&columns%5B%5D=type&columns%5B%5D=subject&columns%5B%5D=status&columns%5B%5D=startDate&columns%5B%5D=dueDate&columns%5B%5D=duration&columns%5B%5D=assignee&filters=%5B%7B%22status%22%3A%7B%22operator%22%3A%22o%22%2C%22values%22%3A%5B%5D%7D%7D%5D&includeSubprojects=true&offset=1&pageSize=20&showHierarchies=true&showSums=false&sortBy=%5B%5B%22id%22%2C%22asc%22%5D%5D"
+      },
+      "unstar": {
+        "href": "/api/v3/queries/1/unstar",
+        "method": "patch"
+      },
+      "schema": {
+        "href": "/api/v3/projects/demo-project/queries/schema"
+      },
+      "update": {
+        "href": "/api/v3/queries/1/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/queries/1",
+        "method": "patch"
+      },
+      "updateOrderedWorkPackages": {
+        "href": "/api/v3/queries/1/order",
+        "method": "put"
+      },
+      "delete": {
+        "href": "/api/v3/queries/1",
+        "method": "delete"
+      },
+      "user": {
+        "href": "/api/v3/users/4",
+        "title": "OpenProject Admin"
+      },
+      "sortBy": [
+        {
+          "href": "/api/v3/queries/sort_bys/id-asc",
+          "title": "ID (Ascending)"
+        }
+      ],
+      "groupBy": {
+        "href": null,
+        "title": null
+      },
+      "columns": [
+        {
+          "href": "/api/v3/queries/columns/id",
+          "title": "ID"
+        },
+        {
+          "href": "/api/v3/queries/columns/type",
+          "title": "Type"
+        },
+        {
+          "href": "/api/v3/queries/columns/subject",
+          "title": "Subject"
+        },
+        {
+          "href": "/api/v3/queries/columns/status",
+          "title": "Status"
+        },
+        {
+          "href": "/api/v3/queries/columns/startDate",
+          "title": "Start date"
+        },
+        {
+          "href": "/api/v3/queries/columns/dueDate",
+          "title": "Finish date"
+        },
+        {
+          "href": "/api/v3/queries/columns/duration",
+          "title": "Duration"
+        },
+        {
+          "href": "/api/v3/queries/columns/assignee",
+          "title": "Assignee"
+        }
+      ],
+      "highlightedAttributes": []
+    }
+  }
+]
