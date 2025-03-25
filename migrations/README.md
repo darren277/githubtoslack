@@ -29,3 +29,11 @@ What we explicitly do NOT see as part of this migration:
 ```
 
 https://community.openproject.org/projects/openproject/work_packages/35007/activity
+
+## Schema
+
+Regarding Schema, it appears that they are custom property definitions assigned to any resource type.
+
+This makes extracting them a bit more difficult, as, from what I can tell, they need to be extracted from each resource (Project, Work Package, etc) independently.
+
+I'll be leaving this aside for now.
