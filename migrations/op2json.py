@@ -40,10 +40,10 @@ def extract_schema():
 
     schemas = []
     for project in all_projects:
-        project_id = project['id']
+        project_id = project.id
         types = op.get_type_service().find_all(project_id=project_id)
         for t in types:
-            type_id = t['id']
+            type_id = t.id
             schema_url = f"/api/v3/projects/{project_id}/types/{type_id}/schema"
             schema = op.conn.get(schema_url)
             schemas.append({
