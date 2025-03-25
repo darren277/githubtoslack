@@ -389,7 +389,7 @@ def export_projects():
         return
 
 
-def serailize_grid_widget(grid_widget: pyopenproject.model.grid_widget.GridWidget):
+def serailize_grid_widget(grid_widget):
     # ['_type', 'id', 'identifier', 'startRow', 'endRow', 'startColumn', 'endColumn', 'options']
     return dict(
         _type=grid_widget._type,
