@@ -76,3 +76,7 @@ class Priority:
 Normal = Priority(8, 'Normal', 2, '#74C0FC', is_default=True)
 Low = Priority(7, 'Low', 1, '#C5F6FA')
 High = Priority(9, 'High', 3, '#F59F00')
+
+
+OP_JSON_OUTPUT_PATH = 'output/op/'
+JIRA_JSON_OUTPUT_PATH = "output/jira/"

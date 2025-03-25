@@ -1,11 +1,9 @@
 """"""
-from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY
+from settings import OPENPROJECT_URL, OPENPROJECT_API_KEY, OP_JSON_OUTPUT_PATH
 from pyopenproject.openproject import OpenProject
 import pyopenproject
 
 import json
-
-JSON_OUTPUT_PATH = "output/op/"
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
@@ -53,7 +51,7 @@ def extract_schema():
                 "type_id": type_id,
                 "schema": schema
             })
-    with open(f"{JSON_OUTPUT_PATH}schemas.json", "w") as f:
+    with open(f"{OP_JSON_OUTPUT_PATH}schemas.json", "w") as f:
         json.dump(schemas, f, indent=2)
 
 extract_schema()
@@ -119,7 +117,7 @@ def export_custom_fields_and_custom_options():
         data.append(dict(custom_field=field, custom_options=[serialize_custom_option(custom_option) for custom_option in custom_options]))
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}custom_fields_and_options.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}custom_fields_and_options.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write custom options to file. {e}")
         breakpoint()
@@ -159,7 +157,7 @@ def export_queries():
 
     data = [serialize_query(query) for query in queries]
 
-    with open(f"{JSON_OUTPUT_PATH}queries.json", "w") as f:
+    with open(f"{OP_JSON_OUTPUT_PATH}queries.json", "w") as f:
         json.dump(data, f, indent=2)
 
 
@@ -212,7 +210,7 @@ def export_work_packages():
     data = [serialize_work_package(wp) for wp in work_packages]
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}work_packages.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}work_packages.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write work packages to file. {e}")
         breakpoint()
@@ -225,7 +223,7 @@ def export_attachments():
     data = build_query(url)
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}attachments.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}attachments.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write attachments to file. {e}")
         breakpoint()
@@ -237,7 +235,7 @@ def export_comments_in_journal():
 
     data = build_query(url)
 
-    with open(f"{JSON_OUTPUT_PATH}comments_in_journal.json", "w") as f:
+    with open(f"{OP_JSON_OUTPUT_PATH}comments_in_journal.json", "w") as f:
         json.dump(data, f, indent=2)
 
 
@@ -246,7 +244,7 @@ def export_work_package_configurations_and_project_configurations():
 
     data = build_query(url)
 
-    with open(f"{JSON_OUTPUT_PATH}work_package_configurations.json", "w") as f:
+    with open(f"{OP_JSON_OUTPUT_PATH}work_package_configurations.json", "w") as f:
         json.dump(data, f, indent=2)
 
 
@@ -255,7 +253,7 @@ def export_journals():
 
     data = build_query(url)
 
-    with open(f"{JSON_OUTPUT_PATH}journals.json", "w") as f:
+    with open(f"{OP_JSON_OUTPUT_PATH}journals.json", "w") as f:
         json.dump(data, f, indent=2)
 
 
@@ -287,7 +285,7 @@ def export_relations():
     data = [serialize_relation(relation) for relation in relations]
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}relations.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}relations.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write relations to file. {e}")
         breakpoint()
@@ -321,7 +319,7 @@ def export_types():
     data = [serialize_type(t) for t in data]
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}types.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}types.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write types to file. {e}")
         breakpoint()
@@ -354,7 +352,7 @@ def export_project_roles():
     data = [serialize_role(role) for role in data]
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}project_roles.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}project_roles.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write project roles to file. {e}")
         breakpoint()
@@ -393,7 +391,7 @@ def export_versions():
     data = [serialize_version(version) for version in versions]
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}versions.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}versions.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write versions to file. {e}")
         breakpoint()
@@ -434,7 +432,7 @@ def export_users():
     data = [serialize_user(user) for user in users]
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}users.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}users.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write users to file. {e}")
         breakpoint()
@@ -472,7 +470,7 @@ def export_projects():
     data = [serialize_project(p) for p in project]
 
     try:
-        with open(f"{JSON_OUTPUT_PATH}projects.json", "w") as f: json.dump(data, f, indent=2)
+        with open(f"{OP_JSON_OUTPUT_PATH}projects.json", "w") as f: json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write projects to file. {e}")
         breakpoint()
