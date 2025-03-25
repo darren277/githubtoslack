@@ -38,13 +38,23 @@ totalSums 	Aggregations of supported values for elements of the collection 	Obje
 '''
 
 def extract_schema():
-    try:
-        schema = op.get_schema_service().find_all()
-    except Exception as e:
-        print(f"Failed to extract schema. {e}")
-        breakpoint()
-        return
-    print("SCHEMA", schema, schema.__dir__())
+    all_projects = op.get_project_service().find_all()
+
+    schemas = []
+    for project in all_projects:
+        project_id = project['id']
+        types = op.get_type_service().find_all(project_id=project_id)
+        for t in types:
+            type_id = t['id']
+            schema_url = f"/api/v3/projects/{project_id}/types/{type_id}/schema"
+            schema = op.conn.get(schema_url)
+            schemas.append({
+                "project_id": project_id,
+                "type_id": type_id,
+                "schema": schema
+            })
+    with open(f"{JSON_OUTPUT_PATH}schemas.json", "w") as f:
+        json.dump(schemas, f, indent=2)
 
 extract_schema()
 quit(54)
