@@ -139,6 +139,7 @@ def serialize_query(query: pyopenproject.model.query.Query):
     )
 
 def export_queries():
+    raise Exception("ALREADY TESTED QUERIES SO SKIPPING...")
     try:
         queries = op.get_query_service().find_all()
     except Exception as e:
@@ -188,6 +189,7 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
     return d
 
 def export_work_packages():
+    raise Exception("ALREADY TESTED WORK PACKAGES SO SKIPPING...")
     try:
         work_packages = op.get_work_package_service().find_all()
     except Exception as e:
@@ -261,6 +263,7 @@ def serialize_relation(relation: pyopenproject.model.relation.Relation):
 
 
 def export_relations():
+    raise Exception("ALREADY TESTED RELATIONS SO SKIPPING...")
     try:
         s = op.get_relation_service()
         relations = s.find_all()
@@ -296,6 +299,7 @@ def serialize_type(t: pyopenproject.model.type.Type):
     )
 
 def export_types():
+    raise Exception("ALREADY TESTED TYPES SO SKIPPING...")
     try:
         data = op.get_type_service().find_all()
     except Exception as e:
@@ -363,6 +367,7 @@ def serialize_version(version: pyopenproject.model.version.Version):
     )
 
 def export_versions():
+    raise Exception("ALREADY TESTED VERSIONS SO SKIPPING...")
     # Work Packages can be assigned to a version.
     # As such, versions serve to group Work Packages into logical units where each group comprises all the work packages that needs to be finished in order for the version to be finished.
 
@@ -405,6 +410,7 @@ def serialize_user(user: pyopenproject.model.user.User):
     )
 
 def export_users():
+    raise Exception("ALREADY TESTED USERS SO SKIPPING...")
     try:
         users = op.get_user_service().find_all()
     except Exception as e:
@@ -443,6 +449,7 @@ def serialize_project(project: pyopenproject.model.project.Project):
 
 
 def export_projects():
+    raise Exception("ALREADY TESTED PROJECTS SO SKIPPING...")
     try:
         project = op.get_project_service().find_all()
     except Exception as e:
