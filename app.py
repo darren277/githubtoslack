@@ -20,7 +20,7 @@ op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
 import requests
 
-from flask import Flask, request, make_response, jsonify, g
+from flask import Flask, request, make_response, jsonify, g, render_template
 
 app = Flask(__name__)
 
@@ -277,6 +277,11 @@ def backups(folder, filename):
     with open(f'output/{folder}/{filename}', 'r', encoding='utf-8') as f:
         data = json.load(f)
     return jsonify(data)
+
+
+@app.route('/op_grid')
+def op_grid():
+    return render_template('op_grid.html')
 
 
 

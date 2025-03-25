@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OpenProject Grid Prototype</title>
+  <style>
+    /* General styling just to visualize the layout */
+    .grid-container {
+      border: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 10px;
+      display: grid;
+      gap: 10px; /* Gap between widgets */
+    }
+
+    .widget {
+      border: 1px dashed #999;
+      padding: 10px;
+      background: #f8f8f8;
+    }
+
+    .grid-title {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+<h1>OpenProject Grids</h1>
+<div id="grids"></div>
+
+<script>
+function renderGrids(grids) {
+  const container = document.getElementById('grids');
+
+  grids.forEach((grid) => {
+    // Create a container div for this grid
+    const gridDiv = document.createElement('div');
+    gridDiv.classList.add('grid-container');
+
+    // Configure CSS Grid rows and columns based on rowCount / columnCount
+    // You can fine-tune row heights (e.g. "auto" vs fixed pixel height, etc.)
+    gridDiv.style.gridTemplateRows = `repeat(${grid.rowCount}, auto)`;
+    gridDiv.style.gridTemplateColumns = `repeat(${grid.columnCount}, 1fr)`;
+
+    // Optional: Give the grid a title if "name" is present
+    if (grid.name) {
+      const title = document.createElement('div');
+      title.className = 'grid-title';
+      title.textContent = grid.name;
+      container.appendChild(title);
+    }
+
+    // For each widget, create a “cell” in the grid
+    grid.widgets.forEach((widget) => {
+      const widgetDiv = document.createElement('div');
+      widgetDiv.classList.add('widget');
+
+      // Position the widget
+      widgetDiv.style.gridRow = `${widget.startRow} / ${widget.endRow}`;
+      widgetDiv.style.gridColumn = `${widget.startColumn} / ${widget.endColumn}`;
+
+      // Display something meaningful about the widget
+      // For example, we could show the "name" or the "identifier"
+      const name = widget.options?.name || widget.identifier;
+      widgetDiv.innerHTML = `
+        <strong>${name}</strong><br>
+        <em>ID: ${widget.id}</em>
+      `;
+
+      // If it's a "custom_text" widget, show the text (or a snippet of it)
+      if (widget.identifier === 'custom_text' && widget.options.text) {
+        widgetDiv.innerHTML += `<div>${widget.options.text.raw}</div>`;
+      }
+
+      // Append widget to the grid container
+      gridDiv.appendChild(widgetDiv);
+    });
+
+    // Append the entire grid to main container
+    container.appendChild(gridDiv);
+  });
+}
+
+// endpoint for gridsData = /backups/op/grids.json
+function fetchData() {
+  fetch('/backups/op/grids.json')
+    .then((response) => response.json())
+    .then((data) => renderGrids(data))
+    .catch((error) => console.error('Error:', error));
+}
+
+fetchData();
+</script>
+</body>
+</html>
