@@ -592,6 +592,15 @@ def serialize_project(project: pyopenproject.model.project.Project):
         return
 
 
+    # Extract Work Packages for Project...
+    try:
+        extract_project_work_packages(project)
+    except Exception as e:
+        print(f"Failed to extract project ({project.identifier}) work packages. {e}")
+        breakpoint()
+        return
+
+
     return dict(
         _type=project._type,
         id=project.id,
