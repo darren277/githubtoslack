@@ -154,7 +154,12 @@ def extract_work_package_schema(schema_href: str):
 
     schema_identifier = schema_href.split('/')[-1]
 
-    with open(f"{OP_JSON_OUTPUT_PATH}work_package_schema_{schema_identifier}.json", "w") as f:
+    # mkdir if does not exist...
+    import os
+    if not os.path.exists(f"{OP_JSON_OUTPUT_PATH}/wp_schema"):
+        os.makedirs(f"{OP_JSON_OUTPUT_PATH}/wp_schema")
+
+    with open(f"{OP_JSON_OUTPUT_PATH}/wp_schema/{schema_identifier}.json", "w") as f:
         json.dump(schema, f, indent=2)
 
 def extract_work_package_activities(work_package: pyopenproject.model.work_package.WorkPackage):
