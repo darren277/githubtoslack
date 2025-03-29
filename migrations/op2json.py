@@ -117,7 +117,7 @@ def export_project_schema():
         raise Exception("ALREADY TESTED PROJECT SCHEMA SO SKIPPING...")
 
     try:
-        project_schema = op.get_project_service().find_schema()
+        project_schema = op.get_project_service().find_schema().__dict__
     except Exception as e:
         print(f"Failed to export project schema. {e}")
         breakpoint()
