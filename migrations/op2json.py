@@ -712,10 +712,12 @@ def export_all():
     # except Exception as e:
     #     print(f"Failed to export work packages. {e}")
 
-    try:
-        export_attachments()
-    except Exception as e:
-        print(f"Failed to export attachments. {e}")
+    # Exporting attachments by work package instead now...
+
+    # try:
+    #     export_attachments()
+    # except Exception as e:
+    #     print(f"Failed to export attachments. {e}")
 
     try:
         export_comments_in_journal()
