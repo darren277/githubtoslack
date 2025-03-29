@@ -80,3 +80,13 @@ High = Priority(9, 'High', 3, '#F59F00')
 
 OP_JSON_OUTPUT_PATH = 'output/op/'
 JIRA_JSON_OUTPUT_PATH = "output/jira/"
+
+ALREADY_TESTED = [
+    'queries',
+    'work_packages',
+    'relations',
+    'types',
+    'versions',
+    'users',
+    'projects'
+]
