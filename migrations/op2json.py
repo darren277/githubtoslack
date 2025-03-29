@@ -7,7 +7,6 @@ import json
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
-# TODO: WorkPackage schema and custom field values for each WorkPackage.
 
 def custom_request(api_user: str, api_key: str, url_path: str):
     '''
@@ -71,6 +70,7 @@ totalSums 	Aggregations of supported values for elements of the collection 	Obje
 '''
 
 custom_project_fields = dict()
+already_seen_schema_href = set()
 
 
 
@@ -130,6 +130,32 @@ def export_project_schema():
         if key.startswith('customField'):
             custom_project_fields.update({key: val})
 
+
+
+""" WORK PACKAGES """
+
+def extract_work_package_schema(schema_href: str):
+    conn = op.conn
+    api_key, api_user = conn.api_key, conn.api_user
+
+    if schema_href in already_seen_schema_href:
+        print(f"Already seen schema href: {schema_href}")
+        return
+
+    schema = custom_request(api_user, api_key, schema_href)
+
+    # for key, val in schema.items():
+    #     if key.startswith('customField'):
+    #         cf = schema[key]
+    #         for key, val in cf.items():
+    #             print(key, val)
+
+    already_seen_schema_href.add(schema_href)
+
+    schema_identifier = schema_href.split('/')[-1]
+
+    with open(f"{OP_JSON_OUTPUT_PATH}work_package_schema_{schema_identifier}.json", "w") as f:
+        json.dump(schema, f, indent=2)
 
 def extract_work_package_activities(work_package: pyopenproject.model.work_package.WorkPackage):
     try:
@@ -196,6 +222,16 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
         )
 
         try:
+            custom_fields = dict()
+            for key, val in wp.__dict__.items():
+                if key.startswith('customField'):
+                    custom_fields.update({key: val})
+            d.update(custom_fields=custom_fields)
+        except Exception as e:
+            print(f"Failed to serialize work package custom fields. {e}")
+            breakpoint()
+
+        try:
             d.update(activities=extract_work_package_activities(wp))
         except Exception as e:
             print(f"Failed to serialize work package activities. {e}")
@@ -211,6 +247,13 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
             d.update(revisions=extract_work_package_revisions(wp))
         except Exception as e:
             print(f"Failed to serialize work package revisions. {e}")
+            breakpoint()
+
+        try:
+            schema_href = wp._links['schema']['href']
+            extract_work_package_schema(schema_href)
+        except Exception as e:
+            print(f"Failed to extract work package schema. {e}")
             breakpoint()
 
     except Exception as e:
