@@ -159,35 +159,44 @@ def extract_work_package_schema(schema_href: str):
 
 def extract_work_package_activities(work_package: pyopenproject.model.work_package.WorkPackage):
     try:
-        activities = op.get_activity_service().find_work_package_activities(work_package)
+        activities = op.get_work_package_service().find_activities(work_package)
     except Exception as e:
         print(f"Failed to extract work package activities. {e}")
         breakpoint()
         return
 
-    return activities
+    # Serializing directly as is for now...
+    data = [activity.__dict__ for activity in activities]
+
+    return data
 
 
 def extract_work_package_attachments(work_package: pyopenproject.model.work_package.WorkPackage):
     try:
-        attachments = op.get_attachment_service().find_attachments(work_package)
+        attachments = op.get_work_package_service().find_attachments(work_package)
     except Exception as e:
         print(f"Failed to extract work package attachments. {e}")
         breakpoint()
         return
 
-    return attachments
+    # Serializing directly as is for now...
+    data = [attachment.__dict__ for attachment in attachments]
+
+    return data
 
 
 def extract_work_package_revisions(work_package: pyopenproject.model.work_package.WorkPackage):
     try:
-        revisions = op.get_revision_service().find_work_package_revisions(work_package)
+        revisions = op.get_work_package_service().find_revisions(work_package)
     except Exception as e:
         print(f"Failed to extract work package revisions. {e}")
         breakpoint()
         return
 
-    return revisions
+    # Serializing directly as is for now...
+    data = [revision.__dict__ for revision in revisions]
+
+    return data
 
 
 def serialize_derived(d):
