@@ -547,14 +547,20 @@ def extract_project_work_packages(project: pyopenproject.model.project.Project):
     try:
         work_packages = op.get_project_service().find_work_packages(project)
     except Exception as e:
-        print(f"Failed to extract project work packages. {e}")
+        print(f"Failed to extract project work packages for Project ({project.identifier}). {e}")
         breakpoint()
         return
 
     data = [serialize_work_package(wp) for wp in work_packages]
 
     try:
-        with open(f"{OP_JSON_OUTPUT_PATH}{project.identifier}_work_packages.json", "w") as f:
+        project_folder_name = project.identifier.replace('-', '_')
+        # mkdir if does not exist...
+        import os
+        if not os.path.exists(f"{OP_JSON_OUTPUT_PATH}/{project_folder_name}"):
+            os.makedirs(f"{OP_JSON_OUTPUT_PATH}/{project_folder_name}")
+
+        with open(f"{OP_JSON_OUTPUT_PATH}/{project_folder_name}/work_packages.json", "w") as f:
             json.dump(data, f, indent=2)
     except Exception as e:
         print(f"Failed to write work packages to file. {e}")
@@ -697,10 +703,12 @@ def export_all():
     except Exception as e:
         print(f"Failed to export queries. {e}")
 
-    try:
-        export_work_packages()
-    except Exception as e:
-        print(f"Failed to export work packages. {e}")
+    # Exporting work packages by project instead now...
+
+    # try:
+    #     export_work_packages()
+    # except Exception as e:
+    #     print(f"Failed to export work packages. {e}")
 
     try:
         export_attachments()
