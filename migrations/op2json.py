@@ -7,7 +7,6 @@ import json
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
-# TODO: Extract WorkPackages by Project (and save to separate JSON files per Project).
 # TODO: WorkPackage schema and custom field values for each WorkPackage.
 
 
@@ -187,6 +186,11 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
     return d
 
 def export_work_packages():
+    '''
+    This function is for exporting ALL work packages.
+    For exporting work packages specific to a particular project, use extract_project_work_packages() [called by serialize_project()].
+    :return:
+    '''
     if 'work_packages' in ALREADY_TESTED:
         raise Exception("ALREADY TESTED WORK PACKAGES SO SKIPPING...")
     try:
@@ -446,6 +450,26 @@ def extract_project_work_package_types(project: pyopenproject.model.project.Proj
 
     return types
 
+
+def extract_project_work_packages(project: pyopenproject.model.project.Project):
+    try:
+        work_packages = op.get_project_service().find_work_packages(project)
+    except Exception as e:
+        print(f"Failed to extract project work packages. {e}")
+        breakpoint()
+        return
+
+    data = [serialize_work_package(wp) for wp in work_packages]
+
+    try:
+        with open(f"{OP_JSON_OUTPUT_PATH}{project.identifier}_work_packages.json", "w") as f:
+            json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f"Failed to write work packages to file. {e}")
+        breakpoint()
+        return
+
+    return work_packages
 
 def serialize_project(project: pyopenproject.model.project.Project):
     # ['_type', 'id', 'identifier', 'name', 'active', 'public', 'description', 'createdAt', 'updatedAt', 'statusExplanation', '_links',
