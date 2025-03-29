@@ -7,6 +7,8 @@ import json
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
+# TODO: Save the actual Work Package attachment binaries (into project specific folder)...
+
 
 def custom_request(api_user: str, api_key: str, url_path: str):
     '''
