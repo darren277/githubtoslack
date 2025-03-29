@@ -436,13 +436,37 @@ def export_users():
         return
 
 
+def extract_project_work_package_types(project: pyopenproject.model.project.Project):
+    try:
+        types = op.get_project_service().find_types(project)
+    except Exception as e:
+        print(f"Failed to extract project work package types. {e}")
+        breakpoint()
+        return
+
+    return types
+
+
 def serialize_project(project: pyopenproject.model.project.Project):
     # ['_type', 'id', 'identifier', 'name', 'active', 'public', 'description', 'createdAt', 'updatedAt', 'statusExplanation', '_links',
 
-    project_custom_fields = dict()
-    for key, val in project.__dict__.items():
-        if key.startswith('customField'):
-            project_custom_fields.update({key: val})
+    try:
+        project_custom_fields = dict()
+        for key, val in project.__dict__.items():
+            if key.startswith('customField'):
+                project_custom_fields.update({key: val})
+    except Exception as e:
+        print(f"Failed to serialize project custom fields. {e}")
+        breakpoint()
+        return
+
+    try:
+        project_work_package_types = extract_project_work_package_types(project)
+    except Exception as e:
+        print(f"Failed to extract project work package types. {e}")
+        breakpoint()
+        return
+
 
     return dict(
         _type=project._type,
@@ -456,7 +480,8 @@ def serialize_project(project: pyopenproject.model.project.Project):
         updatedAt=project.updatedAt,
         statusExplanation=project.statusExplanation,
         _links=project._links,
-        custom_fields=project_custom_fields
+        custom_fields=project_custom_fields,
+        work_package_types=project_work_package_types
     )
 
 
