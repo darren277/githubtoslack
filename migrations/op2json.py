@@ -427,7 +427,7 @@ def export_projects():
         return
 
 
-def serailize_grid_widget(grid_widget):
+def serialize_grid_widget(grid_widget):
     # ['_type', 'id', 'identifier', 'startRow', 'endRow', 'startColumn', 'endColumn', 'options']
     return dict(
         _type=grid_widget._type,
