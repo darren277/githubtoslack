@@ -7,6 +7,9 @@ import json
 
 op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
+# TODO: Extract WorkPackages by Project (and save to separate JSON files per Project).
+# TODO: WorkPackage schema and custom field values for each WorkPackage.
+
 
 '''
 PAGINATION
