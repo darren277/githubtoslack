@@ -35,6 +35,9 @@ groups 	Summarized information about aggregation groups 	Object 	when grouping
 totalSums 	Aggregations of supported values for elements of the collection 	Object 	when showing sums
 '''
 
+custom_project_fields = dict()
+
+
 
 def serialize_query(query: pyopenproject.model.query.Query):
     return dict(
@@ -72,6 +75,25 @@ def export_queries():
 
     with open(f"{OP_JSON_OUTPUT_PATH}queries.json", "w") as f:
         json.dump(data, f, indent=2)
+
+
+def export_project_schema():
+    if 'project_schema' in ALREADY_TESTED:
+        raise Exception("ALREADY TESTED PROJECT SCHEMA SO SKIPPING...")
+
+    try:
+        project_schema = op.get_project_service().find_schema()
+    except Exception as e:
+        print(f"Failed to export project schema. {e}")
+        breakpoint()
+        return
+
+    with open(f"{OP_JSON_OUTPUT_PATH}project_schema.json", "w") as f:
+        json.dump(project_schema, f, indent=2)
+
+    for key, val in project_schema.items():
+        if key.startswith('customField'):
+            custom_project_fields.update({key: val})
 
 
 def serialize_derived(d):
@@ -361,6 +383,12 @@ def export_users():
 
 def serialize_project(project: pyopenproject.model.project.Project):
     # ['_type', 'id', 'identifier', 'name', 'active', 'public', 'description', 'createdAt', 'updatedAt', 'statusExplanation', '_links',
+
+    project_custom_fields = dict()
+    for key, val in project.__dict__.items():
+        if key.startswith('customField'):
+            project_custom_fields.update({key: val})
+
     return dict(
         _type=project._type,
         id=project.id,
@@ -372,7 +400,8 @@ def serialize_project(project: pyopenproject.model.project.Project):
         createdAt=project.createdAt,
         updatedAt=project.updatedAt,
         statusExplanation=project.statusExplanation,
-        _links=project._links
+        _links=project._links,
+        custom_fields=project_custom_fields
     )
 
 
