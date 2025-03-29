@@ -96,6 +96,39 @@ def export_project_schema():
             custom_project_fields.update({key: val})
 
 
+def extract_work_package_activities(work_package: pyopenproject.model.work_package.WorkPackage):
+    try:
+        activities = op.get_activity_service().find_work_package_activities(work_package)
+    except Exception as e:
+        print(f"Failed to extract work package activities. {e}")
+        breakpoint()
+        return
+
+    return activities
+
+
+def extract_work_package_attachments(work_package: pyopenproject.model.work_package.WorkPackage):
+    try:
+        attachments = op.get_attachment_service().find_attachments(work_package)
+    except Exception as e:
+        print(f"Failed to extract work package attachments. {e}")
+        breakpoint()
+        return
+
+    return attachments
+
+
+def extract_work_package_revisions(work_package: pyopenproject.model.work_package.WorkPackage):
+    try:
+        revisions = op.get_revision_service().find_work_package_revisions(work_package)
+    except Exception as e:
+        print(f"Failed to extract work package revisions. {e}")
+        breakpoint()
+        return
+
+    return revisions
+
+
 def serialize_derived(d):
     new_d = dict()
     if getattr(d, 'derivedStartDate', None): new_d['derivedStartDate'] = d.derivedStartDate
@@ -126,6 +159,25 @@ def serialize_work_package(wp: pyopenproject.model.work_package.WorkPackage):
             updatedAt=wp.updatedAt,
             _links=wp._links
         )
+
+        try:
+            d.update(activities=extract_work_package_activities(wp))
+        except Exception as e:
+            print(f"Failed to serialize work package activities. {e}")
+            breakpoint()
+
+        try:
+            d.update(attachments=extract_work_package_attachments(wp))
+        except Exception as e:
+            print(f"Failed to serialize work package attachments. {e}")
+            breakpoint()
+
+        try:
+            d.update(revisions=extract_work_package_revisions(wp))
+        except Exception as e:
+            print(f"Failed to serialize work package revisions. {e}")
+            breakpoint()
+
     except Exception as e:
         print(f"Failed to serialize work package. {e}")
         breakpoint()
