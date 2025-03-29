@@ -1,0 +1,178 @@
+[
+  {
+    "_type": "Version",
+    "id": 4,
+    "name": "Sprint 2",
+    "description": {
+      "format": "plain",
+      "raw": "",
+      "html": ""
+    },
+    "startDate": null,
+    "endDate": null,
+    "status": "open",
+    "sharing": "none",
+    "createdAt": "2025-02-15T17:29:13.456Z",
+    "updatedAt": "2025-02-15T17:29:13.456Z",
+    "_links": {
+      "self": {
+        "href": "/api/v3/versions/4",
+        "title": "Sprint 2"
+      },
+      "schema": {
+        "href": "/api/v3/versions/schema"
+      },
+      "update": {
+        "href": "/api/v3/versions/4/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/versions/4",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/versions/4",
+        "method": "delete"
+      },
+      "definingProject": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "availableInProjects": {
+        "href": "/api/v3/versions/4/projects"
+      }
+    }
+  },
+  {
+    "_type": "Version",
+    "id": 3,
+    "name": "Sprint 1",
+    "description": {
+      "format": "plain",
+      "raw": "",
+      "html": ""
+    },
+    "startDate": null,
+    "endDate": null,
+    "status": "open",
+    "sharing": "none",
+    "createdAt": "2025-02-15T17:29:13.402Z",
+    "updatedAt": "2025-02-15T17:29:13.451Z",
+    "_links": {
+      "self": {
+        "href": "/api/v3/versions/3",
+        "title": "Sprint 1"
+      },
+      "schema": {
+        "href": "/api/v3/versions/schema"
+      },
+      "update": {
+        "href": "/api/v3/versions/3/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/versions/3",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/versions/3",
+        "method": "delete"
+      },
+      "definingProject": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "availableInProjects": {
+        "href": "/api/v3/versions/3/projects"
+      }
+    }
+  },
+  {
+    "_type": "Version",
+    "id": 2,
+    "name": "Product Backlog",
+    "description": {
+      "format": "plain",
+      "raw": "",
+      "html": ""
+    },
+    "startDate": null,
+    "endDate": null,
+    "status": "open",
+    "sharing": "none",
+    "createdAt": "2025-02-15T17:29:13.400Z",
+    "updatedAt": "2025-02-15T17:29:13.400Z",
+    "_links": {
+      "self": {
+        "href": "/api/v3/versions/2",
+        "title": "Product Backlog"
+      },
+      "schema": {
+        "href": "/api/v3/versions/schema"
+      },
+      "update": {
+        "href": "/api/v3/versions/2/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/versions/2",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/versions/2",
+        "method": "delete"
+      },
+      "definingProject": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "availableInProjects": {
+        "href": "/api/v3/versions/2/projects"
+      }
+    }
+  },
+  {
+    "_type": "Version",
+    "id": 1,
+    "name": "Bug Backlog",
+    "description": {
+      "format": "plain",
+      "raw": "",
+      "html": ""
+    },
+    "startDate": null,
+    "endDate": null,
+    "status": "open",
+    "sharing": "none",
+    "createdAt": "2025-02-15T17:29:13.386Z",
+    "updatedAt": "2025-02-15T17:29:13.386Z",
+    "_links": {
+      "self": {
+        "href": "/api/v3/versions/1",
+        "title": "Bug Backlog"
+      },
+      "schema": {
+        "href": "/api/v3/versions/schema"
+      },
+      "update": {
+        "href": "/api/v3/versions/1/form",
+        "method": "post"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/versions/1",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/versions/1",
+        "method": "delete"
+      },
+      "definingProject": {
+        "href": "/api/v3/projects/2",
+        "title": "Scrum project"
+      },
+      "availableInProjects": {
+        "href": "/api/v3/versions/1/projects"
+      }
+    }
+  }
+]

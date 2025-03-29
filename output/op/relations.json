@@ -1,0 +1,219 @@
+[
+  {
+    "_type": "Relation",
+    "id": 7,
+    "name": "follows",
+    "type": "follows",
+    "reverseType": "precedes",
+    "lag": null,
+    "description": null,
+    "_links": {
+      "self": {
+        "href": "/api/v3/relations/7"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/relations/7",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/relations/7",
+        "method": "delete",
+        "title": "Remove relation"
+      },
+      "from": {
+        "href": "/api/v3/work_packages/32",
+        "title": "Release v1.0"
+      },
+      "to": {
+        "href": "/api/v3/work_packages/31",
+        "title": "Develop v1.0"
+      }
+    }
+  },
+  {
+    "_type": "Relation",
+    "id": 6,
+    "name": "follows",
+    "type": "follows",
+    "reverseType": "precedes",
+    "lag": null,
+    "description": null,
+    "_links": {
+      "self": {
+        "href": "/api/v3/relations/6"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/relations/6",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/relations/6",
+        "method": "delete",
+        "title": "Remove relation"
+      },
+      "from": {
+        "href": "/api/v3/work_packages/34",
+        "title": "Release v1.1"
+      },
+      "to": {
+        "href": "/api/v3/work_packages/33",
+        "title": "Develop v1.1"
+      }
+    }
+  },
+  {
+    "_type": "Relation",
+    "id": 5,
+    "name": "follows",
+    "type": "follows",
+    "reverseType": "precedes",
+    "lag": null,
+    "description": null,
+    "_links": {
+      "self": {
+        "href": "/api/v3/relations/5"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/relations/5",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/relations/5",
+        "method": "delete",
+        "title": "Remove relation"
+      },
+      "from": {
+        "href": "/api/v3/work_packages/36",
+        "title": "Release v2.0"
+      },
+      "to": {
+        "href": "/api/v3/work_packages/35",
+        "title": "Develop v2.0"
+      }
+    }
+  },
+  {
+    "_type": "Relation",
+    "id": 4,
+    "name": "follows",
+    "type": "follows",
+    "reverseType": "precedes",
+    "lag": null,
+    "description": null,
+    "_links": {
+      "self": {
+        "href": "/api/v3/relations/4"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/relations/4",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/relations/4",
+        "method": "delete",
+        "title": "Remove relation"
+      },
+      "from": {
+        "href": "/api/v3/work_packages/7",
+        "title": "Invite attendees to conference"
+      },
+      "to": {
+        "href": "/api/v3/work_packages/3",
+        "title": "Set date and location of conference"
+      }
+    }
+  },
+  {
+    "_type": "Relation",
+    "id": 3,
+    "name": "follows",
+    "type": "follows",
+    "reverseType": "precedes",
+    "lag": null,
+    "description": null,
+    "_links": {
+      "self": {
+        "href": "/api/v3/relations/3"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/relations/3",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/relations/3",
+        "method": "delete",
+        "title": "Remove relation"
+      },
+      "from": {
+        "href": "/api/v3/work_packages/8",
+        "title": "Setup conference website"
+      },
+      "to": {
+        "href": "/api/v3/work_packages/3",
+        "title": "Set date and location of conference"
+      }
+    }
+  },
+  {
+    "_type": "Relation",
+    "id": 2,
+    "name": "follows",
+    "type": "follows",
+    "reverseType": "precedes",
+    "lag": null,
+    "description": null,
+    "_links": {
+      "self": {
+        "href": "/api/v3/relations/2"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/relations/2",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/relations/2",
+        "method": "delete",
+        "title": "Remove relation"
+      },
+      "from": {
+        "href": "/api/v3/work_packages/9",
+        "title": "Conference"
+      },
+      "to": {
+        "href": "/api/v3/work_packages/2",
+        "title": "Organize open source conference"
+      }
+    }
+  },
+  {
+    "_type": "Relation",
+    "id": 1,
+    "name": "follows",
+    "type": "follows",
+    "reverseType": "precedes",
+    "lag": null,
+    "description": null,
+    "_links": {
+      "self": {
+        "href": "/api/v3/relations/1"
+      },
+      "updateImmediately": {
+        "href": "/api/v3/relations/1",
+        "method": "patch"
+      },
+      "delete": {
+        "href": "/api/v3/relations/1",
+        "method": "delete",
+        "title": "Remove relation"
+      },
+      "from": {
+        "href": "/api/v3/work_packages/13",
+        "title": "End of project"
+      },
+      "to": {
+        "href": "/api/v3/work_packages/10",
+        "title": "Follow-up tasks"
+      }
+    }
+  }
+]
