@@ -9,6 +9,39 @@ op = OpenProject(url=OPENPROJECT_URL, api_key=OPENPROJECT_API_KEY)
 
 # TODO: WorkPackage schema and custom field values for each WorkPackage.
 
+def custom_request(api_user: str, api_key: str, url_path: str):
+    '''
+    A utility function for those hard to reach places...
+
+    :param api_user:
+    :param api_key:
+    :param url_path:
+    :return:
+    '''
+
+    import requests
+
+    headers = {
+        "Accept": "application/json"
+    }
+
+    from requests.auth import HTTPBasicAuth
+    auth = HTTPBasicAuth(api_user, api_key)
+
+    response = requests.request(
+        "GET",
+        f"{OPENPROJECT_URL}{url_path}",
+        headers=headers,
+        auth=auth
+    )
+
+    if response.status_code != 200:
+        print(f"Error: {response.status_code}")
+        return None
+
+    return response.json()
+
+
 
 '''
 PAGINATION
