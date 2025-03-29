@@ -524,7 +524,9 @@ def extract_project_work_package_types(project: pyopenproject.model.project.Proj
         breakpoint()
         return
 
-    return types
+    data = [serialize_type(t) for t in types]
+
+    return data
 
 
 def extract_project_work_packages(project: pyopenproject.model.project.Project):
