@@ -529,7 +529,7 @@ def serialize_grid(grid: pyopenproject.model.grid.Grid):
         rowCount=grid.rowCount,
         columnCount=grid.columnCount,
         options=grid.options,
-        widgets=[serailize_grid_widget(widget) for widget in grid.widgets],
+        widgets=[serialize_grid_widget(widget) for widget in grid.widgets],
         createdAt=grid.createdAt,
         updatedAt=grid.updatedAt,
         _links=grid._links
