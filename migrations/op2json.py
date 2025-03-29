@@ -492,6 +492,11 @@ def export_grids():
 
 def export_all():
     try:
+        export_project_schema()
+    except Exception as e:
+        print(f"Failed to export project schema. {e}")
+
+    try:
         export_queries()
     except Exception as e:
         print(f"Failed to export queries. {e}")
