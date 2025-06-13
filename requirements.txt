@@ -51,6 +51,7 @@ nvidia-nvjitlink-cu12==12.4.127
 nvidia-nvtx-cu12==12.4.127
 openai==1.60.2
 packaging==24.2
+pandas==2.3.0
 pillow==11.1.0
 plotly==6.1.2
 prompt_toolkit==3.0.50
@@ -59,6 +60,7 @@ pydantic_core==2.27.2
 pyopenproject==0.7.4
 python-dateutil==2.8.2
 python-dotenv==0.21.0
+pytz==2025.2
 PyYAML==5.3.1
 regex==2024.11.6
 requests==2.25.1
